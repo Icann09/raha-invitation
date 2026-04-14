@@ -4,6 +4,13 @@
   --background: #F0F0DB;
   --surface: #FFFFFF;
 
+  /* --color-1: #2c5d6d; main-text */
+  --color-2: #a37a65;
+  --color-3: #bccdd2;
+  --color-4: #668d97;
+  --color-5: #225262;
+  --color-6: #f8dbba;
+
   --primary: #30364F;
   --secondary: #ACBAC4;
   --accent: #E1D9BC;
@@ -12,6 +19,7 @@
 
   --text-main: #30364F;
   --text-muted: #6B7280;
+
 }
 
 @theme inline {
@@ -33,3 +41,33 @@ body {
   background: var(--background);
   color: var(--text-main);
 }
+
+
+@keyframes fly-across {
+  0% {
+    transform: translate(100vw, 50vh);
+  }
+  30% {
+    transform: translate(50vw, 45vh);
+  }
+  60% {
+    transform: translate(0vw, 40vh);
+  }
+  100% {
+    transform: translate(-100vw, 35vh);
+  }
+}
+
+.animate-fly-across {
+  animation: fly-across 30s linear infinite;
+}
+
+
+/* @keyframes fly-across {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+} */
