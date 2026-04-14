@@ -4,7 +4,8 @@
   --background: #F0F0DB;
   --surface: #FFFFFF;
 
-  /* --color-1: #2c5d6d; main-text */
+  /* invitation */
+  --color-1: #2c5d6d; 
   --color-2: #a37a65;
   --color-3: #bccdd2;
   --color-4: #668d97;
@@ -17,10 +18,37 @@
 
   --highlight: #4F46E5;
 
+  /* landing page */
   --text-main: #30364F;
   --text-muted: #6B7280;
 
+  /* breathing
+  codec pro/snow buddy
+  alice
+  alice bold 
+  belleza */
+
 }
+
+@font-face {
+  font-family: "Breathing";
+  src: url("/fonts/Breathing.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Breathing2";
+  src: url("/fonts/Breathing2.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Snow Buddy";
+  src: url("/fonts/SnowBuddy.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @theme inline {
   --color-primary: var(--primary);
@@ -29,6 +57,9 @@
   --color-surface: var(--surface);
   --color-background: var(--background);
   --color-highlight: var(--highlight);
+
+  --color-invitation: var(--color-5);
+  --color-colorName: var(--color-2);
 
   --color-text: var(--text-main);
   --color-muted: var(--text-muted);
