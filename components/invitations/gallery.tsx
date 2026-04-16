@@ -32,26 +32,26 @@ export default function Gallery() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-280px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45"
+          className="absolute top-1/2 left-[-290px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45"
         />
         <Image
           src="/ornaments/tree2.png"
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-8 right-[20px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg]"
+          className="absolute top-8 right-[10px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg]"
         />
           <Image
           src="/ornaments/tree2.png"
           alt="Tree 1"
           width={250}
           height={250}
-          className="absolute bottom-24 right-[20px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-90deg]"
+          className="absolute bottom-[135px] right-[10px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-90deg]"
         />
 
         {/* Content */}
         <div className="relative pt-14 text-center flex flex-col items-center justify-center">
-          <div className="relative w-[340px] h-96">
+          <div className="relative w-[320px] h-96">
             <Image
               src="/photos/cover.png"
               alt="Gallery Top Ornament"
@@ -61,8 +61,8 @@ export default function Gallery() {
           </div>
         
           {/* Placeholder for gallery images */}
-          <div className="w-[340px] flex flex-wrap  justify-between mt-6">
-            <div className="w-[80px] h-[80px] relative">
+          <div className="w-[320px] flex flex-wrap  justify-between mt-6">
+            <div className="w-[70px] h-[70px] relative">
               <Image
                 src="/photos/gallery1.png"
                 alt="Gallery Photo 1"
@@ -70,7 +70,7 @@ export default function Gallery() {
                 className="object-cover rounded-lg shadow-sm"
               />
             </div>
-            <div className="w-[80px] h-[80px] relative">
+            <div className="w-[70px] h-[70px] relative">
               <Image
                 src="/photos/gallery1.png"
                 alt="Gallery Photo 1"
@@ -78,7 +78,7 @@ export default function Gallery() {
                 className="object-cover rounded-lg shadow-sm"
               />
             </div>
-            <div className="w-[80px] h-[80px] relative">
+            <div className="w-[70px] h-[70px] relative">
               <Image
                 src="/photos/gallery1.png"
                 alt="Gallery Photo 1"
@@ -86,7 +86,7 @@ export default function Gallery() {
                 className="object-cover rounded-lg shadow-sm"
               />
             </div>
-            <div className="w-[80px] h-[80px] relative">
+            <div className="w-[70px] h-[70px] relative">
               <Image
                 src="/photos/gallery1.png"
                 alt="Gallery Photo 1"
@@ -98,7 +98,7 @@ export default function Gallery() {
           <h1 className="text-6xl text-colorName font-[Breathing2] leading-tight py-9">
             D & A
           </h1>
-          <p className={plusJakartaSans.className + " max-w-[310px] font-bold text-xs text-invitation"}  >
+          <p className={plusJakartaSans.className + " max-w-[320px] font-bold text-[10px] text-invitation"}  >
             "Dan di antara tanda-tanda (kebesaran)-Nya ialah”
             Dia menciptakan pasangan-pasangan untukmu dari
             jenismu sendiri, agar kamu cenderung dan merasa

@@ -37,7 +37,7 @@ export default function Cover() {
           className="absolute top-40 left-0 animate-fly-across mix-blend-multiply z-20 pointer-events-none"
         />
 
-        {/* Top Tress */}
+        {/* Top Trees */}
         <Image
           src="/ornaments/tree1.png"
           alt="Tree Top"
@@ -79,7 +79,7 @@ export default function Cover() {
 
           {/* Middle */}
           <div className="relative h-[50vh]">
-            <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-20">
+            <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-32">
               <p className={plusJakartaSans.className + " font-bold text-xs text-invitation"}  >
                 THE WEDDING OF
               </p>
@@ -97,6 +97,7 @@ export default function Cover() {
               <p className="relative text-[10px] text-invitation italic mb-4 font-semibold z-30">
                 
                 *Mohon maaf jika ada kesalahan dalam penulisan nama dan gelar
+                {/* flower */}
                 <Image
                   src="/ornaments/flower.png"
                   alt="Flower Ornament"

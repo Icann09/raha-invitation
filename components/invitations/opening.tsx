@@ -30,17 +30,52 @@ export default function Opening() {
         <Image
           src="/ornaments/cover-tree-top.png"
           alt="Tree Top"
-          width={200}
-          height={200}
-          className="absolute top-[-100px] left-0 transform -translate-x-1/2 mix-blend-multiply z-10 pointer-events-none"
+          width={250}
+          height={250}
+          className="absolute top-[-130px] left-0 transform -translate-x-1/2 mix-blend-multiply z-10 pointer-events-none animate-swinging"
         />
         <Image
           src="/ornaments/cover-tree-top.png"
           alt="Tree Top"
-          width={200}
-          height={200}
-          className="absolute top-[-100px] right-[-200px] transform -translate-x-1/2 mix-blend-multiply z-10 pointer-events-none"
+          width={250}
+          height={250}
+          className="absolute top-[-130px] right-[-230px] transform -translate-x-1/2 mix-blend-multiply z-10 pointer-events-none animate-swinging"
         />
+        {/* Bottom */}
+        {/* Tree 1 */}
+        <Image
+          src="/ornaments/cover-tree-top.png"
+          alt="Tree Top"
+          width={250}
+          height={250}
+          className="absolute bottom-[-420px] left-[15px] transform -translate-x-1/2 z-20 pointer-events-none rotate-180 animate-swinging"
+        />
+        <Image
+          src="/ornaments/cover-tree-top.png"
+          alt="Tree Top"
+          width={250}
+          height={250}
+          className="absolute bottom-[-420px] right-[-230px] transform -translate-x-1/2 z-20 pointer-events-none rotate-180 animate-swinging"
+        />
+        {/* Tree 2 */}
+        <Image
+          src="/ornaments/trees-left.png"
+          alt="Trees"
+          width={230}
+          height={300}
+          className="absolute bottom-0 left-0 z-20 pointer-events-none"
+        />
+        <Image
+          src="/ornaments/trees-right.png"
+          alt="Trees"
+          width={230}
+          height={300}
+          className="absolute bottom-0 right-0 z-20 pointer-events-none"
+        />
+
+
+
+      
 
         {/* Moon */}
         <Image
