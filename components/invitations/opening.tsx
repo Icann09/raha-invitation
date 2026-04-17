@@ -87,14 +87,14 @@ export default function Opening({ isOpen }: { isOpen: boolean }) {
           alt="Trees"
           width={230}
           height={300}
-          className="absolute bottom-0 left-0 z-20 pointer-events-none"
+          className="absolute bottom-0 left-0 z-20 pointer-events-none animate-fade-right"
         />
         <Image
           src="/ornaments/trees-right.png"
           alt="Trees"
           width={230}
           height={300}
-          className="absolute bottom-0 right-0 z-20 pointer-events-none"
+          className="absolute bottom-0 right-0 z-20 pointer-events-none animate-fade-left"
         />
 
         {/* Moon */}

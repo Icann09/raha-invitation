@@ -19,9 +19,10 @@ const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "900" });
 const link = createGoogleCalendarLink({
   title: "Wedding of Alisyah & Dillo",
   description: "We would love to see you at our wedding!",
-  location: "Makassar, Indonesia",
+  location: "SOR Laode Pandu, Raha",
   startDate: weddingDate,
 });
+
 
 export default function WeddingDate() {
 const [time, setTime] = useState({
@@ -130,7 +131,8 @@ const [time, setTime] = useState({
           variants={fadeVariants.up}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true }
+        }
         >
           <h1 className="text-4xl text-colorName font-[Breathing2] leading-tight py-3">
             Save the Date
@@ -153,20 +155,17 @@ const [time, setTime] = useState({
               <p className="text-white font-bold text-xs">Detik</p>
             </div>
           </div>
-          <p className={sourceCodePro.className + " text-white text-xs mt-4 rounded-full bg-colorName py-1 px-2 font-bold"}>
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Add wedding date to Google Calendar"
-          >
-            Add to Google Calendar
-          </a>
+          <p className={sourceCodePro.className + " text-white text-xs mt-4 rounded-full bg-colorName py-1 px-2 font-bold pointer-events-auto"}>
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Add to Google Calendar
+            </a>
           </p>
         </motion.div>
         </div>
-
-      
       </div>
     </section>
   );

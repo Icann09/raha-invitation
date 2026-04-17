@@ -8,24 +8,13 @@ import { fadeVariants } from "@/lib/motion";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 
+const akadMap = " https://maps.app.goo.gl/Li11FsmvkLJPg3EQ8?g_st=iw";
 
 export default function Woman() {
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
       <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
       
-        {/* Backgrounds */}
-        {/* <Image
-          src="/backgrounds/bg-1.png"
-          alt="Background"
-          fill
-          className="object-cover z-0"
-          priority
-        /> */}
-
-        {/* Overlay */}
-        {/* <div className="absolute w-full h-screen bg-gradient-to-t from-white to-white/90 bottom-0 z-10 pointer-events-none" /> */}
-
         {/* Trees */}
         <Image
           src="/ornaments/tree2.png"
@@ -106,8 +95,14 @@ export default function Woman() {
                 </p>
               </div>
               <p className="bg-white rounded-full mx-auto text-invitation text-xs font-bold w-max px-4">
-                <MapPin className="inline-block mr-1" size={20}/>
-                Google Maps
+                <a 
+                  href={akadMap}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MapPin className="inline-block mr-1" size={20}/>
+                  Google Maps
+                </a>
               </p>
             </div>
             <div className="absolute bottom-0 w-[55px] h-[55%] right-0 bg-colorName">

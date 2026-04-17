@@ -25,6 +25,22 @@ const wishes: Wish[] = [
     name: "Andi",
     message: "Semoga menjadi keluarga sakinah, mawaddah, warahmah.",
   },
+  {
+    name: "Kaisan",
+    message: "Selamat menempuh hidup baru! Semoga bahagia selalu.",
+  },
+  {
+    name: "Andi",
+    message: "Semoga menjadi keluarga sakinah, mawaddah, warahmah.",
+  },
+  {
+    name: "Kaisan",
+    message: "Selamat menempuh hidup baru! Semoga bahagia selalu.",
+  },
+  {
+    name: "Andi",
+    message: "Semoga menjadi keluarga sakinah, mawaddah, warahmah.",
+  },
 ];
 
 export default function Gift() {

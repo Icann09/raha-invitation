@@ -10,6 +10,8 @@ import { fadeVariants } from "@/lib/motion";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 
+const resepsiMap = " https://maps.app.goo.gl/HKJ6W7coiJSMgVhw7?g_st=iw";
+
 
 export default function Woman() {
   return (
@@ -107,8 +109,14 @@ export default function Woman() {
                 </p>
               </div>
               <p className={"bg-white rounded-full mx-auto text-invitation text-xs font-bold w-max px-4"}>
-                <MapPin className="inline-block mr-1" size={20}/>
-                Google Maps
+                <a 
+                  href={resepsiMap}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MapPin className="inline-block mr-1" size={20}/>
+                  Google Maps
+                </a>
               </p>
             </div>
             <div className="absolute bottom-0 w-[55px] h-[55%] right-0 bg-colorName">

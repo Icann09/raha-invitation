@@ -28,7 +28,7 @@ export default function Gallery() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-290px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45 animate-fade-right"
+          className="absolute top-1/2 left-[-290px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45"
         />
         <Image
           src="/ornaments/tree2.png"
@@ -42,8 +42,9 @@ export default function Gallery() {
           alt="Tree 1"
           width={250}
           height={250}
-          className="absolute bottom-[135px] right-[10px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-90deg]"
+          className="absolute bottom-[135px] right-[10px] transform translate-x-1/2 z-10 rotate-[-90deg]"
         />
+        
 
         {/* Content */}
         <div className="relative pt-14 text-center flex flex-col items-center justify-center">

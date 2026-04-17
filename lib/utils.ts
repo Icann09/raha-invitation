@@ -21,14 +21,15 @@ export function createGoogleCalendarLink({
   const pad = (n: number) => String(n).padStart(2, "0");
 
   const formatDate = (date: Date) => {
-    return (
-      date.getFullYear() +
-      pad(date.getMonth() + 1) +
-      pad(date.getDate()) +
+  return (
+      date.getUTCFullYear() +
+      pad(date.getUTCMonth() + 1) +
+      pad(date.getUTCDate()) +
       "T" +
-      pad(date.getHours()) +
-      pad(date.getMinutes()) +
-      pad(date.getSeconds())
+      pad(date.getUTCHours()) +
+      pad(date.getUTCMinutes()) +
+      pad(date.getUTCSeconds()) +
+      "Z"  // ← tells Google this is UTC
     );
   };
 
