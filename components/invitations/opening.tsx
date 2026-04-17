@@ -42,10 +42,11 @@ export default function Opening({ isOpen }: { isOpen: boolean }) {
 
 
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center animate-fade-in">
+    <section  className="min-h-screen flex items-center justify-center bg-neutral-200">
+
     
 
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+      <div className="relative w-full max-w-md h-[100vh] bg-white overflow-hidden shadow-2xl">
         
         {/* Backgrounds */}
         <Image
@@ -118,7 +119,7 @@ export default function Opening({ isOpen }: { isOpen: boolean }) {
           alt="Castle"
           width={600}
           height={500}
-          className="absolute bottom-[-80px] left-1/2 -translate-x-1/2  z-10 pointer-events-none animate-fade-up"
+          className="absolute bottom-[-80px] left-1/2 -translate-x-1/2  z-10 animate-fade-left"
         />
 
         {/* Music */}

@@ -87,8 +87,8 @@ export default function Cover({onClick} : {onClick: () => void }) {
           </div>
 
           {/* Middle */}
-          <div className="relative h-[50vh]">
-            <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-32">
+          <div className="relative h-[50vh] z-30">
+            <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-28">
               <p className={plusJakartaSans.className + " font-bold text-xs text-invitation animate-fade-up"}  >
                 THE WEDDING OF
               </p>
@@ -97,7 +97,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
                 Dillo & Alisyah
               </h1>
 
-              <p className= {plusJakartaSans.className + " text-xs text-invitation font-bold animate-fade-up-delay-2"}>
+              <p className= {plusJakartaSans.className + " text-xs text-invitation font-bold animate-fade-up-delay-2 z-30"}>
                 Kepada Yth. <br />
                 {guest || "Tamu Undangan"}
               </p>

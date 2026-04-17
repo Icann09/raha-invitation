@@ -12,7 +12,7 @@ const akadMap = " https://maps.app.goo.gl/Li11FsmvkLJPg3EQ8?g_st=iw";
 
 export default function Woman() {
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
+    <section  className="min-h-screen flex items-center justify-center bg-neutral-200">
       <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
       
         {/* Trees */}

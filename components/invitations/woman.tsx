@@ -135,19 +135,8 @@ export default function Woman() {
             @alishyah_cahya12
           </p>
           </motion.div>
-        
           
-        </div>
-
-        {/* rope */}
-        <Image
-          src="/ornaments/rope.png"
-          alt="Rope Ornament"
-          width={40}
-          height={60}
-          className="absolute bottom-[-125px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none  "
-        />
-    
+        </div>    
       </div>
     </section>
   );
