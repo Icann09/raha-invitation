@@ -6,7 +6,7 @@ export const fadeVariants = {
       y: 0,
       transition: {
         duration: 8,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   },
@@ -18,7 +18,7 @@ export const fadeVariants = {
       y: 0,
       transition: {
         duration: 8,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   },
@@ -30,7 +30,7 @@ export const fadeVariants = {
       x: 0,
       transition: {
         duration: 6,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   },
@@ -42,7 +42,7 @@ export const fadeVariants = {
       x: 0,
       transition: {
         duration: 6,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   },
@@ -55,7 +55,7 @@ export const fadeVariants = {
       opacity: 1,
       transition: {
         duration: 10,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   }
