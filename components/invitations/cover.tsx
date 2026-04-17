@@ -88,7 +88,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
 
           {/* Middle */}
           <div className="relative h-[50vh] z-30">
-            <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-28">
+            <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-24">
               <p className={plusJakartaSans.className + " font-bold text-xs text-invitation animate-fade-up"}  >
                 THE WEDDING OF
               </p>
@@ -125,7 +125,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
                 alt="Tree Bottom"
                 width={500}
                 height={400}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2  z-20 pointer-events-none animate-fade-up"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2  z-0 pointer-events-none animate-fade-up"
               />
             </div>
           </div>
