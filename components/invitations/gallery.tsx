@@ -114,7 +114,7 @@ export default function Gallery() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-6xl text-colorName font-[Breathing2] leading-tight py-9">
+          <h1 className="text-5xl text-colorName font-[Breathing2] leading-tight py-7">
             D & A
           </h1>
           <p className={plusJakartaSans.className + " max-w-[320px] font-bold text-[10px] text-invitation"}  >
@@ -124,7 +124,7 @@ export default function Gallery() {
             tenteram kepadanya, dan Dia menjadikan di
             antaramu rasa kasih dan sayang.
           </p>
-          <p className={plusJakartaSans.className + " font-bold text-xs text-invitation pt-4"}  >
+          <p className={plusJakartaSans.className + " font-bold text-xs text-invitation pt-2"}  >
             QS. Ar-Rum: 21
           </p>
           </motion.div>
