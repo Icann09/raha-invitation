@@ -1,19 +1,12 @@
-
+"use client"
 
 import Image from "next/image";
-import { Alice } from "next/font/google";
-import { Belleza } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { Source_Code_Pro } from "next/font/google";
+import { motion } from "framer-motion";
+import { fadeVariants } from "@/lib/motion";
 
 
-const belleza = Belleza({ subsets: ["latin"], weight: "400" });
-const alice = Alice({ subsets: ["latin"], weight: "400" });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "600" });
-const plusJakartaSans1 = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
-
-
-const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "900" });
 
 export default function Gift() {
   return (
@@ -32,11 +25,6 @@ export default function Gift() {
         {/* Overlay */}
         <div className="absolute w-full h-[50vh] bg-gradient-to-t from-white  to-transparent bottom-0 z-20 pointer-events-none" />
         <div className="absolute w-full h-screen bg-[#bccdd2]/80 transparent bottom-0 z-10 pointer-events-none" />
-
-        {/* <div className="absolute w-full h-screen bg-white transparent bottom-0 z-10 pointer-events-none" /> */}
-
-
-
 
 
         {/* Trees */}
@@ -78,22 +66,37 @@ export default function Gift() {
           className="absolute bottom-44 right-[50px] transform translate-x-1/2 z-40 pointer-events-none rotate-[0deg]"
         />
 
-        
-
         {/* Content */}
         <div className="relative h-screen flex flex-col items-center justify-center text-center mb-30 z-30 ">
+          <motion.div
+            variants={fadeVariants.up}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
           <h1 className="text-[45px] text-invitation font-[Breathing2] leading-tight pb-2">
             Wedding Gift
           </h1>
+          </motion.div>
+          
           <p className={plusJakartaSans.className + " text-xs text-invitation max-w-[300] font-normal pt-4"}  >
             Merupakan suatu kebahagiaan dan
-kehormatan bagi kami apabila
-Bapak/Ibu/Saudara/i berkenan hadir untuk
-memberikan doa restu kepada kedua mempelai.
+            kehormatan bagi kami apabila
+            Bapak/Ibu/Saudara/i berkenan hadir untuk
+            memberikan doa restu kepada kedua mempelai.
           </p>
+
+          <motion.div
+            variants={fadeVariants.down}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
           <p className={plusJakartaSans.className + " text-sm text-white w-36 my-4 py-2 font-bold bg-invitation rounded-full"}  >
             Klik Di Sini
           </p>
+          </motion.div>
+          
         </div>
     
       </div>

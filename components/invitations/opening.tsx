@@ -1,18 +1,42 @@
-
-
+"use client"
 import Image from "next/image";
-import { Alice } from "next/font/google";
-import { Belleza } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { Source_Code_Pro } from "next/font/google";
+import { Disc3, Music3 } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useRef } from "react";
 
 
-const belleza = Belleza({ subsets: ["latin"], weight: "400" });
-const alice = Alice({ subsets: ["latin"], weight: "400" });
+
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
-const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "900" });
 
-export default function Opening() {
+
+export default function Opening({ isOpen }: { isOpen: boolean }) {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isSpining, setIsSpinning] = useState(true);
+
+  // Auto play music when invitation is opened
+  useEffect(() => {
+    if (isOpen && audioRef.current) {
+      audioRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
+    }
+  }, [isOpen]);
+
+  const toggleMusic = () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+      setIsSpinning(false); // 🔥 stop spinning
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+      setIsSpinning(true); // 🔥 start spinning
+    }
+  };
+
+
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
       <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
@@ -73,17 +97,13 @@ export default function Opening() {
           className="absolute bottom-0 right-0 z-20 pointer-events-none"
         />
 
-
-
-      
-
         {/* Moon */}
         <Image
           src="/ornaments/moon.png"
           alt="Moon"
           width={200}
           height={200}
-          className="absolute top-[-100px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none"
+          className="absolute top-[-100px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none animate-fade-down"
         />
 
         {/* Castle */}
@@ -92,11 +112,26 @@ export default function Opening() {
           alt="Castle"
           width={600}
           height={500}
-          className="absolute bottom-[-80px] left-1/2 -translate-x-1/2  z-10 pointer-events-none"
+          className="absolute bottom-[-80px] left-1/2 -translate-x-1/2  z-10 pointer-events-none animate-fade-up"
         />
 
+        {/* Music */}
+        <div className="absolute bottom-3 left-3 z-30 animate-fade-right">
+          <Disc3 
+            size={50}
+            className={`text-invitation ${
+              isSpining ? "animate-spin" : ""
+            }`}
+
+            onClick={toggleMusic}
+          />
+        </div>
+      
+        {/* Hidden audio element */}
+        <audio ref={audioRef} loop src="/music/music.mp3" />
+
         {/* Content */}
-        <div className="w-full flex flex-col items-center justify-center text-center absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
+        <div className="w-full flex flex-col items-center justify-center text-center absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none animate-fade-in">
           <p className={plusJakartaSans.className + " font-bold text-xs text-invitation"}  >
             THE WEDDING OF
           </p>
@@ -109,11 +144,11 @@ export default function Opening() {
           </p>
           <div className="">
             <Image
-              src="/icons/arrow.png"
+              src="/icons/arrow-down.png"
               alt="Arrow Down"
               width={30}
               height={30}
-              className="pointer-events-none rounded-full mt-10 animate-bounce text-white mix-blend-multiply"
+              className="pointer-events-none rounded-full mt-10 animate-bounce text-white"
             />
           </div>
 

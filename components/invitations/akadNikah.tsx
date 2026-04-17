@@ -1,12 +1,10 @@
-
+"use client"
 
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Clock, MapPin } from "lucide-react";
-
-
-
-
+import { motion } from "framer-motion";
+import { fadeVariants } from "@/lib/motion";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 
@@ -17,16 +15,16 @@ export default function Woman() {
       <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
       
         {/* Backgrounds */}
-        <Image
+        {/* <Image
           src="/backgrounds/bg-1.png"
           alt="Background"
           fill
           className="object-cover z-0"
           priority
-        />
+        /> */}
 
         {/* Overlay */}
-        <div className="absolute w-full h-screen bg-gradient-to-t from-white to-white/90 bottom-0 z-10 pointer-events-none" />
+        {/* <div className="absolute w-full h-screen bg-gradient-to-t from-white to-white/90 bottom-0 z-10 pointer-events-none" /> */}
 
         {/* Trees */}
         <Image
@@ -72,7 +70,14 @@ export default function Woman() {
 
         {/* Content */}
         <div className="">
+          <motion.div
+            variants={fadeVariants.up}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
           <div className="w-72 h-[500px] mx-auto relative flex flex-col items-center justify-center text-center mt-20 z-30">
+          
             <Image
               src="/photos/cover.png"
               alt="Gallery Top Ornament"
@@ -149,6 +154,8 @@ export default function Woman() {
             />
             
           </div>
+          </motion.div>
+
         </div>
         
       </div>

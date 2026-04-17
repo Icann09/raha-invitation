@@ -1,18 +1,13 @@
-
-
 import Image from "next/image";
-import { Alice } from "next/font/google";
-import { Belleza } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { Source_Code_Pro } from "next/font/google";
+import { useSearchParams } from "next/navigation";
 
 
-const belleza = Belleza({ subsets: ["latin"], weight: "400" });
-const alice = Alice({ subsets: ["latin"], weight: "400" });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
-const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "900" });
 
-export default function Cover() {
+export default function Cover({onClick} : {onClick: () => void }) {
+  const params = useSearchParams();
+  const guest = params.get("to")?.replace(/\+/g, " ");
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
       
@@ -24,7 +19,7 @@ export default function Cover() {
           src="/photos/cover.png"
           alt="Wedding Cover"
           fill
-          className="object-cover"
+          className="object-cover animate-slow-zoom"
           priority
         />
 
@@ -43,14 +38,14 @@ export default function Cover() {
           alt="Tree Top"
           width={200}
           height={200}
-          className="absolute top-[-100px] left-0 transform -translate-x-1/2 z-10 pointer-events-none"
+          className="absolute top-[-100px] left-0 transform -translate-x-1/2 z-10 animate-swinging"
         />
         <Image
           src="/ornaments/tree1.png"
           alt="Tree Top"
           width={200}
           height={200}
-          className="absolute top-[-100px] right-[-200px] transform -translate-x-1/2 z-10 pointer-events-none"
+          className="absolute top-[-100px] right-[-200px] transform -translate-x-1/2 z-10 animate-swinging"
         />
 
         {/* Top Center */}
@@ -80,17 +75,17 @@ export default function Cover() {
           {/* Middle */}
           <div className="relative h-[50vh]">
             <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-32">
-              <p className={plusJakartaSans.className + " font-bold text-xs text-invitation"}  >
+              <p className={plusJakartaSans.className + " font-bold text-xs text-invitation animate-fade-up"}  >
                 THE WEDDING OF
               </p>
               
-              <h1 className="text-4xl text-colorName font-[Breathing2] leading-tight py-3">
+              <h1 className="text-4xl text-colorName font-[Breathing2] leading-tight py-3 animate-fade-up-delay-1">
                 Dillo & Alisyah
               </h1>
 
-              <p className= {plusJakartaSans.className + " text-xs text-invitation font-bold"}>
+              <p className= {plusJakartaSans.className + " text-xs text-invitation font-bold animate-fade-up-delay-2"}>
                 Kepada Yth. <br />
-                Bapak/Ibu/Saudara/i
+                {guest || "Tamu Undangan"}
               </p>
             </div>
             <div className="flex flex-col bg-white h-[40%] justify-end items-center pb-16">
@@ -106,7 +101,7 @@ export default function Cover() {
                   className="absolute right-0 bottom-0"
                 />
               </p>
-              <button className="px-6 py-2.5 bg-colorName text-white text-sm font-bold rounded-full z-30 hover:bg-colorName/80 transition">
+              <button onClick={onClick} className="px-6 py-2.5 bg-colorName text-white text-sm font-bold rounded-full z-30 hover:bg-colorName/80 transition animate-fade-up-delay-3">
                 BUKA UNDANGAN
               </button>
 
@@ -116,7 +111,7 @@ export default function Cover() {
                 alt="Tree Bottom"
                 width={500}
                 height={400}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2  z-20 pointer-events-none"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2  z-20 pointer-events-none animate-fade-up"
               />
             </div>
           </div>

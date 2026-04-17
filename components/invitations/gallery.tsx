@@ -1,16 +1,12 @@
-
-
+"use client"
 import Image from "next/image";
-import { Alice } from "next/font/google";
-import { Belleza } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { Source_Code_Pro } from "next/font/google";
+import { motion } from "framer-motion";
+import { fadeVariants } from "@/lib/motion";
 
 
-const belleza = Belleza({ subsets: ["latin"], weight: "400" });
-const alice = Alice({ subsets: ["latin"], weight: "400" });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
-const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "900" });
+
 
 export default function Gallery() {
   return (
@@ -32,7 +28,7 @@ export default function Gallery() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-290px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45"
+          className="absolute top-1/2 left-[-290px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45 animate-fade-right"
         />
         <Image
           src="/ornaments/tree2.png"
@@ -51,16 +47,30 @@ export default function Gallery() {
 
         {/* Content */}
         <div className="relative pt-14 text-center flex flex-col items-center justify-center">
-          <div className="relative w-[320px] h-96">
-            <Image
-              src="/photos/cover.png"
-              alt="Gallery Top Ornament"
-              fill
-              className="object-cover rounded-4xl shadow-md"
-            />
-          </div>
+          <motion.div
+            variants={fadeVariants.up}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="relative w-[320px] h-96">
+              <Image
+                src="/photos/cover.png"
+                alt="Gallery Top Ornament"
+                fill
+                className="object-cover rounded-4xl shadow-md"
+              />
+            </div>
+          </motion.div>
+                    
         
           {/* Placeholder for gallery images */}
+          <motion.div
+            variants={fadeVariants.in}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
           <div className="w-[320px] flex flex-wrap  justify-between mt-6">
             <div className="w-[70px] h-[70px] relative">
               <Image
@@ -95,6 +105,14 @@ export default function Gallery() {
               />
             </div>
           </div>
+          </motion.div>
+
+          <motion.div
+            variants={fadeVariants.down}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
           <h1 className="text-6xl text-colorName font-[Breathing2] leading-tight py-9">
             D & A
           </h1>
@@ -108,6 +126,9 @@ export default function Gallery() {
           <p className={plusJakartaSans.className + " font-bold text-xs text-invitation pt-4"}  >
             QS. Ar-Rum: 21
           </p>
+          </motion.div>
+          
+        
         </div>
       </div>
     </section>

@@ -1,16 +1,15 @@
-
+"use client"
 
 import Image from "next/image";
-import { Alice } from "next/font/google";
-import { Belleza } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { Source_Code_Pro } from "next/font/google";
+import { motion } from "framer-motion";
+import { fadeVariants } from "@/lib/motion";
 
 
-const belleza = Belleza({ subsets: ["latin"], weight: "400" });
-const alice = Alice({ subsets: ["latin"], weight: "400" });
+
+
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
-const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "900" });
+
 
 export default function Woman() {
   return (
@@ -69,11 +68,19 @@ export default function Woman() {
             className="object-cover "
           />
         </div>
+
+        
         
 
         {/* Content */}
         <div className="relative flex flex-col items-center justify-center text-center mt-14 z-30">
           <div>
+            <motion.div
+              variants={fadeVariants.up}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
             <div className="w-60 h-72 relative mt-20">
               <Image
                 src="/photos/gallery1.png"
@@ -106,8 +113,16 @@ export default function Woman() {
                 height={60}
                 className="absolute left-[-30px] bottom-[-30px] z-20 rotate-[-45deg]"
               />
-            </div>            
+            </div> 
+            </motion.div>
           </div>
+
+          <motion.div
+            variants={fadeVariants.in}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
           <h1 className="text-5xl text-colorName font-[Breathing2] leading-tight mt-20">
             Dillo
           </h1>
@@ -122,6 +137,8 @@ export default function Woman() {
           <p className={plusJakartaSans.className + " font-bold text-xs bg-invitation text-white py-1 px-4 rounded-full"}  >
             @dillo_mahendra
           </p>
+          </motion.div>
+          
           
         </div>
 
