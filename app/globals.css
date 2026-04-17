@@ -298,7 +298,7 @@ body {
 }
 
 .animate-fade-in {
-  animation: fade-in 0.8s ease-out forwards;
+  animation: fade-in 4s ease-out forwards;
 }
 
 @keyframes slow-zoom {
@@ -325,6 +325,21 @@ body {
 
 .animate-fade-left {
   animation: fade-left 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fade-opening {
+  0% {
+    transform: translateX(40px) scale(0.98);
+
+  }
+  100% {
+    transform: translateX(0) scale(1);
+
+  }
+}
+
+.animate-fade-opening {
+  animation: fade-opening 8s forwards;
 }
 
 @keyframes fade-right {

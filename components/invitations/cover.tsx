@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { useSearchParams } from "next/navigation";
+import { motion } from "framer-motion";
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
@@ -12,6 +13,17 @@ export default function Cover({onClick} : {onClick: () => void }) {
   const guest = params.get("to")?.replace(/\+/g, " ");
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          duration: 1,
+          ease: [0.76, 0, 0.24, 1], // more dramatic curve
+        }}
+        className="w-full flex items-center justify-center"
+      >
+
       
       {/* Mobile Frame */}
       <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
@@ -65,7 +77,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
           {/* Logo */}
           <div>
             <Image
-              src="/photos/assets/logo.png"
+              src="/images/logo.png"
               alt="Raha Invitation Logo"
               width={200}
 
@@ -119,6 +131,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
           </div>
         </div>
       </div>
+      </motion.div>
     </section>
   );
 }

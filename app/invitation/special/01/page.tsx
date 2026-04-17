@@ -14,6 +14,7 @@ import Woman from "@/components/invitations/woman";
 import Image from "next/image";
 import { useState } from "react";
 import { Suspense } from "react";
+import { AnimatePresence } from "framer-motion";
 
 
 const bride = {
@@ -106,24 +107,28 @@ export default function Page() {
     
 
 
-      <div className={open? "hidden": "block"}>
+      <AnimatePresence mode="wait">
+      {!open && (
         <Suspense fallback={<div>Loading...</div>}>
-          <Cover onClick={handleClick} />
+          <Cover key="cover" onClick={handleClick} />
         </Suspense>
-      </div>
-      <div className= {open? "block": "hidden" }>
-        <Opening isOpen ={open}/>
+      )}
+    </AnimatePresence>
+
+    {open && (
+      <>
+        <Opening isOpen={open} />
         <Gallery />
         <Woman />
         <Man />
         <Date />
         <AkadNikah />
-        <Resepsi /> 
+        <Resepsi />
         <Terimakasih />
         <Gift />
         <Wishes />
-
-      </div>
+      </>
+    )}
     </div>
   );
 }

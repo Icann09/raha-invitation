@@ -4,6 +4,10 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { Disc3, Music3 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
+import { motion } from "framer-motion";
+import { fadeVariants } from "@/lib/motion";
+
+
 
 
 
@@ -38,7 +42,9 @@ export default function Opening({ isOpen }: { isOpen: boolean }) {
 
 
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
+    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center animate-fade-in">
+    
+
       <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
         
         {/* Backgrounds */}
@@ -52,14 +58,14 @@ export default function Opening({ isOpen }: { isOpen: boolean }) {
 
         {/* Top Tress */}
         <Image
-          src="/ornaments/cover-tree-top.png"
+          src="/ornaments/tree1.png"
           alt="Tree Top"
           width={250}
           height={250}
           className="absolute top-[-130px] left-0 transform -translate-x-1/2 mix-blend-multiply z-10 pointer-events-none animate-swinging"
         />
         <Image
-          src="/ornaments/cover-tree-top.png"
+          src="/ornaments/tree1.png"
           alt="Tree Top"
           width={250}
           height={250}
@@ -68,14 +74,14 @@ export default function Opening({ isOpen }: { isOpen: boolean }) {
         {/* Bottom */}
         {/* Tree 1 */}
         <Image
-          src="/ornaments/cover-tree-top.png"
+          src="/ornaments/tree1.png"
           alt="Tree Top"
           width={250}
           height={250}
           className="absolute bottom-[-420px] left-[15px] transform -translate-x-1/2 z-20 pointer-events-none rotate-180 animate-swinging"
         />
         <Image
-          src="/ornaments/cover-tree-top.png"
+          src="/ornaments/tree1.png"
           alt="Tree Top"
           width={250}
           height={250}
@@ -154,6 +160,7 @@ export default function Opening({ isOpen }: { isOpen: boolean }) {
 
         </div>
       </div>
+
     </section>
   );
 }
