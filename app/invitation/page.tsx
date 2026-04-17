@@ -13,6 +13,7 @@ import Wishes from "@/components/invitations/wishes";
 import Woman from "@/components/invitations/woman";
 import Image from "next/image";
 import { useState } from "react";
+import { Suspense } from "react";
 
 
 const bride = {
@@ -106,7 +107,9 @@ export default function Page() {
 
 
       <div className={open? "hidden": "block"}>
-        <Cover onClick={handleClick} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Cover onClick={handleClick} />
+        </Suspense>
       </div>
       <div className= {open? "block": "hidden" }>
         <Opening isOpen ={open}/>
