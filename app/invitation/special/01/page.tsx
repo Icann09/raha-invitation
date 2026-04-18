@@ -64,7 +64,7 @@ export default function Page() {
 
       {/* Backgrounds */}
       <Image
-        src="/backgrounds/bg-1.png"
+        src="/images/special01/background.png"
         alt="Background"
         fill
         className="object-cover fixed top-0 left-0 w-full h-screen z-0 pointer-events-none"
