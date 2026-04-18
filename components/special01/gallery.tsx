@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { fadeVariants } from "@/lib/motion";
 import { useState } from "react";
 
@@ -52,21 +52,23 @@ export default function Gallery() {
 
         {/* Content */}
         <div className="relative pt-14 text-center flex flex-col items-center justify-center z-20">
-          <motion.div
-            variants={fadeVariants.up}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <div className="relative w-[320px] h-96">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedImage} // 👈 IMPORTANT (triggers re-animation)
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 1.05 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative w-[320px] h-96"
+            >
               <Image
                 src={`/images/special01/${selectedImage}.png`}
-                alt="Gallery Top Ornament"
+                alt="Gallery"
                 fill
                 className="object-cover rounded-4xl shadow-md"
               />
-            </div>
-          </motion.div>
+            </motion.div>
+          </AnimatePresence>
                     
         
           {/* Placeholder for gallery images */}
@@ -125,7 +127,7 @@ export default function Gallery() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-5xl text-colorName font-[Breathing2] leading-tight py-7">
+          <h1 className="text-5xl text-colorName font-[Breathing2] leading-tight py-6">
             D & A
           </h1>
           <p className={plusJakartaSans.className + " max-w-[320px] font-bold text-[10px] text-invitation"}  >
@@ -135,7 +137,7 @@ export default function Gallery() {
             tenteram kepadanya, dan Dia menjadikan di
             antaramu rasa kasih dan sayang.
           </p>
-          <p className={plusJakartaSans.className + " font-bold text-xs text-invitation pt-2"}  >
+          <p className={plusJakartaSans.className + " font-bold text-xs text-invitation "}  >
             QS. Ar-Rum: 21
           </p>
           </motion.div>
