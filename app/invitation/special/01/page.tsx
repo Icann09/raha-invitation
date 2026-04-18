@@ -60,7 +60,7 @@ export default function Page() {
   const handleClick = () => setIsOpen(true);
 
   return (
-    <div className="w-full flex flex-col max-h-[100dvh] overflow-y-auto">
+    <div className="w-full flex flex-col h-[100dvh] overflow-y-hidden">
 
       {/* Backgrounds */}
       <Image
@@ -71,37 +71,39 @@ export default function Page() {
         priority
       />
 
-      {/* Ornaments */}
-      <div className="hidden md:block">
-      <Image
-        src="/images/special01/assets/tree1.png"
-        alt="Tree"
-        width={400}
-        height={400}
-        className="absolute top-[-200px] left-0 transform -translate-x-1/2 z-10 "
-      />
-      <Image
-        src="/images/special01/assets/tree1.png"
-        alt="Tree Top"
-        width={400}
-        height={400}
-        className="absolute top-[-200px] right-[-380px] transform -translate-x-1/2 z-10"
-      />
-      <Image
-        src="/images/special01/assets/tree1.png"
-        alt="Tree Top"
-        width={400}
-        height={400}
-        className="absolute bottom-[-220px] left-0 transform -translate-x-1/2 z-20 pointer-events-none rotate-180"
-      />
-      <Image
-        src="/images/special01/assets/tree1.png"
-        alt="Tree Top"
-        width={400}
-        height={400}
-        className="absolute bottom-[-220px] right-[-380px] transform -translate-x-1/2 z-20 pointer-events-none rotate-180"
-      />
-      </div>
+<div className="fixed inset-0 pointer-events-none z-10 hidden md:block overflow-hidden">
+  {/* Ornaments */}
+  <div className="hidden md:block">
+    <Image
+      src="/images/special01/assets/tree1.png"
+      alt="Tree"
+      width={400}
+      height={400}
+      className="absolute top-[-200px] left-0 -translate-x-1/2 z-10"
+    />
+    <Image
+      src="/images/special01/assets/tree1.png"
+      alt="Tree Top"
+      width={400}
+      height={400}
+      className="absolute top-[-200px] right-[-380px] -translate-x-1/2 z-10"
+    />
+    <Image
+      src="/images/special01/assets/tree1.png"
+      alt="Tree Bottom"
+      width={400}
+      height={400}
+      className="absolute bottom-[-220px] left-0 -translate-x-1/2 z-20 rotate-180"
+    />
+    <Image
+      src="/images/special01/assets/tree1.png"
+      alt="Tree Bottom"
+      width={400}
+      height={400}
+      className="absolute bottom-[-220px] right-[-380px] -translate-x-1/2 z-20 rotate-180"
+    />
+  </div>
+</div>
 
     
     
@@ -116,7 +118,7 @@ export default function Page() {
     </AnimatePresence>
 
     {open && (
-      <>
+      <div className="overflow-y-auto">
         <Opening isOpen={open} />
         <Gallery />
         <Woman />
@@ -127,7 +129,7 @@ export default function Page() {
         <Terimakasih />
         <Gift />
         <Wishes />
-      </>
+      </div>
     )}
     </div>
   );

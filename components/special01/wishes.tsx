@@ -134,7 +134,7 @@ export default function Gift() {
               name="nama"
               placeholder="Nama"
               required
-              className="w-80 bg-invitation text-white py-1 pl-2 rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-invitation focus:border-transparent"
+              className="w-80 bg-invitation text-white py-2 pl-2 rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-invitation focus:border-transparent"
 
             />
             </motion.div>
@@ -158,31 +158,15 @@ export default function Gift() {
               viewport={{ once: true }}
             >
             <p className="text-invitation text-xs mb-2">Konfirmasi Kehadiran</p>
-            <div className="w-80 flex justify-between text-white">
-              <button
-                onClick={() => setAttendance("hadir")}
-                className={`w-36 p-1 text-xs rounded-md transition
-                  ${
-                    attendance === "hadir"
-                      ? "bg-invitation/80 scale-110"
-                      : "bg-invitation border border-invitation "
-                  }`}
-              >
-                Hadir
-              </button>
-
-              <button
-                onClick={() => setAttendance("tidak")}
-                className={`w-36 p-1 text-xs rounded-md transition
-                  ${
-                    attendance === "tidak"
-                      ? "bg-invitation/80 scale-110"
-                      : "bg-invitation border border-invitation"
-                  }`}
-              >
-                Tidak
-              </button>
-            </div>
+            <select
+              value={attendance ?? ""}
+              onChange={(e) => setAttendance(e.target.value as "hadir" | "tidak")}
+              className="w-80 p-2 rounded-md bg-invitation text-white text-xs focus:outline-none focus:ring-2 focus:ring-invitation focus:border-transparent resize-none"
+            >
+              <option value="">Pilih Kehadiran</option>
+              <option value="hadir">Hadir</option>
+              <option value="tidak">Tidak</option>
+            </select>
             
             </motion.div>
 
@@ -192,7 +176,7 @@ export default function Gift() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-            <p className={plusJakartaSans.className + " text-xs text-white w-80 mt-3 py-1 font-bold bg-invitation rounded-full"}  >
+            <p className={plusJakartaSans.className + " text-xs text-white w-80 mt-3 py-2 font-bold bg-invitation rounded-md"}  >
               Kirim
             </p>
             </motion.div>

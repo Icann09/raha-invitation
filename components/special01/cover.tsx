@@ -12,7 +12,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
   const params = useSearchParams();
   const guest = params.get("to")?.replace(/\+/g, " ");
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
+    <section  className="max-h-[100dvh] bg-neutral-200 flex items-center justify-center">
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}

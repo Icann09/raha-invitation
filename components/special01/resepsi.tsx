@@ -95,7 +95,7 @@ export default function Woman() {
                   Jl. Gatot Subroto No. 25, Jakarta Selatan
                 </p>
               </div>
-              <p className={"bg-white rounded-full mx-auto text-invitation text-xs font-bold w-max px-4"}>
+              <p className={"bg-white rounded-full mx-auto text-invitation text-xs font-bold w-max px-4 py-1"}>
                 <a 
                   href={resepsiMap}
                   target="_blank"

@@ -155,7 +155,7 @@ const [time, setTime] = useState({
               <p className="text-white font-bold text-xs">Detik</p>
             </div>
           </div>
-          <p className={sourceCodePro.className + " text-white text-xs mt-4 rounded-full bg-colorName py-1 px-2 font-bold pointer-events-auto"}>
+          <p className={sourceCodePro.className + " text-white text-xs mt-4 rounded-full bg-invitation py-2 px-2 font-bold pointer-events-auto"}>
             <a
               href={link}
               target="_blank"
