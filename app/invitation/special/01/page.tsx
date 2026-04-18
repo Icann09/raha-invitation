@@ -1,16 +1,16 @@
 "use client"
 
-import AkadNikah from "@/components/invitations/akadNikah";
-import Cover from "@/components/invitations/cover";
-import Date from "@/components/invitations/date";
-import Gallery from "@/components/invitations/gallery";
-import Gift from "@/components/invitations/gift";
-import Man from "@/components/invitations/man";
-import Opening from "@/components/invitations/opening";
-import Resepsi from "@/components/invitations/resepsi";
-import Terimakasih from "@/components/invitations/terimakasih";
-import Wishes from "@/components/invitations/wishes";
-import Woman from "@/components/invitations/woman";
+import AkadNikah from "@/components/special01/akadNikah";
+import Cover from "@/components/special01/cover";
+import Date from "@/components/special01/date";
+import Gallery from "@/components/special01/gallery";
+import Gift from "@/components/special01/gift";
+import Man from "@/components/special01/man";
+import Opening from "@/components/special01/opening";
+import Resepsi from "@/components/special01/resepsi";
+import Terimakasih from "@/components/special01/terimakasih";
+import Wishes from "@/components/special01/wishes";
+import Woman from "@/components/special01/woman";
 import Image from "next/image";
 import { useState } from "react";
 import { Suspense } from "react";
