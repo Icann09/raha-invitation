@@ -74,28 +74,28 @@ export default function Page() {
       {/* Ornaments */}
       <div className="hidden md:block">
       <Image
-        src="/ornaments/tree1.png"
+        src="/images/special01/assets/tree1.png"
         alt="Tree"
         width={400}
         height={400}
         className="absolute top-[-200px] left-0 transform -translate-x-1/2 z-10 "
       />
       <Image
-        src="/ornaments/tree1.png"
+        src="/images/special01/assets/tree1.png"
         alt="Tree Top"
         width={400}
         height={400}
         className="absolute top-[-200px] right-[-380px] transform -translate-x-1/2 z-10"
       />
       <Image
-        src="/ornaments/tree1.png"
+        src="/images/special01/assets/tree1.png"
         alt="Tree Top"
         width={400}
         height={400}
         className="absolute bottom-[-220px] left-0 transform -translate-x-1/2 z-20 pointer-events-none rotate-180"
       />
       <Image
-        src="/ornaments/tree1.png"
+        src="/images/special01/assets/tree1.png"
         alt="Tree Top"
         width={400}
         height={400}
