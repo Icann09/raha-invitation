@@ -60,7 +60,7 @@ export default function Page() {
   const handleClick = () => setIsOpen(true);
 
   return (
-    <div className="w-full flex flex-col max-h-screen overflow-y-auto">
+    <div className="w-full flex flex-col max-h-[100dvh] overflow-y-auto">
 
       {/* Backgrounds */}
       <Image

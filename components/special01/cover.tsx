@@ -26,7 +26,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
 
       
       {/* Mobile Frame */}
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+      <div className="relative w-full max-w-md h-[100dvh] overflow-hidden shadow-2xl bg-white">
         
         {/* Background Image */}
         <Image
