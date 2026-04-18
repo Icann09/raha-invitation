@@ -15,7 +15,7 @@ export default function Gift() {
       
         {/* Backgrounds */}
         <Image
-          src="/photos/cover.png"
+          src="/images/special01/cover.png"
           alt="Background"
           fill
           className="object-cover z-0"
@@ -29,14 +29,14 @@ export default function Gift() {
 
         {/* Trees */}
         <Image
-          src="/ornaments/tree2.png"
+          src="/images/special01/assets/tree2.png"
           alt="Tree 1"
           width={400}
           height={400}
           className="absolute top-2/3 left-[-270px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45"
         />
         <Image
-          src="/ornaments/flower.png"
+          src="/images/special01/assets/flower.png"
           alt="flower"
           width={60}
           height={60}
@@ -44,7 +44,7 @@ export default function Gift() {
         />
 
         <Image
-          src="/ornaments/tree2.png"
+          src="/images/special01/assets/tree2.png"
           alt="Tree 2"
           width={350}
           height={350}
@@ -52,14 +52,14 @@ export default function Gift() {
         />
 
         <Image
-          src="/ornaments/tree2.png"
+          src="/images/special01/assets/tree2.png"
           alt="Tree 1"
           width={250}
           height={250}
           className="absolute bottom-14 right-[10px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-90deg]"
         />
         <Image
-          src="/ornaments/flower.png"
+          src="/images/special01/assets/flower.png"
           alt="flower"
           width={80}
           height={80}
