@@ -34,14 +34,14 @@ export default function Woman() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-270px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45"
+          className="absolute top-1/2 left-[-270px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45"
         />
         <Image
           src="/ornaments/tree2.png"
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-0 right-[-20px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-40deg]"
+          className="absolute top-0 right-[-20px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-40deg]"
         />
           <Image
           src="/ornaments/tree2.png"
@@ -52,7 +52,7 @@ export default function Woman() {
         />
 
         {/* Content */}
-        <div className="relative flex flex-col items-center justify-center text-center mt-14 z-20">
+        <div className="relative flex flex-col items-center justify-center text-center mt-14 z-40">
 
           <motion.div
             variants={fadeVariants.up}
@@ -60,10 +60,10 @@ export default function Woman() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <p className={plusJakartaSans.className + " font-bold text-[10px] text-invitation pt-4 "}  >
+          <p className={plusJakartaSans.className + " font-bold text-[10px] text-invitation pt-4 z-40"}  >
             Assalamu'alaikum warahmatullahi wabarakatuh
           </p>
-          <p className={plusJakartaSans.className + " text-[10px] text-colorName pt-4 max-w-[320]"}  >
+          <p className={plusJakartaSans.className + " text-[10px] text-colorName pt-4 max-w-[320] z-40"}  >
             Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-
             pasangan. Ya Allah, perkenankanlah kami merangkaikan kasih sayang
             yang Kau ciptakan dalam ikatan pernikahan suci
@@ -120,7 +120,7 @@ export default function Woman() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-5xl text-colorName font-[Breathing2] leading-tight mt-20">
+          <h1 className="text-4xl text-colorName font-[Breathing2] leading-tight mt-20">
             Alisyah
           </h1>
           <div className="py-4">

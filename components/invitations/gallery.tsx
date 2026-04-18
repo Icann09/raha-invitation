@@ -3,12 +3,16 @@ import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { motion } from "framer-motion";
 import { fadeVariants } from "@/lib/motion";
+import { useState } from "react";
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
+const images = ["gallery1", "gallery2", "gallery3", "gallery4"];
 
 
 export default function Gallery() {
+
+  const [selectedImage, setSelectedImage] = useState(images[0]);
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
       <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
@@ -47,7 +51,7 @@ export default function Gallery() {
         
 
         {/* Content */}
-        <div className="relative pt-14 text-center flex flex-col items-center justify-center">
+        <div className="relative pt-14 text-center flex flex-col items-center justify-center z-20">
           <motion.div
             variants={fadeVariants.up}
             initial="hidden"
@@ -56,7 +60,7 @@ export default function Gallery() {
           >
             <div className="relative w-[320px] h-96">
               <Image
-                src="/photos/cover.png"
+                src={`/photos/${selectedImage}.png`}
                 alt="Gallery Top Ornament"
                 fill
                 className="object-cover rounded-4xl shadow-md"
@@ -79,30 +83,37 @@ export default function Gallery() {
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
+                onClick={() => setSelectedImage(images[0])}
               />
             </div>
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/photos/gallery1.png"
+                src="/photos/gallery2.png"
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
+                onClick={() => setSelectedImage(images[1])}
+
               />
             </div>
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/photos/gallery1.png"
+                src="/photos/gallery3.png"
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
+                onClick={() => setSelectedImage(images[2])}
+
               />
             </div>
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/photos/gallery1.png"
+                src="/photos/gallery4.png"
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
+                onClick={() => setSelectedImage(images[3])}
+
               />
             </div>
           </div>

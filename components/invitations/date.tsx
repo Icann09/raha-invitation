@@ -126,7 +126,7 @@ const [time, setTime] = useState({
         />
 
         {/* Content */}
-        <div className="w-full flex flex-col items-center justify-center text-center absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">  
+        <div className="w-full flex flex-col items-center justify-center text-center absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none">  
         <motion.div
           variants={fadeVariants.up}
           initial="hidden"

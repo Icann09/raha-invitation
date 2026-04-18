@@ -72,7 +72,7 @@ export default function Woman() {
 
         {/* Content */}
       
-        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center z-10 mb-30">
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center z-40 mb-30">
         <motion.div
           variants={fadeVariants.down}
           initial="hidden"

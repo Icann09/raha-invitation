@@ -4,10 +4,12 @@ import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { motion } from "framer-motion";
 import { fadeVariants } from "@/lib/motion";
+import { useState } from "react";
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "500" });
 const plusJakartaSans1 = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
+
 
 
 
@@ -44,6 +46,9 @@ const wishes: Wish[] = [
 ];
 
 export default function Gift() {
+  
+  const [attendance, setAttendance] = useState("");
+
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
       <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
@@ -101,7 +106,7 @@ export default function Gift() {
         />
 
         {/* Content */}
-        <div className="relative h-screen flex flex-col items-center justify-center text-center mb-30 z-30 ">
+        <div className="relative h-screen flex flex-col items-center justify-center text-center mb-30 z-40 ">
           
           <motion.div
             variants={fadeVariants.up}
@@ -153,15 +158,30 @@ export default function Gift() {
               viewport={{ once: true }}
             >
             <p className="text-invitation text-xs mb-2">Konfirmasi Kehadiran</p>
-            <div className="w-80 flex justify-between">
-              <p className="bg-invitation w-36 text-white p-1 text-xs rounded-md">
-                {/* <Check className="inline-block mr-3" /> */}
+            <div className="w-80 flex justify-between text-white">
+              <button
+                onClick={() => setAttendance("hadir")}
+                className={`w-36 p-1 text-xs rounded-md transition
+                  ${
+                    attendance === "hadir"
+                      ? "bg-invitation/80 scale-110"
+                      : "bg-invitation border border-invitation "
+                  }`}
+              >
                 Hadir
-              </p>
-              <p className="bg-invitation w-36 text-white p-1 text-xs rounded-md">
-                {/* <X className="inline-block mr-3" /> */}
+              </button>
+
+              <button
+                onClick={() => setAttendance("tidak")}
+                className={`w-36 p-1 text-xs rounded-md transition
+                  ${
+                    attendance === "tidak"
+                      ? "bg-invitation/80 scale-110"
+                      : "bg-invitation border border-invitation"
+                  }`}
+              >
                 Tidak
-              </p>
+              </button>
             </div>
             
             </motion.div>

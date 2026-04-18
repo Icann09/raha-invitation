@@ -40,7 +40,7 @@ export default function Gift() {
           alt="flower"
           width={60}
           height={60}
-          className="absolute top-2/3 left-0 transform translate-x-1/2 z-40 pointer-events-none rotate-[45deg]"
+          className="absolute top-2/3 left-[-40px] transform translate-x-1/2 z-40 pointer-events-none rotate-[45deg]"
         />
 
         <Image
@@ -67,7 +67,7 @@ export default function Gift() {
         />
 
         {/* Content */}
-        <div className="relative h-screen flex flex-col items-center justify-center text-center mb-30 z-30 ">
+        <div className="relative h-screen flex flex-col items-center justify-center text-center mb-30 z-40 ">
           <motion.div
             variants={fadeVariants.up}
             initial="hidden"

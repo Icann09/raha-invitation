@@ -21,21 +21,21 @@ export default function Woman() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-270px] transform -translate-y-1/2 z-40 pointer-events-none rotate-45"
+          className="absolute top-1/2 left-[-270px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45"
         />
         <Image
           src="/ornaments/tree2.png"
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-0 right-[-20px] transform translate-x-1/2 z-40 pointer-events-none rotate-[-40deg]"
+          className="absolute top-0 right-[-20px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-40deg]"
         />
           <Image
           src="/ornaments/tree2.png"
           alt="Tree 1"
           width={250}
           height={250}
-          className="absolute bottom-14 right-[10px] transform translate-x-1/2 z-40 pointer-events-none rotate-[-90deg]"
+          className="absolute bottom-14 right-[10px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-90deg]"
         />
 
         {/* Castle */}
@@ -58,7 +58,7 @@ export default function Woman() {
         
 
         {/* Content */}
-        <div className="">
+        <div className="z-40">
           <motion.div
             variants={fadeVariants.up}
             initial="hidden"

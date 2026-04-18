@@ -17,17 +17,17 @@ export default function Woman() {
       <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
       
         {/* Backgrounds */}
-        <Image
-          src="/backgrounds/bg-1.png"
-          alt="Background"
-          fill
-          className="object-cover z-0"
-          priority
-        />
-
-        {/* Overlay */}
-        <div className="absolute w-full h-screen bg-gradient-to-t from-white to-white/90 bottom-0 z-10 pointer-events-none" />
-
+              <Image
+                src="/backgrounds/bg-1.png"
+                alt="Background"
+                fill
+                className="object-cover z-0"
+                priority
+              />
+      
+              {/* Overlay */}
+              <div className="absolute w-full h-screen bg-gradient-to-t from-white to-white/50 bottom-0 z-10 pointer-events-none" />
+      
         {/* Trees */}
         <Image
           src="/ornaments/tree2.png"
@@ -73,7 +73,7 @@ export default function Woman() {
         
 
         {/* Content */}
-        <div className="relative flex flex-col items-center justify-center text-center mt-14 z-30">
+        <div className="relative flex flex-col items-center justify-center text-center mt-14 z-40">
           <div>
             <motion.div
               variants={fadeVariants.up}
@@ -123,7 +123,7 @@ export default function Woman() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-5xl text-colorName font-[Breathing2] leading-tight mt-20">
+          <h1 className="text-4xl text-colorName font-[Breathing2] leading-tight mt-20">
             Dillo
           </h1>
           <div className="py-4">

@@ -43,7 +43,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
           alt="Ornament"
           width={60}
           height={60}
-          className="absolute top-40 left-0 animate-fly-across mix-blend-multiply z-20 pointer-events-none"
+          className="absolute top-20 left-0 animate-fly-across mix-blend-multiply z-20 pointer-events-none"
         />
 
         {/* Top Trees */}
