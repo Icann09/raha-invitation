@@ -51,7 +51,7 @@ export default function Woman() {
         />
 
         {/* Castle */}
-        <div className="w-[500px] h-[40vh] absolute bottom-[-60px] left-20  z-20 pointer-events-none">
+        <div className="w-[500px] h-[40vh] absolute bottom-[-60px] left-20  z-10 pointer-events-none">
           <Image
             src="/images/special01/assets/castle.png"
             alt="Castle Ornament"
@@ -59,7 +59,7 @@ export default function Woman() {
             className="object-cover "
           />
         </div>
-        <div className="w-[500px] h-[40vh] absolute bottom-[-120px] left-[-220px]  z-20 pointer-events-none">
+        <div className="w-[500px] h-[40vh] absolute bottom-[-120px] left-[-220px]  z-10 pointer-events-none">
           <Image
             src="/images/special01/assets/castle.png"
             alt="Castle Ornament"
@@ -70,7 +70,7 @@ export default function Woman() {
         
 
         {/* Content */}
-        <div className="">
+        <div className="z-20">
         <motion.div
           variants={fadeVariants.down}
           initial="hidden"
