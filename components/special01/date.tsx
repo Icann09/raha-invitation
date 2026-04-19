@@ -66,7 +66,7 @@ const [time, setTime] = useState({
         
         {/* Backgrounds */}
         <Image
-          src="/images/special01/background.png"
+          src="/images/special01/background.webp"
           alt="Background"
           fill
           className="object-cover"
@@ -75,14 +75,14 @@ const [time, setTime] = useState({
 
         {/* Top Tress */}
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={200}
           height={200}
           className="absolute top-[-100px] left-0 transform -translate-x-1/2 mix-blend-multiply z-10 pointer-events-none animate-swinging"
         />
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={200}
           height={200}
@@ -90,14 +90,14 @@ const [time, setTime] = useState({
         />
         {/* Bottom Trees */}
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={200}
           height={200}
           className="absolute bottom-[-100px] left-0 transform -translate-x-1/2 z-20 pointer-events-none rotate-180"
         />
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={200}
           height={200}
@@ -106,14 +106,14 @@ const [time, setTime] = useState({
 
         {/* Tree 2 */}
         <Image
-          src="/images/special01/assets/trees-left.png"
+          src="/images/special01/assets/trees-left.webp"
           alt="Trees"
           width={230}
           height={300}
           className="absolute bottom-0 left-0 z-20 pointer-events-none"
         />
         <Image
-          src="/images/special01/assets/trees-right.png"
+          src="/images/special01/assets/trees-right.webp"
           alt="Trees"
           width={230}
           height={300}
@@ -122,7 +122,7 @@ const [time, setTime] = useState({
 
         {/* Castle */}
         <Image
-          src="/images/special01/assets/castle-crop.png"
+          src="/images/special01/assets/castle-crop.webp"
           alt="Castle"
           width={600}
           height={500}

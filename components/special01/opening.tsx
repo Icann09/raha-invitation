@@ -16,7 +16,7 @@ export default function Opening() {
         
         {/* Backgrounds */}
         <Image
-          src="/images/special01/background.png"
+          src="/images/special01/background.webp"
           alt="Background"
           fill
           className="object-cover"
@@ -25,14 +25,14 @@ export default function Opening() {
 
         {/* Top Tress */}
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={250}
           height={250}
           className="absolute top-[-130px] left-0 transform -translate-x-1/2 mix-blend-multiply z-10 pointer-events-none animate-swinging"
         />
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={250}
           height={250}
@@ -41,14 +41,14 @@ export default function Opening() {
         {/* Bottom */}
         {/* Tree 1 */}
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={250}
           height={250}
           className="absolute bottom-[-420px] left-[15px] transform -translate-x-1/2 z-20 pointer-events-none rotate-180 animate-swinging"
         />
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={250}
           height={250}
@@ -56,14 +56,14 @@ export default function Opening() {
         />
         {/* Tree 2 */}
         <Image
-          src="/images/special01/assets/trees-left.png"
+          src="/images/special01/assets/trees-left.webp"
           alt="Trees"
           width={230}
           height={300}
           className="absolute bottom-0 left-0 z-20 pointer-events-none animate-fade-right"
         />
         <Image
-          src="/images/special01/assets/trees-right.png"
+          src="/images/special01/assets/trees-right.webp"
           alt="Trees"
           width={230}
           height={300}
@@ -72,7 +72,7 @@ export default function Opening() {
 
         {/* Moon */}
         <Image
-          src="/images/special01/assets/moon.png"
+          src="/images/special01/assets/moon.webp"
           alt="Moon"
           width={200}
           height={200}
@@ -81,7 +81,7 @@ export default function Opening() {
 
         {/* Castle */}
         <Image
-          src="/images/special01/assets/castle-crop.png"
+          src="/images/special01/assets/castle-crop.webp"
           alt="Castle"
           width={600}
           height={500}
@@ -102,7 +102,7 @@ export default function Opening() {
           </p>
           <div className="">
             <Image
-              src="/icons/arrow-down.png"
+              src="/icons/arrow-down.webp"
               alt="Arrow Down"
               width={30}
               height={30}

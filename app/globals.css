@@ -212,10 +212,12 @@ body {
   transform-origin: top center; 
 }
 
+
 .animate-swingingtree2 { 
 animation: swingingtree2 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   transform-origin: bottom center; 
 }
+
 
 @keyframes sway {
   0% {

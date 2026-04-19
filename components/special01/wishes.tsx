@@ -63,7 +63,7 @@ export default function Gift() {
       
         {/* Backgrounds */}
         <Image
-          src="/images/special01/cover.png"
+          src="/images/special01/cover.webp"
           alt="Background"
           fill
           className="object-cover z-0"
@@ -77,13 +77,13 @@ export default function Gift() {
         {/* Trees */}
         <div className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]">
           <Image
-            src="/images/special01/assets/tree2.png"
+            src="/images/special01/assets/tree2.webp"
             alt="Tree 1"
             width={400}
             height={400}
           />
           <Image
-            src="/images/special01/assets/flower.png"
+            src="/images/special01/assets/flower.webp"
             alt="flower"
             width={60}
             height={60}
@@ -91,7 +91,7 @@ export default function Gift() {
           />
         </div>
         <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 2"
           width={350}
           height={350}
@@ -99,13 +99,13 @@ export default function Gift() {
         />
         <div className="absolute bottom-[135px] right-[0px] transform translate-x-1/2 z-30  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]">
           <Image
-            src="/images/special01/assets/tree2.png"
+            src="/images/special01/assets/tree2.webp"
             alt="Tree 1"
             width={250}
             height={250}
           />
           <Image
-            src="/images/special01/assets/flower.png"
+            src="/images/special01/assets/flower.webp"
             alt="flower"
             width={80}
             height={80}
@@ -216,7 +216,7 @@ export default function Gift() {
           <div className="">
             <p className={plusJakartaSans.className + "text-invitation flex items-center gap-1"}>
               <Image 
-               src="/images/logo.png"
+               src="/images/logo.webp"
                alt="Logo"
                width={150}
                height={150}

@@ -21,7 +21,7 @@ export default function Gallery() {
         
         {/* Backgrounds */}
         <Image
-          src="/images/special01/background.png"
+          src="/images/special01/background.webp"
           alt="Background"
           fill
           className="object-cover"
@@ -30,21 +30,21 @@ export default function Gallery() {
 
         {/* Trees */}
         <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 1"
           width={400}
           height={400}
           className="absolute top-1/2 left-[-280px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
         />
         <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 2"
           width={350}
           height={350}
           className="absolute top-1 right-[-100px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg] animate-swingingtree2"
         />
           <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 1"
           width={350}
           height={350}
@@ -64,7 +64,7 @@ export default function Gallery() {
               className="relative w-[300px] sm:w-[320px]  h-[360px] sm:h-96"
             >
               <Image
-                src={`/images/special01/${selectedImage}.png`}
+                src={`/images/special01/${selectedImage}.webp`}
                 alt="Gallery"
                 fill
                 className="object-cover rounded-4xl shadow-md"
@@ -83,7 +83,7 @@ export default function Gallery() {
           <div className="w-[300px] sm:w-[320px] flex flex-wrap  justify-between mt-6">
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/images/special01/gallery1.png"
+                src="/images/special01/gallery1.webp"
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
@@ -92,7 +92,7 @@ export default function Gallery() {
             </div>
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/images/special01/gallery2.png"
+                src="/images/special01/gallery2.webp"
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
@@ -102,7 +102,7 @@ export default function Gallery() {
             </div>
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/images/special01/gallery3.png"
+                src="/images/special01/gallery3.webp"
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
@@ -112,7 +112,7 @@ export default function Gallery() {
             </div>
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/images/special01/gallery4.png"
+                src="/images/special01/gallery4.webp"
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"

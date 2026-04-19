@@ -28,7 +28,7 @@ export default function Woman() {
       
         {/* Backgrounds */}
         <Image
-          src="/images/special01/background.png"
+          src="/images/special01/background.webp"
           alt="Background"
           fill
           className="object-cover z-0"
@@ -40,21 +40,21 @@ export default function Woman() {
 
             {/* Trees */}
         <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 1"
           width={400}
           height={400}
           className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
         />
         <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 2"
           width={350}
           height={350}
           className="absolute top-1 right-[-100px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg] animate-swingingtree2"
         />
           <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 1"
           width={350}
           height={350}
@@ -64,7 +64,7 @@ export default function Woman() {
         {/* Castle */}
         <div className="w-[500px] h-[40vh] absolute bottom-[-80px] left-20  z-20 pointer-events-none">
           <Image
-            src="/images/special01/assets/castle.png"
+            src="/images/special01/assets/castle.webp"
             alt="Castle Ornament"
             fill
             className="object-cover "
@@ -72,7 +72,7 @@ export default function Woman() {
         </div>
         <div className="w-[500px] h-[40vh] absolute bottom-[-140px] left-[-220px]  z-20 pointer-events-none">
           <Image
-            src="/images/special01/assets/castle.png"
+            src="/images/special01/assets/castle.webp"
             alt="Castle Ornament"
             fill
             className="object-cover "
@@ -93,7 +93,7 @@ export default function Woman() {
             >
             <div className="w-60 h-72 relative mt-20">
               <Image
-                src="/images/special01/gallery1.png"
+                src="/images/special01/gallery1.webp"
                 alt="Gallery Top Ornament"
                 fill
                 className="object-cover shadow-md rounded-t-full "
@@ -102,7 +102,7 @@ export default function Woman() {
               {/* ornaments */}
               {/* flowers */}
               <Image
-                src="/images/special01/assets/flowers.png"
+                src="/images/special01/assets/flowers.webp"
                 alt="Flowers Ornament"
                 width={240}
                 height={50}
@@ -110,14 +110,14 @@ export default function Woman() {
               />
               {/* flower */}
               <Image
-                src="/images/special01/assets/flower.png"
+                src="/images/special01/assets/flower.webp"
                 alt="Flower Ornament"
                 width={60}
                 height={60}
                 className="absolute right-[-30px] bottom-[-30px] z-20 rotate-90"
               />
               <Image
-                src="/images/special01/assets/flower.png"
+                src="/images/special01/assets/flower.webp"
                 alt="Flower Ornament"
                 width={60}
                 height={60}

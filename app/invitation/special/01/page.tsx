@@ -120,7 +120,7 @@ export default function Page() {
 
       {/* Backgrounds */}
       <Image
-        src="/images/special01/background.png"
+        src="/images/special01/background.webp"
         alt="Background"
         fill
         className="object-cover fixed top-0 left-0 w-full h-screen z-0 pointer-events-none"
@@ -131,28 +131,28 @@ export default function Page() {
         {/* Ornaments */}
         <div className="hidden md:block">
           <Image
-            src="/images/special01/assets/tree1.png"
+            src="/images/special01/assets/tree1.webp"
             alt="Tree"
             width={400}
             height={400}
             className="absolute top-[-200px] left-0 -translate-x-1/2 z-10"
           />
           <Image
-            src="/images/special01/assets/tree1.png"
+            src="/images/special01/assets/tree1.webp"
             alt="Tree Top"
             width={400}
             height={400}
             className="absolute top-[-200px] right-[-380px] -translate-x-1/2 z-10"
           />
           <Image
-            src="/images/special01/assets/tree1.png"
+            src="/images/special01/assets/tree1.webp"
             alt="Tree Bottom"
             width={400}
             height={400}
             className="absolute bottom-[-220px] left-0 -translate-x-1/2 z-20 rotate-180"
           />
           <Image
-            src="/images/special01/assets/tree1.png"
+            src="/images/special01/assets/tree1.webp"
             alt="Tree Bottom"
             width={400}
             height={400}

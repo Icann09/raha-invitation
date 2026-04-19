@@ -32,7 +32,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
         
         {/* Background Image */}
         <Image
-          src="/images/special01/cover.png"
+          src="/images/special01/cover.webp"
           alt="Wedding Cover"
           fill
           className="object-cover animate-slow-zoom"
@@ -50,14 +50,14 @@ export default function Cover({onClick} : {onClick: () => void }) {
 
         {/* Top Trees */}
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={200}
           height={200}
           className="absolute top-[-100px] left-0 transform -translate-x-1/2 z-10 animate-swinging"
         />
         <Image
-          src="/images/special01/assets/tree1.png"
+          src="/images/special01/assets/tree1.webp"
           alt="Tree Top"
           width={200}
           height={200}
@@ -66,7 +66,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
 
         {/* Top Center */}
         <Image
-          src="/images/special01/assets/cover-top-center.png"
+          src="/images/special01/assets/cover-top-center.webp"
           alt="Top Center Ornament"
           width={400}
           height={200}
@@ -79,7 +79,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
           {/* Logo */}
           <div>
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="Raha Invitation Logo"
               width={200}
 
@@ -110,7 +110,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
                 *Mohon maaf jika ada kesalahan dalam penulisan nama dan gelar
                 {/* flower */}
                 <Image
-                  src="/images/special01/assets/flower.png"
+                  src="/images/special01/assets/flower.webp"
                   alt="Flower Ornament"
                   width={60}
                   height={60}
@@ -123,7 +123,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
 
             {/* Bottom Trees */}
               <Image
-                src="/images/special01/assets/jungle.png"
+                src="/images/special01/assets/jungle.webp"
                 alt="Tree Bottom"
                 width={500}
                 height={400}

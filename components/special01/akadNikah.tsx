@@ -26,21 +26,21 @@ export default function Woman() {
       
         {/* Trees */}
         <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 1"
           width={400}
           height={400}
           className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
         />
         <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 2"
           width={350}
           height={350}
           className="absolute top-1 right-[-100px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-45deg] animate-swingingtree2"
         />
           <Image
-          src="/images/special01/assets/tree2.png"
+          src="/images/special01/assets/tree2.webp"
           alt="Tree 1"
           width={350}
           height={350}
@@ -50,7 +50,7 @@ export default function Woman() {
         {/* Castle */}
         <div className="w-[500px] h-[40vh] absolute bottom-[-60px] left-20  z-10 pointer-events-none">
           <Image
-            src="/images/special01/assets/castle.png"
+            src="/images/special01/assets/castle.webp"
             alt="Castle Ornament"
             fill
             className="object-cover "
@@ -58,7 +58,7 @@ export default function Woman() {
         </div>
         <div className="w-[500px] h-[40vh] absolute bottom-[-120px] left-[-220px]  z-10 pointer-events-none">
           <Image
-            src="/images/special01/assets/castle.png"
+            src="/images/special01/assets/castle.webp"
             alt="Castle Ornament"
             fill
             className="object-cover "
@@ -77,7 +77,7 @@ export default function Woman() {
           <div className="w-72 h-[500px] mx-auto relative flex flex-col items-center justify-center text-center mt-20 z-10">
           
             <Image
-              src="/images/special01/cover.png"
+              src="/images/special01/cover.webp"
               alt="Gallery Top Ornament"
               fill
               className="object-cover rounded-tr-[60px] shadow-md"
@@ -127,7 +127,7 @@ export default function Woman() {
 
             {/* Flower */}
             <Image
-              src="/images/special01/assets/flower.png"
+              src="/images/special01/assets/flower.webp"
               alt="Flower Ornament"
               width={90}
               height={90}
@@ -136,21 +136,21 @@ export default function Woman() {
 
             {/* flowers */}
             <Image
-              src="/images/special01/assets/flowers.png"
+              src="/images/special01/assets/flowers.webp"
               alt="Flowers Ornament"
               width={200}
               height={50}
               className="absolute top-[-40px] left-[45px] z-10 pointer-events-none"
             />
             <Image
-              src="/images/special01/assets/flower.png"
+              src="/images/special01/assets/flower.webp"
               alt="Flower Ornament"
               width={70}
               height={70}
               className="absolute right-[15px] top-[-30px] z-20 rotate-90"
             />
             <Image
-              src="/images/special01/assets/flower.png"
+              src="/images/special01/assets/flower.webp"
               alt="Flower Ornament"
               width={70}
               height={70}
