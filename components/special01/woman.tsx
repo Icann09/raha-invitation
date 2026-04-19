@@ -13,6 +13,14 @@ const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" })
 const womanIG =  "https://www.instagram.com/ika.smandaracup?igsh=MTNuN2oyYXM3NWQ4Nw==";
 
 
+// foto
+// nama
+// nama lengkap 
+// nama ayah dan ibu 
+// nama IG 
+
+
+
 export default function Woman() {
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
@@ -35,6 +43,7 @@ export default function Woman() {
           src="/images/special01/assets/tree2.png"
           alt="Tree 1"
           width={400}
+
           height={400}
           className="absolute top-1/2 left-[-270px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45"
         />

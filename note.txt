@@ -1,0 +1,57 @@
+
+cover:
+// tamu undangan
+
+opening: 
+// pilihan musik 
+
+gallery: 
+// foto/album galery pengantin 4 
+
+woman: 
+// foto
+// nama
+// nama lengkap 
+// nama ayah dan ibu 
+// nama IG 
+
+man: 
+// foto
+// nama
+// nama lengkap 
+// nama ayah dan ibu 
+// nama IG 
+
+date: 
+// tanggal pernikahan dengan format: const weddingDate = new Date('2026-05-10T10:00:00+08:00');
+
+akad nikah 
+// hari, tanggal, waktu dan alamat dengan format berikut: 
+// Sabtu
+// 23 Desember 2023
+// 09.00 WIB - Selesa
+// Grand Ballroom Majesty
+// Jl. Gatot Subroto No. 25, Jakarta Selatan
+// link maps :  https://maps.app.goo.gl/Li11FsmvkLJPg3EQ8?g_st=iw"
+
+resepsi: 
+// hari, tanggal, waktu dan alamat dengan format berikut: 
+// Sabtu
+// 23 Desember 2023
+// 09.00 WIB - Selesa
+// Grand Ballroom Majesty
+// Jl. Gatot Subroto No. 25, Jakarta Selatan
+// link maps :  https://maps.app.goo.gl/Li11FsmvkLJPg3EQ8?g_st=iw"
+
+terimakasih:
+-
+
+gift: 
+// alamat rumah pria dan wanita
+// no. rek pria dan wanita (beserta nama bank)
+
+wishes: 
+// nama/kode undangan pengantin 
+// nama tamu 
+// pesan 
+// konfirmasi kehadiran 

@@ -9,6 +9,8 @@ import { useState } from "react";
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 const images = ["gallery1", "gallery2", "gallery3", "gallery4"];
 
+// foto/album galery
+
 
 export default function Gallery() {
 
@@ -32,26 +34,26 @@ export default function Gallery() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-290px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45"
+          className="absolute top-1/2 left-[-280px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special01/assets/tree2.png"
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-8 right-[10px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg]"
+          className="absolute top-1 right-[-100px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg] animate-swingingtree2"
         />
           <Image
           src="/images/special01/assets/tree2.png"
           alt="Tree 1"
-          width={250}
-          height={250}
-          className="absolute bottom-[135px] right-[10px] transform translate-x-1/2 z-10 rotate-[-90deg]"
+          width={350}
+          height={350}
+          className="absolute bottom-[135px] right-[-25px] transform translate-x-1/2 z-10  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
         />
         
 
         {/* Content */}
-        <div className="relative pt-14 text-center flex flex-col items-center justify-center z-20">
+        <div className="relative pt-14 text-center flex flex-col items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedImage} // 👈 IMPORTANT (triggers re-animation)

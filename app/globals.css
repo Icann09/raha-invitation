@@ -188,16 +188,33 @@ body {
   animation: fly-across 30s linear infinite;
 }
 
-@keyframes swinging {
+@keyframes swinging { 
+  0% { transform: rotate(0deg); } 
+  25% { transform: rotate(8deg); } 
+  50% { transform: rotate(0deg); } 
+  75% { transform: rotate(-8deg); } 
+  100% { transform: rotate(0deg); } 
+} 
+
+@keyframes swingingtree2 {
   0%   { transform: rotate(0deg); }
-  25%  { transform: rotate(8deg); }
-  50%  { transform: rotate(0deg); }
-  75%  { transform: rotate(-8deg); }
+  15%  { transform: rotate(6deg); }
+  30%  { transform: rotate(-4deg); }
+  45%  { transform: rotate(7deg); }
+  60%  { transform: rotate(-3deg); }
+  75%  { transform: rotate(5deg); }
+  90%  { transform: rotate(-2deg); }
   100% { transform: rotate(0deg); }
 }
-.animate-swinging {
-  animation: swinging 8s ease-in-out infinite;
-  transform-origin: top center;
+
+.animate-swinging { 
+  animation: swinging 8s ease-in-out infinite; 
+  transform-origin: top center; 
+}
+
+.animate-swingingtree2 { 
+animation: swingingtree2 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  transform-origin: bottom center; 
 }
 
 @keyframes sway {

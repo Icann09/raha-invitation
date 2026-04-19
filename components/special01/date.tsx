@@ -13,6 +13,10 @@ import { createGoogleCalendarLink } from "@/lib/utils";
 const weddingDate = new Date('2026-05-10T10:00:00+08:00');
 // May 10, 2026, 10:00 AM (local time)
 
+
+// tanggal pernikahan dengan format: const weddingDate = new Date('2026-05-10T10:00:00+08:00');
+
+
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "900" });
 

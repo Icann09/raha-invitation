@@ -7,10 +7,18 @@ import { fadeVariants } from "@/lib/motion";
 import { useState } from "react";
 
 
+
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "500" });
 const plusJakartaSans1 = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 
+<a href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." target="_blank" rel="nofollow">		
+</a>
 
+
+// nama/kode undangan pengantin 
+// nama tamu 
+// pesan 
+// konfirmasi kehadiran 
 
 
 interface Wish {
@@ -50,8 +58,8 @@ export default function Gift() {
   const [attendance, setAttendance] = useState("");
 
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+    <section  className=" bg-neutral-200 flex items-center justify-center h-auto">
+      <div className="relative w-full max-w-md h-auto overflow-hidden shadow-2xl bg-white">
       
         {/* Backgrounds */}
         <Image
@@ -64,7 +72,7 @@ export default function Gift() {
 
         {/* Overlay */}
         <div className="absolute w-full h-[50vh] bg-gradient-to-t from-white  to-transparent bottom-0 z-20 pointer-events-none" />
-        <div className="absolute w-full h-screen bg-[#bccdd2]/80 transparent bottom-0 z-10 pointer-events-none" />
+        <div className="absolute w-full h-full bg-[#bccdd2]/80 transparent bottom-0 z-10 pointer-events-none" />
 
         {/* Trees */}
         <Image
@@ -106,7 +114,7 @@ export default function Gift() {
         />
 
         {/* Content */}
-        <div className="relative h-screen flex flex-col items-center justify-center text-center mb-30 z-40 ">
+<div className="relative min-h-screen flex flex-col items-center justify-start text-center py-20 z-40">
           
           <motion.div
             variants={fadeVariants.up}
@@ -167,7 +175,6 @@ export default function Gift() {
               <option value="hadir">Hadir</option>
               <option value="tidak">Tidak</option>
             </select>
-            
             </motion.div>
 
             <motion.div
@@ -201,17 +208,60 @@ export default function Gift() {
                   </p>
                 </div>
               ))}
-
-        
-
-            
-
             </div>
             </motion.div>
 
-            
-            
           </form>
+
+          {/* contact */}
+          <div className="">
+            <p className={plusJakartaSans.className + "text-invitation flex items-center gap-1"}>
+              <Image 
+               src="/images/logo.png"
+               alt="Logo"
+               width={150}
+               height={150}
+               className=""
+              />
+            </p>
+            <div className="flex gap-3 justify-center bg-invitation/50 p-2 rounded-md mb-3">
+              <a href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." target="_blank" rel="nofollow">		
+                <Image 
+                src="/icons/whatsapp2.svg"
+                alt="WhatsApp"
+                width={30}
+                height={30}
+                className="text-invitation"
+                />
+              </a>
+              <a href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." target="_blank" rel="nofollow">		
+                <Image 
+                  src="/icons/instagram.svg"
+                  alt="Instagram"
+                  width={30}
+                  height={30}
+                  className="text-invitation"
+                  />
+              </a>
+              <a href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." target="_blank" rel="nofollow">		
+                <Image 
+                src="/icons/tik-tok.svg"
+                alt="Tik Tok"
+                width={30}
+                height={30}
+                className="text-invitation"
+                />
+              </a>
+            </div>
+            <a 
+              href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." 
+              target="_blank" 
+              rel="nofollow"
+              className={plusJakartaSans.className + "text-invitation mt-4"}
+            >		
+              CONTACT US
+            </a>
+          </div>
         </div>
     
       </div>

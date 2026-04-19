@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 
+// tamu undangan
+
 export default function Cover({onClick} : {onClick: () => void }) {
   const params = useSearchParams();
   const guest = params.get("to")?.replace(/\+/g, " ");

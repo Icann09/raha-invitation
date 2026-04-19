@@ -8,6 +8,11 @@ import { fadeVariants } from "@/lib/motion";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "600" });
 
+
+
+// alamat rumah pria dan wanita
+// no. rek pria dan wanita (beserta nama bank)
+
 export default function Gift() {
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">

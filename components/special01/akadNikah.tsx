@@ -10,6 +10,15 @@ const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" })
 
 const akadMap = " https://maps.app.goo.gl/Li11FsmvkLJPg3EQ8?g_st=iw";
 
+
+// hari, tanggal, waktu dan alamat dengan format berikut: 
+// Sabtu
+// 23 Desember 2023
+// 09.00 WIB - Selesa
+// Grand Ballroom Majesty
+// Jl. Gatot Subroto No. 25, Jakarta Selatan
+// link maps :  https://maps.app.goo.gl/Li11FsmvkLJPg3EQ8?g_st=iw"
+
 export default function Woman() {
   return (
     <section  className="min-h-screen flex items-center justify-center bg-neutral-200">
@@ -21,14 +30,14 @@ export default function Woman() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-270px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45"
+          className="absolute top-1/2 left-[-270px] transform -translate-y-1/2 z-50 pointer-events-none rotate-45"
         />
         <Image
           src="/images/special01/assets/tree2.png"
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-0 right-[-20px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-40deg]"
+          className="absolute top-0 right-[-20px] transform translate-x-1/2 z-50 pointer-events-none rotate-[-40deg]"
         />
           <Image
           src="/images/special01/assets/tree2.png"
@@ -58,7 +67,7 @@ export default function Woman() {
         
 
         {/* Content */}
-        <div className="z-40">
+        <div className="">
           <motion.div
             variants={fadeVariants.up}
             initial="hidden"

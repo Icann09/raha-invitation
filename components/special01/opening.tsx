@@ -7,11 +7,10 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { fadeVariants } from "@/lib/motion";
 
-
-
-
-
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
+
+
+// pilihan musik 
 
 
 export default function Opening({ isOpen }: { isOpen: boolean }) {

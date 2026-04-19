@@ -13,6 +13,14 @@ const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" })
 const manIG = "https://www.instagram.com/ika.smandaracup?igsh=MTNuN2oyYXM3NWQ4Nw==";
 
 
+// pria
+// foto
+// nama
+// nama lengkap 
+// nama ayah dan ibu 
+// nama IG 
+
+
 export default function Woman() {
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
