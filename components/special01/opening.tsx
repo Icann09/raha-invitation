@@ -1,45 +1,12 @@
-"use client"
+
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { Disc3, Music3 } from "lucide-react";
-import { useEffect, useState } from "react";
-import { useRef } from "react";
-import { motion } from "framer-motion";
-import { fadeVariants } from "@/lib/motion";
+
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 
 
-// pilihan musik 
-
-
-export default function Opening({ isOpen }: { isOpen: boolean }) {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [isSpining, setIsSpinning] = useState(true);
-
-  // Auto play music when invitation is opened
-  useEffect(() => {
-    if (isOpen && audioRef.current) {
-      audioRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
-    }
-  }, [isOpen]);
-
-  const toggleMusic = () => {
-    if (!audioRef.current) return;
-
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
-      setIsSpinning(false); // 🔥 stop spinning
-    } else {
-      audioRef.current.play();
-      setIsPlaying(true);
-      setIsSpinning(true); // 🔥 start spinning
-    }
-  };
-
-
+export default function Opening() {
   return (
     <section  className="min-h-screen flex items-center justify-center bg-neutral-200">
 
@@ -120,21 +87,6 @@ export default function Opening({ isOpen }: { isOpen: boolean }) {
           height={500}
           className="absolute bottom-[-80px] left-1/2 -translate-x-1/2  z-10 animate-fade-left"
         />
-
-        {/* Music */}
-        <div className="absolute bottom-3 left-3 z-30 animate-fade-right">
-          <Disc3 
-            size={50}
-            className={`text-invitation ${
-              isSpining ? "animate-spin" : ""
-            }`}
-
-            onClick={toggleMusic}
-          />
-        </div>
-      
-        {/* Hidden audio element */}
-        <audio ref={audioRef} loop src="/music/music.mp3" />
 
         {/* Content */}
         <div className="w-full flex flex-col items-center justify-center text-center absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none animate-fade-in">

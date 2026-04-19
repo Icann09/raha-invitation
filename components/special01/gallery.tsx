@@ -48,7 +48,7 @@ export default function Gallery() {
           alt="Tree 1"
           width={350}
           height={350}
-          className="absolute bottom-[135px] right-[-25px] transform translate-x-1/2 z-10  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute bottom-[135px] right-[-50px] transform translate-x-1/2 z-10  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
         />
         
 
@@ -61,7 +61,7 @@ export default function Gallery() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.05 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="relative w-[320px] h-96"
+              className="relative w-[300px] sm:w-[320px]  h-[360px] sm:h-96"
             >
               <Image
                 src={`/images/special01/${selectedImage}.png`}
@@ -80,7 +80,7 @@ export default function Gallery() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <div className="w-[320px] flex flex-wrap  justify-between mt-6">
+          <div className="w-[300px] sm:w-[320px] flex flex-wrap  justify-between mt-6">
             <div className="w-[70px] h-[70px] relative">
               <Image
                 src="/images/special01/gallery1.png"

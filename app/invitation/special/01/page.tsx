@@ -12,9 +12,13 @@ import Terimakasih from "@/components/special01/terimakasih";
 import Wishes from "@/components/special01/wishes";
 import Woman from "@/components/special01/woman";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Suspense } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useRef } from "react";
+import { Disc3 } from "lucide-react";
+
+
 
 
 const bride = {
@@ -58,9 +62,57 @@ const wedding = {
 export default function Page() {
   const [open, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(true);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+    const [isPlaying, setIsPlaying] = useState(true);
+    const [isSpining, setIsSpinning] = useState(false);
+  
+    // Auto play music when invitation is opened
+    useEffect(() => {
+  if (open && audioRef.current) {
+    audioRef.current
+      .play()
+      .then(() => {
+        setIsPlaying(true);
+        setIsSpinning(true);
+      })
+      .catch(() => {
+        // autoplay blocked → user must click
+        setIsPlaying(false);
+        setIsSpinning(false);
+      });
+  }
+}, [open]);
+  
+    const toggleMusic = () => {
+  if (!audioRef.current) return;
+
+  if (audioRef.current.paused) {
+    audioRef.current.play();
+    setIsPlaying(true);
+    setIsSpinning(true);
+  } else {
+    audioRef.current.pause();
+    setIsPlaying(false);
+    setIsSpinning(false);
+  }
+};
 
   return (
     <div className="w-full flex flex-col h-[100dvh] overflow-y-hidden">
+      {/* Music */}
+        <div className="absolute bottom-3 right-3 z-50 animate-fade-right rounded-full bg-white/50">
+          <Disc3 
+            size={50}
+            className={`text-invitation ${
+              isSpining ? "animate-spin" : ""
+            }`}
+
+            onClick={toggleMusic}
+          />
+        </div>
+      
+        {/* Hidden audio element */}
+        <audio ref={audioRef} loop src="/music/music.mp3" />
 
       {/* Backgrounds */}
       <Image
@@ -71,43 +123,41 @@ export default function Page() {
         priority
       />
 
-<div className="fixed inset-0 pointer-events-none z-10 hidden md:block overflow-hidden">
-  {/* Ornaments */}
-  <div className="hidden md:block">
-    <Image
-      src="/images/special01/assets/tree1.png"
-      alt="Tree"
-      width={400}
-      height={400}
-      className="absolute top-[-200px] left-0 -translate-x-1/2 z-10"
-    />
-    <Image
-      src="/images/special01/assets/tree1.png"
-      alt="Tree Top"
-      width={400}
-      height={400}
-      className="absolute top-[-200px] right-[-380px] -translate-x-1/2 z-10"
-    />
-    <Image
-      src="/images/special01/assets/tree1.png"
-      alt="Tree Bottom"
-      width={400}
-      height={400}
-      className="absolute bottom-[-220px] left-0 -translate-x-1/2 z-20 rotate-180"
-    />
-    <Image
-      src="/images/special01/assets/tree1.png"
-      alt="Tree Bottom"
-      width={400}
-      height={400}
-      className="absolute bottom-[-220px] right-[-380px] -translate-x-1/2 z-20 rotate-180"
-    />
-  </div>
-</div>
+      <div className="fixed inset-0 pointer-events-none z-10 hidden md:block overflow-hidden">
+        {/* Ornaments */}
+        <div className="hidden md:block">
+          <Image
+            src="/images/special01/assets/tree1.png"
+            alt="Tree"
+            width={400}
+            height={400}
+            className="absolute top-[-200px] left-0 -translate-x-1/2 z-10"
+          />
+          <Image
+            src="/images/special01/assets/tree1.png"
+            alt="Tree Top"
+            width={400}
+            height={400}
+            className="absolute top-[-200px] right-[-380px] -translate-x-1/2 z-10"
+          />
+          <Image
+            src="/images/special01/assets/tree1.png"
+            alt="Tree Bottom"
+            width={400}
+            height={400}
+            className="absolute bottom-[-220px] left-0 -translate-x-1/2 z-20 rotate-180"
+          />
+          <Image
+            src="/images/special01/assets/tree1.png"
+            alt="Tree Bottom"
+            width={400}
+            height={400}
+            className="absolute bottom-[-220px] right-[-380px] -translate-x-1/2 z-20 rotate-180"
+          />
+        </div>
+      </div>
 
     
-    
-
 
       <AnimatePresence mode="wait">
       {!open && (
@@ -119,7 +169,7 @@ export default function Page() {
 
     {open && (
       <div className="overflow-y-auto">
-        <Opening isOpen={open} />
+        <Opening />
         <Gallery />
         <Woman />
         <Man />

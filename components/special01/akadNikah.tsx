@@ -30,21 +30,21 @@ export default function Woman() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-270px] transform -translate-y-1/2 z-50 pointer-events-none rotate-45"
+          className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special01/assets/tree2.png"
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-0 right-[-20px] transform translate-x-1/2 z-50 pointer-events-none rotate-[-40deg]"
+          className="absolute top-1 right-[-100px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-45deg] animate-swingingtree2"
         />
           <Image
           src="/images/special01/assets/tree2.png"
           alt="Tree 1"
-          width={250}
-          height={250}
-          className="absolute bottom-14 right-[10px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-90deg]"
+          width={350}
+          height={350}
+          className="absolute bottom-[135px] right-[-50px] transform translate-x-1/2 z-30  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
         />
 
         {/* Castle */}
@@ -67,14 +67,14 @@ export default function Woman() {
         
 
         {/* Content */}
-        <div className="">
+        <div className="z-0">
           <motion.div
             variants={fadeVariants.up}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <div className="w-72 h-[500px] mx-auto relative flex flex-col items-center justify-center text-center mt-20 z-30">
+          <div className="w-72 h-[500px] mx-auto relative flex flex-col items-center justify-center text-center mt-20 z-10">
           
             <Image
               src="/images/special01/cover.png"
