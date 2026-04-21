@@ -17,6 +17,7 @@ import { Suspense } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useRef } from "react";
 import { Disc3 } from "lucide-react";
+import TurutMengundang from "@/components/special01/turutmengundang";
 
 
 
@@ -183,6 +184,7 @@ export default function Page() {
         <Terimakasih />
         <Gift />
         <Wishes />
+        <TurutMengundang />
       </div>
     )}
     </div>

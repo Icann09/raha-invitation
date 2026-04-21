@@ -282,11 +282,11 @@ animation: swingingtree2 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
 .animate-fade-down {
-  animation: fade-down 2.0s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-down 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-fade-up {
-  animation: fade-up 1s ease-out forwards;
+  animation: fade-up 2s ease-out forwards;
 }
 
 .animate-fade-up-delay-1 {

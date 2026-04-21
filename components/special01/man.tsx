@@ -70,7 +70,7 @@ export default function Woman() {
             className="object-cover "
           />
         </div>
-        <div className="w-[500px] h-[40vh] absolute bottom-[-140px] left-[-220px]  z-20 pointer-events-none">
+        <div className="w-[500px] h-[60vh] absolute bottom-[-140px] left-[-220px]  z-20 pointer-events-none">
           <Image
             src="/images/special01/assets/castle.webp"
             alt="Castle Ornament"
