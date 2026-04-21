@@ -81,10 +81,10 @@ export default function Cover({onClick} : {onClick: () => void }) {
             <Image
               src="/images/logo.webp"
               alt="Raha Invitation Logo"
-              width={200}
+              width={60}
 
-              height={200}
-              className="mx-auto mb-6"
+              height={60}
+              className="mx-auto my-6"
             />
           </div>
 

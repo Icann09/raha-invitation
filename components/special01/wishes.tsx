@@ -213,13 +213,13 @@ export default function Gift() {
           </form>
 
           {/* contact */}
-          <div className="">
-            <p className={plusJakartaSans.className + "text-invitation flex items-center gap-1"}>
+          <div className="pt-3">
+            <p className={plusJakartaSans.className + "text-invitation flex items-center gap-1 justify-center mb-3"}>
               <Image 
                src="/images/logo.webp"
                alt="Logo"
-               width={150}
-               height={150}
+               width={60}
+               height={60}
                className=""
               />
             </p>
@@ -266,7 +266,7 @@ export default function Gift() {
               href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." 
               target="_blank" 
               rel="nofollow"
-              className={plusJakartaSans.className + "text-invitation mt-4"}
+              className={plusJakartaSans.className + "text-invitation"}
             >		
               CONTACT US
             </a>
