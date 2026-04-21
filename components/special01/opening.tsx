@@ -60,14 +60,14 @@ export default function Opening() {
           alt="Trees"
           width={230}
           height={300}
-          className="absolute bottom-0 left-0 z-20 pointer-events-none animate-fade-right"
+          className="absolute bottom-0 left-0 z-20 pointer-events-none animate-fade-right-slow"
         />
         <Image
           src="/images/special01/assets/trees-right.webp"
           alt="Trees"
           width={230}
           height={300}
-          className="absolute bottom-0 right-0 z-20 pointer-events-none animate-fade-left"
+          className="absolute bottom-0 right-0 z-20 pointer-events-none animate-fade-left-slow"
         />
 
         {/* Moon */}
@@ -76,7 +76,7 @@ export default function Opening() {
           alt="Moon"
           width={200}
           height={200}
-          className="absolute top-[-100px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none animate-fade-down"
+          className="absolute top-[-100px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none animate-fade-down-slow"
         />
 
         {/* Castle */}
@@ -85,7 +85,7 @@ export default function Opening() {
           alt="Castle"
           width={600}
           height={500}
-          className="absolute bottom-[-80px] left-1/2 -translate-x-1/2  z-10 animate-fade-left"
+          className="absolute bottom-[-80px] left-1/2 -translate-x-1/2  z-10 animate-fade-up-slow"
         />
 
         {/* Content */}

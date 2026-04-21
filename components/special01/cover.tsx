@@ -20,7 +20,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{
-          duration: 1,
+          duration: 2,
           ease: [0.76, 0, 0.24, 1], // more dramatic curve
         }}
         className="w-full flex items-center justify-center"

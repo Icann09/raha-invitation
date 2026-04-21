@@ -53,7 +53,7 @@ export default function Gallery() {
         
 
         {/* Content */}
-        <div className="relative pt-14 text-center flex flex-col items-center justify-center">
+        <div className="relative pt-14 text-center flex flex-col items-center justify-center animate-fade-up-slow">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedImage} // 👈 IMPORTANT (triggers re-animation)

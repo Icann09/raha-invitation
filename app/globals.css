@@ -251,7 +251,7 @@ animation: swingingtree2 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
 .animate-slow-spin {
-  animation: slow-spin 6s linear infinite;
+  animation: slow-spin 1.2s linear infinite;
 }
 
 @keyframes fade-up {
@@ -285,8 +285,16 @@ animation: swingingtree2 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   animation: fade-down 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.animate-fade-down-slow {
+  animation: fade-down 10s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 .animate-fade-up {
-  animation: fade-up 2s ease-out forwards;
+  animation: fade-up 4s ease-out forwards;
+}
+
+.animate-fade-up-slow {
+  animation: fade-up 10s ease-out forwards;
 }
 
 .animate-fade-up-delay-1 {
@@ -346,6 +354,10 @@ animation: swingingtree2 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   animation: fade-left 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.animate-fade-left-slow {
+  animation: fade-left 10s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 @keyframes fade-opening {
   0% {
     transform: translateX(40px) scale(0.98);
@@ -375,7 +387,11 @@ animation: swingingtree2 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
 .animate-fade-right {
-  animation: fade-right 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-right 6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-right-slow {
+  animation: fade-right 10s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-slow-zoom {
