@@ -105,12 +105,12 @@ export default function TurutMengundang() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-[25px] sm:text-[30px]  text-invitation font-[Breathing2] leading-tight pb-2">
+          <h1 className="text-[25px] sm:text-[30px]  text-special01E font-[Breathing2] leading-tight pb-2">
             Turut Mengundang
           </h1>
           </motion.div>
           
-          <p className={plusJakartaSans.className + " text-xs text-invitation max-w-[300] font-normal pt-4"}  >
+          <p className={plusJakartaSans.className + " text-xs text-special01E max-w-[300] font-normal pt-4"}  >
             Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i, kami yang turut mengundang mengucapkan terimakasih yang setulus-tulusnya. 
           </p>
 
@@ -121,7 +121,7 @@ export default function TurutMengundang() {
             viewport={{ once: true }}
           >
           
-          <div className="flex w-80 mx-auto bg-invitation/50 rounded-xl p-6 mt-8 text-white text-xs flex-col overflow-y-auto text-center gap-3 animate-fade-down">
+          <div className="flex w-80 mx-auto bg-special01E/50 rounded-xl p-6 mt-8 text-white text-xs flex-col overflow-y-auto text-center gap-3 animate-fade-down">
             <div>
               <p className="font-bold text-sm">Keluarga besar mempelai wanita</p>
               <div className="flex items-center justify-center flex-col">

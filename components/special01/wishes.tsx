@@ -122,10 +122,10 @@ export default function Gift() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-[45px] text-invitation font-[Breathing2] leading-tight pb-2">
+          <h1 className="text-[45px] text-special01E font-[Breathing2] leading-tight pb-2">
             Wishes
           </h1>
-          <p className={plusJakartaSans.className + " text-xs text-invitation max-w-[300] font-normal"}  >
+          <p className={plusJakartaSans.className + " text-xs text-special01E max-w-[300] font-normal"}  >
             Berikan doa dan ucapan terbaik untuk kami
           </p>
           </motion.div>
@@ -142,7 +142,7 @@ export default function Gift() {
               name="nama"
               placeholder="Nama"
               required
-              className="w-80 bg-invitation text-white py-2 pl-2 rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-invitation focus:border-transparent"
+              className="w-80 bg-special01E text-white py-2 pl-2 rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-special01E focus:border-transparent"
 
             />
             </motion.div>
@@ -154,7 +154,7 @@ export default function Gift() {
               viewport={{ once: true }}
             >
             <textarea
-              className="w-80 h-18 my-2 p-2 text-xs rounded-md bg-invitation text-white focus:outline-none focus:ring-2 focus:ring-invitation focus:border-transparent resize-none"
+              className="w-80 h-18 my-2 p-2 text-xs rounded-md bg-special01E text-white focus:outline-none focus:ring-2 focus:ring-special01E focus:border-transparent resize-none"
               placeholder="Tulis ucapanmu di sini..."
             />
             </motion.div>
@@ -168,7 +168,7 @@ export default function Gift() {
             <select
               value={attendance ?? ""}
               onChange={(e) => setAttendance(e.target.value as "hadir" | "tidak")}
-              className="w-80 p-2 rounded-md bg-invitation text-white text-xs focus:outline-none focus:ring-2 focus:ring-invitation focus:border-transparent resize-none"
+              className="w-80 p-2 rounded-md bg-special01E text-white text-xs focus:outline-none focus:ring-2 focus:ring-special01E focus:border-transparent resize-none"
             >
               <option value="">Pilih Kehadiran</option>
               <option value="hadir">Hadir</option>
@@ -182,7 +182,7 @@ export default function Gift() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-            <p className={plusJakartaSans.className + " text-xs text-white w-80 mt-3 py-2 font-bold bg-invitation rounded-md"}  >
+            <p className={plusJakartaSans.className + " text-xs text-white w-80 mt-3 py-2 font-bold bg-special01E rounded-md hover:bg-special01E/80 hover:scale-110 transition cursor-pointer"}  >
               Kirim
             </p>
             </motion.div>
@@ -193,7 +193,7 @@ export default function Gift() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-            <div className="w-80 h-80 max-w-sm mx-auto bg-invitation/50 rounded-xl p-4 mt-8 text-white text-xs flex flex-col gap-4 overflow-y-auto text-left">
+            <div className="w-80 h-80 max-w-sm mx-auto bg-special01E/50 rounded-xl p-4 mt-8 text-white text-xs flex flex-col gap-4 overflow-y-auto text-left">
               {wishes.map((wish, index) => (
                 <div
                   key={index}
@@ -214,12 +214,12 @@ export default function Gift() {
 
           {/* contact */}
           <div className="pt-3">
-            <p className={plusJakartaSans.className + "text-invitation flex items-center gap-1 justify-center mb-3"}>
+            <p className={plusJakartaSans.className + "text-special01E flex items-center gap-1 justify-center mb-3"}>
               <Image 
-               src="/images/logo.webp"
+               src="/images/logoutama.webp"
                alt="Logo"
-               width={60}
-               height={60}
+               width={100}
+               height={100}
                className=""
               />
             </p>
@@ -228,7 +228,7 @@ export default function Gift() {
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   viewBox="0 0 640 640"
-                  className="w-8 h-8 text-invitation hover:text-white transition"
+                  className="w-8 h-8 text-special01E hover:scale-110 transition"
                 >
                   <path 
                     fill="currentColor" 
@@ -241,7 +241,7 @@ export default function Gift() {
                   <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 640"
-                  className="w-8 h-8 text-invitation hover:text-white transition"
+                  className="w-8 h-8 text-special01E hover:scale-110  transition"
                 >
                   <path
                     fill="currentColor"
@@ -253,7 +253,7 @@ export default function Gift() {
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   viewBox="0 0 640 640"
-                  className="w-8 h-8 text-invitation hover:text-white transition"
+                  className="w-8 h-8 text-special01E hover:scale-110 transition"
                 >
                   <path 
                     fill="currentColor" 
@@ -262,14 +262,15 @@ export default function Gift() {
                 </svg>
               </a>
             </div>
-            <a 
-              href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." 
-              target="_blank" 
-              rel="nofollow"
-              className={plusJakartaSans.className + "text-invitation"}
-            >		
-              CONTACT US
-            </a>
+            <p className="text-invitation">
+              <a 
+                href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." 
+                target="_blank" 
+                rel="nofollow"
+              >
+                CONTACT US
+              </a>
+            </p>
           </div>
         </div>
     

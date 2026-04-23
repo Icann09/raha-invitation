@@ -80,19 +80,19 @@ export default function Woman() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h1 className="text-[45px] text-invitation font-[Breathing2] leading-tight pb-2">
+          <h1 className="text-[45px] text-special01E font-[Breathing2] leading-tight pb-2">
             Terima Kasih
           </h1>
-          <p className={plusJakartaSans.className + " text-xs text-invitation max-w-[300] font-normal"}  >
+          <p className={plusJakartaSans.className + " text-xs text-special01E max-w-[300] font-normal"}  >
             Merupakan suatu kebahagiaan dan
             kehormatan bagi kami apabila
             Bapak/Ibu/Saudara/i berkenan hadir untuk
             memberikan doa restu kepada kedua mempelai.
           </p>
-          <p className={plusJakartaSans1.className + " text-xs text-invitation max-w-[300] my-4 font-bold"}  >
+          <p className={plusJakartaSans1.className + " text-xs text-special01E max-w-[300] my-4 font-bold"}  >
             Wassalamu’alaikum warahmatullahi wabarakatuh
           </p>
-          <p className={plusJakartaSans1.className + " text-sm text-invitation max-w-[320] pt-3"}  >
+          <p className={plusJakartaSans1.className + " text-sm text-special01E max-w-[320] pt-3"}  >
             Kami yang berbahagia,
           </p>
         </motion.div>

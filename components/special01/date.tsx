@@ -10,7 +10,6 @@ import { createGoogleCalendarLink } from "@/lib/utils";
 
 
 // Create date explicitly for Makassar timezone (UTC+8)
-const weddingDate = new Date('2026-05-10T10:00:00+08:00');
 // May 10, 2026, 10:00 AM (local time)
 
 
@@ -20,6 +19,7 @@ const weddingDate = new Date('2026-05-10T10:00:00+08:00');
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "900" });
 
+const weddingDate = new Date('2026-05-10T10:00:00+08:00');
 const link = createGoogleCalendarLink({
   title: "Wedding of Alisyah & Dillo",
   description: "We would love to see you at our wedding!",
@@ -138,28 +138,28 @@ const [time, setTime] = useState({
           viewport={{ once: true }
         }
         >
-          <h1 className="text-4xl text-colorName font-[Breathing2] leading-tight py-3">
+          <h1 className="text-4xl text-special01B font-[Breathing2] leading-tight py-3">
             Save the Date
           </h1>
           <div className="grid grid-cols-4 gap-2">
-            <div className={plusJakartaSans.className + " w-20 h-20 bg-invitation rounded-md text-center flex flex-col items-center justify-center"}>
+            <div className={plusJakartaSans.className + " w-20 h-20 bg-special01E rounded-md text-center flex flex-col items-center justify-center"}>
               <p className="text-white font-bold text-2xl">{time.days}</p>
               <p className="text-white font-bold text-xs">Hari</p>
             </div>
-            <div className={plusJakartaSans.className + " w-20 h-20 bg-invitation rounded-md text-center flex flex-col items-center justify-center"}>
+            <div className={plusJakartaSans.className + " w-20 h-20 bg-special01E rounded-md text-center flex flex-col items-center justify-center"}>
               <p className="text-white font-bold text-2xl">{time.hours}</p>
               <p className="text-white font-bold text-xs">Jam</p>
             </div>
-            <div className={plusJakartaSans.className + " w-20 h-20 bg-invitation rounded-md text-center flex flex-col items-center justify-center"}>
+            <div className={plusJakartaSans.className + " w-20 h-20 bg-special01E rounded-md text-center flex flex-col items-center justify-center"}>
               <p className="text-white font-bold text-2xl">{time.minutes}</p>
               <p className="text-white font-bold text-xs">Menit</p>
             </div>
-            <div className={plusJakartaSans.className + " w-20 h-20 bg-invitation rounded-md text-center flex flex-col items-center justify-center"}>
+            <div className={plusJakartaSans.className + " w-20 h-20 bg-special01E rounded-md text-center flex flex-col items-center justify-center"}>
               <p className="text-white font-bold text-2xl">{time.seconds}</p>
               <p className="text-white font-bold text-xs">Detik</p>
             </div>
           </div>
-          <p className={sourceCodePro.className + " text-white text-xs mt-4 rounded-full bg-invitation py-2 px-2 font-bold pointer-events-auto"}>
+          <p className={sourceCodePro.className + " text-white text-xs mt-4 rounded-full bg-special01E py-2 px-2 font-bold pointer-events-auto"}>
             <a
               href={link}
               target="_blank"

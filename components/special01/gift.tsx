@@ -9,31 +9,27 @@ import { useState } from "react";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "600" });
 
-interface rek {
-  nama_bank: string;
-  nama_penerima: string;
-  no_rek: number;
+const gift = {
+  rekening : [
+      {
+        nama_bank:"bni",
+        nama_penerima: "aslan", 
+        no_rek: 897892789298, 
+      },
+      {
+        nama_bank:"mandiri",
+        nama_penerima: "aslan", 
+        no_rek: 897892789298, 
+      },
+      {
+        nama_bank:"bri",
+        nama_penerima: "aslan", 
+        no_rek: 897892789298, 
+      },
+    ],
+  alamat: "1001 Coffee Shop, Samping POLRES",
+  map: "https://maps.app.goo.gl/N3QAhkDJrD4gGGVLA?g_st=iw"
 }
-
-const rekening: rek[] = [
-  {
-    nama_bank:"bni",
-    nama_penerima: "aslan", 
-    no_rek: 897892789298, 
-  },
-  {
-    nama_bank:"mandiri",
-    nama_penerima: "aslan", 
-    no_rek: 897892789298, 
-  },
-  {
-    nama_bank:"bri",
-    nama_penerima: "aslan", 
-    no_rek: 897892789298, 
-  },
-]
-
-const alamat: string = "1001 Coffee Shop, Samping POLRES";
 
 
 // alamat rumah pria dan wanita
@@ -41,7 +37,6 @@ const alamat: string = "1001 Coffee Shop, Samping POLRES";
 
 export default function Gift() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
-  const [isCopiedAddress, setIsCopiedAddress] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   return (
     <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
@@ -108,12 +103,12 @@ export default function Gift() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-[45px] text-invitation font-[Breathing2] leading-tight pb-2">
+          <h1 className="text-[45px] text-special01E font-[Breathing2] leading-tight pb-2">
             Wedding Gift
           </h1>
           </motion.div>
           
-          <p className={plusJakartaSans.className + " text-xs text-invitation max-w-[300] font-normal pt-4"}  >
+          <p className={plusJakartaSans.className + " text-xs text-special01E max-w-[300] font-normal pt-4"}  >
             Merupakan suatu kebahagiaan dan
             kehormatan bagi kami apabila
             Bapak/Ibu/Saudara/i berkenan hadir untuk
@@ -129,17 +124,17 @@ export default function Gift() {
           <p 
             className={`${plusJakartaSans.className} ${
               isOpen ? "hidden" : "block"
-            } text-sm text-white w-36 my-4 py-2 font-bold bg-invitation rounded-full cursor-pointer`}
+            } text-sm text-white w-36 my-4 py-2 font-bold bg-special01E rounded-full cursor-pointer`}
             onClick={() => setIsOpen(true)}
           >
             Klik Di Sini
           </p>
-          <div className={`${isOpen ? "flex" : "hidden"} w-80 max-w-sm mx-auto bg-invitation/50 rounded-xl p-6 mt-8 text-white text-xs flex-col overflow-y-auto text-center gap-3 animate-fade-down`}>
+          <div className={`${isOpen ? "flex" : "hidden"} w-80 max-w-sm mx-auto bg-special01E/50 rounded-xl p-6 mt-8 text-white text-xs flex-col overflow-y-auto text-center gap-3 animate-fade-down`}>
             <div className="flex flex-col gap-2">
-              {rekening.map((rek, index) => (
+              {gift.rekening.map((rek, index) => (
                 <div 
                   key={index}
-                  className="bg-white h-20 text-invitation flex flex-col rounded-md py-2 items-center justify-center">
+                  className="bg-white h-20 text-special01E flex flex-col rounded-md py-2 items-center justify-center">
                 <Image 
                   src={`/icons/${rek.nama_bank}.webp`}
                   width={40}
@@ -163,24 +158,17 @@ export default function Gift() {
             </div>
             <div>
               <p className="text-sm">Kirim Kado Ke Alamat</p>
-              <p>Anda Juga Dapat Mengirimkan Kado Melalui Alamat Berikut</p>
-              <p 
-                className={`p-2 mt-2 bg-invitation text-sm rounded-md cursor-pointer transition ${
-                  isCopiedAddress ? "bg-green-500 scale-105" : ""
-                }`}
-                onClick={() => {
-                  navigator.clipboard.writeText(alamat.toString());
-                  setIsCopiedAddress(true);
-
-                  setTimeout(() => setIsCopiedAddress(false), 1500);
-                }}
+              <p className="mb-4">Anda Juga Dapat Mengirimkan Kado Melalui Alamat Berikut</p>
+              <a 
+                href={gift.map}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-special01E text-sm rounded-md"              
               >
-                {isCopiedAddress ? "Alamat berhasil disalin!" : alamat}
-              </p>
+                {gift.alamat}
+              </a>
             </div>
           </div>
-            
-
           </motion.div>
           
         </div>

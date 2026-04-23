@@ -10,7 +10,14 @@ import { fadeVariants } from "@/lib/motion";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 
-const resepsiMap = " https://maps.app.goo.gl/HKJ6W7coiJSMgVhw7?g_st=iw";
+const resepsi = {
+  hari: "Sabtu",
+  tanggal: "23 Desember 2023",
+  waktu: "09.00 WIB - Selesai",
+  tempat: "Grand Ballroom Majesty",
+  alamat: "Jl. Gatot Subroto No. 25, Jakarta Selatan",
+  map: "https://maps.app.goo.gl/Li11FsmvkLJPg3EQ8?g_st=iw"
+}
 
 // resepsi
 // hari, tanggal, waktu dan alamat dengan format berikut: 
@@ -84,30 +91,30 @@ export default function Woman() {
               fill
               className="object-cover rounded-tr-[60px] shadow-md"
             />
-            <div className="absolute bottom-0 w-full h-[55%] bg-invitation text-white flex flex-col items-center justify-center pr-14">
+            <div className="absolute bottom-0 w-full h-[55%] bg-special01E text-white flex flex-col items-center justify-center pr-14">
               <h1 className="font-[Breathing2] text-5xl leading-tight ">
-                Sabtu
+                {resepsi.hari}
               </h1>
               <div className={plusJakartaSans.className + " font-bold"}>
                 <p className="text-sm mt-1">
-                  23 Desember 2023
+                  {resepsi.tanggal}
                 </p>
                 <p className="text-[10px]">
                   <Clock className="inline-block mr-1" size={20} />
-                  09.00 WIB - Selesai
+                  {resepsi.waktu}
                 </p>
               </div>
               <div className="my-4">
                 <p className="text-sm font-bold">
-                  Grand Ballroom Majesty
+                  {resepsi.tempat}
                 </p>
                 <p className="text-xs">
-                  Jl. Gatot Subroto No. 25, Jakarta Selatan
+                  {resepsi.alamat}
                 </p>
               </div>
-              <p className={"bg-white rounded-full mx-auto text-invitation text-xs font-bold w-max px-4 py-1"}>
+              <p className={"bg-white rounded-full mx-auto text-special01E text-xs font-bold w-max px-4 py-1"}>
                 <a 
-                  href={resepsiMap}
+                  href={resepsi.map}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -116,7 +123,7 @@ export default function Woman() {
                 </a>
               </p>
             </div>
-            <div className="absolute bottom-0 w-[55px] h-[55%] right-0 bg-colorName">
+            <div className="absolute bottom-0 w-[55px] h-[55%] right-0 bg-special01B">
               <p className="text-white h-full text-3xl rotate-90 flex items-center justify-center ">
                 Resepsi
               </p>

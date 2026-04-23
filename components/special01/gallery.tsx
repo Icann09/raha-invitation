@@ -8,6 +8,7 @@ import { useState } from "react";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 const images = ["gallery1", "gallery2", "gallery3", "gallery4"];
+const initials = "D & A";
 
 // foto/album galery
 
@@ -83,7 +84,7 @@ export default function Gallery() {
           <div className="w-[300px] sm:w-[320px] flex flex-wrap  justify-between mt-6">
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/images/special01/gallery1.webp"
+                src={`/images/special01/${images[0]}.webp`}
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
@@ -92,27 +93,26 @@ export default function Gallery() {
             </div>
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/images/special01/gallery2.webp"
+                src={`/images/special01/${images[1]}.webp`}
+
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
                 onClick={() => setSelectedImage(images[1])}
-
               />
             </div>
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/images/special01/gallery3.webp"
+                src={`/images/special01/${images[2]}.webp`}
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
                 onClick={() => setSelectedImage(images[2])}
-
               />
             </div>
             <div className="w-[70px] h-[70px] relative">
               <Image
-                src="/images/special01/gallery4.webp"
+                src={`/images/special01/${images[3]}.webp`}
                 alt="Gallery Photo 1"
                 fill
                 className="object-cover rounded-lg shadow-sm"
@@ -129,17 +129,17 @@ export default function Gallery() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-5xl text-colorName font-[Breathing2] leading-tight py-6">
-            D & A
+          <h1 className="text-5xl text-special01B font-[Breathing2] leading-tight py-6">
+            {initials}
           </h1>
-          <p className={plusJakartaSans.className + " max-w-[320px] font-bold text-[10px] text-invitation"}  >
+          <p className={plusJakartaSans.className + " max-w-[320px] font-bold text-[10px] text-special01E"}  >
             "Dan di antara tanda-tanda (kebesaran)-Nya ialah”
             Dia menciptakan pasangan-pasangan untukmu dari
             jenismu sendiri, agar kamu cenderung dan merasa
             tenteram kepadanya, dan Dia menjadikan di
             antaramu rasa kasih dan sayang.
           </p>
-          <p className={plusJakartaSans.className + " font-bold text-xs text-invitation "}  >
+          <p className={plusJakartaSans.className + " font-bold text-xs text-special01E "}  >
             QS. Ar-Rum: 21
           </p>
           </motion.div>

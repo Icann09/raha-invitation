@@ -8,6 +8,9 @@ import { motion } from "framer-motion";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 
+const groom = "Dillo";
+const bride = "Alisyah";
+
 // tamu undangan
 
 export default function Cover({onClick} : {onClick: () => void }) {
@@ -79,11 +82,11 @@ export default function Cover({onClick} : {onClick: () => void }) {
           {/* Logo */}
           <div>
             <Image
-              src="/images/logo.webp"
+              src="/images/logoutama.webp"
               alt="Raha Invitation Logo"
-              width={60}
+              width={100}
 
-              height={60}
+              height={100}
               className="mx-auto my-6"
             />
           </div>
@@ -91,21 +94,21 @@ export default function Cover({onClick} : {onClick: () => void }) {
           {/* Middle */}
           <div className="relative h-[50vh] z-30">
             <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-24">
-              <p className={plusJakartaSans.className + " font-bold text-xs text-invitation animate-fade-up"}  >
+              <p className={plusJakartaSans.className + " font-bold text-xs text-special01E animate-fade-up"}  >
                 THE WEDDING OF
               </p>
               
-              <h1 className="text-4xl text-colorName font-[Breathing2] leading-tight py-3 animate-fade-up-delay-1">
-                Dillo & Alisyah
+              <h1 className="text-4xl text-special01B font-[Breathing2] leading-tight py-3 animate-fade-up-delay-1">
+                {groom} & {bride}
               </h1>
 
-              <p className= {plusJakartaSans.className + " text-xs text-invitation font-bold animate-fade-up-delay-2 z-30"}>
+              <p className= {plusJakartaSans.className + " text-xs text-special01E font-bold animate-fade-up-delay-2 z-30"}>
                 Kepada Yth. <br />
                 {guest || "Tamu Undangan"}
               </p>
             </div>
             <div className="flex flex-col bg-white h-[40%] justify-end items-center pb-16">
-              <p className="relative text-[10px] text-invitation italic mb-4 font-semibold z-30">
+              <p className="relative text-[10px] text-special01E italic mb-4 font-semibold z-30">
                 
                 *Mohon maaf jika ada kesalahan dalam penulisan nama dan gelar
                 {/* flower */}
@@ -117,7 +120,7 @@ export default function Cover({onClick} : {onClick: () => void }) {
                   className="absolute right-0 bottom-0"
                 />
               </p>
-              <button onClick={onClick} className="px-6 py-2.5 bg-colorName text-white text-sm font-bold rounded-full z-30 hover:bg-colorName/80 transition animate-fade-up-delay-3">
+              <button onClick={onClick} className="px-6 py-2.5 bg-special01B text-white text-sm font-bold rounded-full z-30 hover:bg-special01B/80 transition animate-fade-up-delay-3">
                 BUKA UNDANGAN
               </button>
 

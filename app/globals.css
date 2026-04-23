@@ -7,13 +7,22 @@
 :root {
   --surface: #FFFFFF;
 
-  /* invitation */
+  /* special 01 */
   --color-1: #2c5d6d; 
   --color-2: #a37a65;
   --color-3: #bccdd2;
   --color-4: #668d97;
   --color-5: #225262;
-  --color-6: #f8dbba; /* cream */
+  --color-6: #f8dbba; 
+
+  /* special 02 */
+  --color-7: #471414; 
+  --color-8: #720b18;
+  --color-9: #efd2b3;
+  --color-10: #a37a65;
+  --color-11: #be9498;
+  --color-12: #dfc5ca; 
+  --color-13: #1e0c06;
 
   --primary: oklch(0.205 0 0);
   --secondary: oklch(0.97 0 0);
@@ -25,11 +34,6 @@
   --text-main: #30364F;
   --text-muted: #6B7280;
 
-  /* breathing
-  codec pro/snow buddy
-  alice
-  alice bold 
-  belleza */
 
   --background: oklch(1 0 0);
 
@@ -121,12 +125,30 @@
   --color-wedding-primary: var(--color-2);  /* Add this */
   --color-wedding-secondary: #2c5d6d; /* Optional: add your color-1 too */
 
+
+  /* special 01 */
   --color-invitation: var(--color-5);
   --color-colorName: var(--color-2);
   --color-invitation-muted: var(--color-1);
 
-  --color-text: var(--text-main);
-  --color-muted: var(--text-muted);
+  --color-special01A: var(--color-1);
+  --color-special01B: var(--color-2);
+  --color-special01C: var(--color-3);
+  --color-special01D: var(--color-4);
+  --color-special01E: var(--color-5);
+  --color-special01F: var(--color-6);
+
+  /* special 02 */
+  --color-special02A: var(--color-7);
+  --color-special02B: var(--color-13);
+  --color-special02C: var(--color-9);
+  --color-special02D: var(--color-10);
+  --color-special02E: var(--color-11);
+  --color-special02F: var(--color-12);
+  --color-special02G: var(--color-8);
+
+  
+
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
