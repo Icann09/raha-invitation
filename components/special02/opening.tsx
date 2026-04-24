@@ -28,14 +28,14 @@ export default function Opening() {
           alt="Tree Top"
           width={250}
           height={250}
-          className="absolute top-[-40px] left-[-80px] z-10 pointer-events-none -scale-y-100"
+          className="absolute top-[-40px] left-[-80px] z-10 pointer-events-none -scale-y-100 animate-[swingingtree2_10s_ease-in-out_infinite_2s]"
         />
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree Top"
           width={250}
           height={250}
-          className="absolute top-[-40px] right-[-80px] z-10 pointer-events-none -scale-y-100"
+          className="absolute top-[-40px] right-[-80px] z-10 pointer-events-none -scale-y-100 animate-[swingingtree2_10s_ease-in-out_infinite_2s]"
         />
 
         {/* Flowers */}
@@ -76,9 +76,9 @@ export default function Opening() {
           alt="Tree Top"
           width={300}
           height={300}
-          className="absolute bottom-[300px] left-[-160px] z-10 pointer-events-none rotate-90"
+          className="absolute bottom-[300px] left-[-160px] z-10 pointer-events-none rotate-90 animate-[swingingtree2_10s_ease-in-out_infinite_3s]"
         />
-        <div className="absolute bottom-[300px] right-[-160px] z-10 pointer-events-none rotate-[-90deg]">
+        <div className="absolute bottom-[300px] right-[-160px] z-10 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_3s]">
           <Image
             src="/images/special02/assets/flower-right.webp"
             alt="Tree Top"
@@ -101,28 +101,28 @@ export default function Opening() {
           alt="Trees"
           width={350}
           height={350}
-          className="absolute bottom-[20px] left-[310px] z-0 pointer-events-none animate-fade-right-slow"
+          className="absolute bottom-[20px] left-[310px] z-0 pointer-events-none animate-[swingingtree2_10s_ease-in-out_infinite_3s]"
         />
         <Image
           src="/images/special02/assets/tree.webp"
           alt="Trees"
           width={350}
           height={350}
-          className="absolute bottom-[140px] left-[310px] z-0 pointer-events-none animate-fade-left-slow"
+          className="absolute bottom-[140px] left-[310px] z-0 pointer-events-none animate-[swingingtree2_10s_ease-in-out_infinite_3s]"
         />
         <Image
           src="/images/special02/assets/tree.webp"
           alt="Trees"
           width={350}
           height={350}
-          className="absolute bottom-[20px] right-[310px] z-0 pointer-events-none animate-fade-right-slow -scale-x-100"
+          className="absolute bottom-[20px] right-[310px] z-0 pointer-events-none -scale-x-100 animate-[swingingtree2_10s_ease-in-out_infinite_3s]"
         />
         <Image
           src="/images/special02/assets/tree.webp"
           alt="Trees"
           width={350}
           height={350}
-          className="absolute bottom-[140px] right-[310px] z-0 pointer-events-none animate-fade-left-slow -scale-x-100"
+          className="absolute bottom-[140px] right-[310px] z-0 pointer-events-none -scale-x-100 animate-[swingingtree2_10s_ease-in-out_infinite_3s]"
         />
 
         {/* Moon */}
