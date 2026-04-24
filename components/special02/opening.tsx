@@ -139,7 +139,7 @@ export default function Opening() {
           alt="Tribal"
           width={150}
           height={150}
-          className="absolute bottom-[220px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none animate-fade-down-slow"
+          className="absolute bottom-[190px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none animate-fade-down-slow"
         />
 
 
@@ -149,7 +149,7 @@ export default function Opening() {
             THE WEDDING OF
           </p>
           
-          <h1 className="text-[45px] font-[Breathing2] leading-tight py-3">
+          <h1 className="text-[40px] font-[Breathing2] leading-tight py-3">
             {groom} & {bride}
           </h1>
           <p className={plusJakartaSans.className + " font-bold text-xs"}  >

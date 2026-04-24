@@ -34,16 +34,16 @@ export default function Woman() {
           <Image
             src="/images/special02/assets/tribal-1.webp"
             alt="Tree 1"
-            width={280}
-            height={280}
+            width={260}
+            height={260}
           />
         </div>
         <div className="absolute bottom-[50px] right-2 transform translate-x-1/2 z-30  rotate-[10deg] animate-[swingingtree2_10s_ease-in-out_infinite_3s]">
           <Image
             src="/images/special02/assets/tribal-1.webp"
             alt="Tree 1"
-            width={250}
-            height={250}
+            width={230}
+            height={230}
           />
         </div>
       
@@ -59,7 +59,7 @@ export default function Woman() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h1 className="text-[45px] font-[Breathing2] leading-tight pb-2">
+          <h1 className="text-[40px] font-[Breathing2] leading-tight pb-2">
             Terima Kasih
           </h1>
           <p className={plusJakartaSans.className + " text-xs max-w-[300] font-normal"}  >
@@ -71,7 +71,7 @@ export default function Woman() {
           <p className={plusJakartaSans1.className + " text-xs max-w-[300] my-4 font-bold"}  >
             Wassalamu’alaikum warahmatullahi wabarakatuh
           </p>
-          <p className={plusJakartaSans1.className + " text-sm max-w-[320] pt-3"}  >
+          <p className={plusJakartaSans1.className + " text-xs max-w-[320] pt-3"}  >
             Kami yang berbahagia,
           </p>
         </motion.div>

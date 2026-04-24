@@ -81,19 +81,19 @@ export default function Gift() {
         height={370}
         className="absolute bottom-[80px] left-[-250px] transform z-50 pointer-events-none rotate-90 -scale-x-100"
       />
-      <div className="absolute top-[80px] right-[-200px] z-50 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]">
+      <div className="absolute top-[80px] right-[-200px] z-30 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]">
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree 2"
-          width={320}
-          height={320}
+          width={300}
+          height={300}
         />
         <Image
           src="/images/special02/assets/flower-yellow.webp"
           alt="Flower"
-          width={80}
-          height={80}
-          className="absolute top-0 right-0 rotate-[60deg]"
+          width={60}
+          height={60}
+          className="absolute top-0 right-[20px] rotate-[60deg]"
         />
       </div>
       
@@ -144,7 +144,7 @@ export default function Gift() {
           <h1 className="text-[45px] text-special02C font-[Breathing2] leading-tight pb-2">
             Wishes
           </h1>
-          <p className={plusJakartaSans.className + " text-xs text-special02C max-w-[300] font-normal"}  >
+          <p className={plusJakartaSans.className + " text-xs text-special02C max-w-[290] font-normal"}  >
             Berikan doa dan ucapan terbaik untuk kami
           </p>
           </motion.div>
@@ -161,7 +161,7 @@ export default function Gift() {
               name="nama"
               placeholder="Nama"
               required
-              className="placeholder:text-special02B/70 w-80 bg-special02C py-2 pl-2 rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-special02C focus:border-transparent"
+              className="placeholder:text-special02B/70 w-[290px] bg-special02C py-2 pl-2 rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-special02C focus:border-transparent"
 
             />
             </motion.div>
@@ -173,7 +173,7 @@ export default function Gift() {
               viewport={{ once: true }}
             >
             <textarea
-              className="w-80 h-18 my-2 p-2 text-xs rounded-md bg-special02C 
+              className="w-[290px] h-18 my-2 p-2 text-xs rounded-md bg-special02C 
               placeholder:text-special02B/70 
               focus:outline-none focus:ring-2 focus:ring-special02C 
               resize-none"
@@ -190,7 +190,7 @@ export default function Gift() {
             <select
               value={attendance ?? ""}
               onChange={(e) => setAttendance(e.target.value as "hadir" | "tidak")}
-              className="w-80 p-2 rounded-md bg-special02C text-xs focus:outline-none focus:ring-2 focus:ring-invitation focus:border-transparent resize-none"
+              className="w-[290px] p-2 rounded-md bg-special02C text-xs focus:outline-none focus:ring-2 focus:ring-invitation focus:border-transparent resize-none"
             >
               <option value="">Pilih Kehadiran</option>
               <option value="hadir">Hadir</option>
@@ -207,7 +207,7 @@ export default function Gift() {
             <p
               className={
                 plusJakartaSans.className +
-                " text-xs w-80 mt-3 py-2 font-bold bg-special02C rounded-md cursor-pointer transform transition-all duration-300 ease-out hover:bg-special02C/80 hover:scale-105"
+                " text-xs w-[290px] mt-3 py-2 font-bold bg-special02C rounded-md cursor-pointer transform transition-all duration-300 ease-out hover:bg-special02C/80 hover:scale-105"
               }
             >
               Kirim
@@ -220,7 +220,7 @@ export default function Gift() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-            <div className="w-80 h-80 max-w-sm mx-auto bg-special02C/50 rounded-xl p-4 mt-8 text-xs text-white flex flex-col gap-4 overflow-y-auto text-left">
+            <div className="w-80 h-80 max-w-[290px] mx-auto bg-special02C/50 rounded-xl p-4 mt-8 text-xs text-white flex flex-col gap-4 overflow-y-auto text-left">
               {wishes.map((wish, index) => (
                 <div
                   key={index}

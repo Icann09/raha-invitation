@@ -62,27 +62,27 @@ export default function TurutMengundang() {
         alt="Tree 1"
         width={370}
         height={370}
-        className="absolute bottom-[80px] left-[-250px] transform z-50 pointer-events-none rotate-90 -scale-x-100"
+        className="absolute bottom-[80px] left-[-250px] transform z-30 pointer-events-none rotate-90 -scale-x-100"
       />
-      <div className="absolute top-[80px] right-[-200px] z-50 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]">
+      <div className="absolute top-[80px] right-[-200px] z-10 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]">
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree 2"
-          width={320}
-          height={320}
+          width={300}
+          height={300}
         />
         <Image
           src="/images/special02/assets/flower-yellow.webp"
           alt="Flower"
-          width={80}
-          height={80}
-          className="absolute top-0 right-0 rotate-[60deg]"
+          width={60}
+          height={60}
+          className="absolute top-0 right-[20px] rotate-[60deg]"
         />
       </div>
       
 
       {/* Bottom Flowers */}
-      <div className="absolute bottom-[-50px] right-[-110px]  z-50 pointer-events-none animate-fade-up">
+      <div className="absolute bottom-[-50px] right-[-110px]  z-30 pointer-events-none animate-fade-up">
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Flower"
@@ -90,7 +90,7 @@ export default function TurutMengundang() {
           height={280}
         />
       </div>
-      <div className="absolute bottom-[-50px] left-[-110px]  z-50 pointer-events-none animate-fade-up">
+      <div className="absolute bottom-[-50px] left-[-110px]  z-30 pointer-events-none animate-fade-up">
         <Image
           src="/images/special02/assets/flower-left.webp"
           alt="Flower"
@@ -116,19 +116,19 @@ export default function TurutMengundang() {
       />
 
         {/* Content */}
-        <div className="relative h-screen flex flex-col items-center justify-center text-center text-special02C mb-30 z-40 ">
+        <div className="relative h-screen flex flex-col items-center justify-center text-center text-special02C mb-30 z-50 ">
           <motion.div
             variants={fadeVariants.up}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-[25px] sm:text-[30px] font-[Breathing2] leading-tight pb-2">
+          <h1 className="text-[26px] font-[Breathing2] leading-tight pb-2 z-50">
             Turut Mengundang
           </h1>
           </motion.div>
           
-          <p className={plusJakartaSans.className + " text-xs max-w-[300] font-normal pt-4"}  >
+          <p className={plusJakartaSans.className + " text-xs max-w-[300] font-normal pt-4 z-50"}  >
             Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i, kami yang turut mengundang mengucapkan terimakasih yang setulus-tulusnya. 
           </p>
 

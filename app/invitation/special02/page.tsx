@@ -102,7 +102,7 @@ export default function Page() {
     <div className="w-full flex flex-col h-[100dvh] overflow-y-hidden">
       {/* Music */}
         <div 
-          className={`absolute bottom-3 right-3 z-50 animate-fade-right rounded-full bg-white/50 ${
+          className={`absolute bottom-3 right-3 z-100 animate-fade-right rounded-full bg-white/50 ${
   open ? "block" : "hidden"
 }`}
         >

@@ -42,17 +42,17 @@ export default function Bride() {
         {/* Flowers */}
         <Image
           src="/images/special02/assets/flower-left.webp"
-          alt="Tree 1"
-          width={370}
-          height={370}
-          className="absolute top-1/2 left-[-250px] transform -translate-y-1/2 z-20 pointer-events-none rotate-90 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
+          alt="Flower"
+          width={320}
+          height={320}
+          className="absolute top-1/2 left-[-220px] transform -translate-y-1/2 z-30 pointer-events-none rotate-90 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special02/assets/flower-right.webp"
-          alt="Tree 2"
+          alt="Flower"
           width={320}
           height={320}
-          className="absolute top-[80px] right-[-200px] z-20 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute top-[80px] right-[-210px] z-20 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
         />
     
         {/* Content */}
@@ -68,11 +68,11 @@ export default function Bride() {
           <Image 
             src="/images/special02/assets/house4.webp"
             alt="House"
-            width={180}
+            width={150}
             height={40}
             className="absolute top-[-20px] left-1/2 -translate-x-1/2"
           />
-          <p className={plusJakartaSans.className + " font-bold text-[10px] pt-4 z-40 mt-14"}  >
+          <p className={plusJakartaSans.className + " font-bold text-[10px] pt-4 z-40 mt-10"}  >
             Assalamu'alaikum warahmatullahi wabarakatuh
           </p>
           <p className={plusJakartaSans.className + " text-[10px] pt-4 max-w-[320] z-40"}  >

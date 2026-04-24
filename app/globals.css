@@ -236,7 +236,7 @@ body {
 
 
 .animate-swingingtree2 { 
-animation: swingingtree2 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+animation: swingingtree2 20s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   transform-origin: bottom center; 
 }
 

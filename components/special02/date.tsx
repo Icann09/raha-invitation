@@ -88,7 +88,7 @@ const [time, setTime] = useState({
           alt="Tribal"
           width={180}
           height={180}
-          className="absolute bottom-[180px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none animate-fade-down-slow"
+          className="absolute bottom-[130px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none animate-fade-down-slow"
         />
 
         {/* Side Flowers */}
@@ -104,7 +104,7 @@ const [time, setTime] = useState({
           alt="Tree 2"
           width={320}
           height={320}
-          className="absolute top-[80px] right-[-200px] z-50 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute top-[80px] right-[-220px] z-50 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
         />
 
         {/* Bottom Flowers */}
@@ -161,19 +161,19 @@ const [time, setTime] = useState({
             Save the Date
           </h1>
           <div className="grid grid-cols-4 gap-2 text-special02B">
-            <div className={plusJakartaSans.className + " w-20 h-20 bg-special02C rounded-md text-center flex flex-col items-center justify-center"}>
+            <div className={plusJakartaSans.className + " w-16 h-16 bg-special02C rounded-md text-center flex flex-col items-center justify-center"}>
               <p className="font-bold text-2xl">{time.days}</p>
               <p className="font-bold text-xs">Hari</p>
             </div>
-            <div className={plusJakartaSans.className + " w-20 h-20 bg-special02C rounded-md text-center flex flex-col items-center justify-center"}>
+            <div className={plusJakartaSans.className + " w-16 h-16 bg-special02C rounded-md text-center flex flex-col items-center justify-center"}>
               <p className="font-bold text-2xl">{time.hours}</p>
               <p className="font-bold text-xs">Jam</p>
             </div>
-            <div className={plusJakartaSans.className + " w-20 h-20 bg-special02C rounded-md text-center flex flex-col items-center justify-center"}>
+            <div className={plusJakartaSans.className + " w-16 h-16 bg-special02C rounded-md text-center flex flex-col items-center justify-center"}>
               <p className="font-bold text-2xl">{time.minutes}</p>
               <p className="font-bold text-xs">Menit</p>
             </div>
-            <div className={plusJakartaSans.className + " w-20 h-20 bg-special02C rounded-md text-center flex flex-col items-center justify-center"}>
+            <div className={plusJakartaSans.className + " w-16 h-16 bg-special02C rounded-md text-center flex flex-col items-center justify-center"}>
               <p className="font-bold text-2xl">{time.seconds}</p>
               <p className="font-bold text-xs">Detik</p>
             </div>

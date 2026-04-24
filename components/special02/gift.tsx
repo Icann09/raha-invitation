@@ -66,15 +66,15 @@ export default function Gift() {
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree 2"
-          width={320}
-          height={320}
+          width={300}
+          height={300}
         />
         <Image
           src="/images/special02/assets/flower-yellow.webp"
           alt="Flower"
-          width={80}
-          height={80}
-          className="absolute top-0 right-0 rotate-[60deg]"
+          width={60}
+          height={60}
+          className="absolute top-0 right-[20px] rotate-[60deg]"
         />
       </div>
       
@@ -114,19 +114,19 @@ export default function Gift() {
       />
 
         {/* Content */}
-        <div className="relative h-screen flex flex-col items-center justify-center text-center text-special02C mb-30 z-40 ">
+        <div className="relative h-screen flex flex-col items-center justify-center text-center text-special02C mb-30 z-50 ">
           <motion.div
             variants={fadeVariants.up}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-[45px] font-[Breathing2] leading-tight pb-2">
+          <h1 className="text-[40px] font-[Breathing2] leading-tight pb-2">
             Wedding Gift
           </h1>
           </motion.div>
           
-          <p className={plusJakartaSans.className + " text-xs  max-w-[300] font-normal pt-4"}  >
+          <p className={plusJakartaSans.className + " text-xs  max-w-[290] font-normal pt-4"}  >
             Merupakan suatu kebahagiaan dan
             kehormatan bagi kami apabila
             Bapak/Ibu/Saudara/i berkenan hadir untuk
@@ -147,7 +147,7 @@ export default function Gift() {
           >
             Klik Di Sini
           </p>
-          <div className={`${isOpen ? "flex" : "hidden"} w-80 max-w-sm mx-auto bg-special02C/50 rounded-xl p-6 mt-8 text-white text-xs flex-col overflow-y-auto text-center gap-3 animate-fade-down`}>
+          <div className={`${isOpen ? "flex" : "hidden"} w-80 max-w-[290px] mx-auto bg-special02C/50 rounded-xl p-6 mt-8 text-white text-xs flex-col overflow-y-auto text-center gap-3 animate-fade-down`}>
             <div className="flex flex-col gap-2">
               {gift.rekening.map((rek, index) => (
                 <div 
