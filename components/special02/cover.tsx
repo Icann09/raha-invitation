@@ -89,13 +89,13 @@ export default function Cover({onClick} : {onClick: () => void }) {
                 className="absolute top-[10px] right-[-107px] z-10 pointer-events-none rotate-[0deg] animate-fade-left"
               />
               
-              <div className="flex flex-col text-special02B items-center z-30 pt-5">
+              <div className="flex flex-col text-special02B items-center z-30 pt-3">
 
                 <Image 
                   src="/images/logoutama.webp"
                   alt="Logo"
-                  width={130}
-                  height={130}
+                  width={110}
+                  height={110}
                   className="z-20"
                 />
                 <p className={plusJakartaSans.className + " font-bold text-xs animate-fade-up"}  >

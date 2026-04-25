@@ -52,7 +52,7 @@ export default function Groom() {
             />
         
             {/* Content */}
-            <div className="relative flex flex-col justify-center items-center text-center mt-14 z-20 text-special02C">
+            <div className="relative flex flex-col justify-center items-center text-center mt-12 z-20 text-special02C">
     
               <motion.div
                 variants={fadeVariants.up}
@@ -64,7 +64,7 @@ export default function Groom() {
               <Image 
                 src="/images/special02/assets/house4.webp"
                 alt="House"
-                width={150}
+                width={140}
                 height={40}
                 className="absolute top-[-20px] left-1/2 -translate-x-1/2"
               />
@@ -121,7 +121,7 @@ export default function Groom() {
                 {groom.nama}
               </h1>
               <div className="py-4">
-                <p className="leading-tight font-semibold">
+                <p className="leading-tight font-semibold text-sm">
                   {groom.nama_lengkap}
                 </p>
                 <p className="leading-tight text-xs">
@@ -132,7 +132,7 @@ export default function Groom() {
                 href={groom.link_ig}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={plusJakartaSans.className + " font-bold text-xs bg-special02C text-special02A py-1 px-4 rounded-full"} 
+                className={plusJakartaSans.className + " font-bold text-[10px] bg-special02C text-special02A py-1 px-4 rounded-full"} 
               >
                 {groom.ig}
               </a>
