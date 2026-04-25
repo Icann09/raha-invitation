@@ -224,12 +224,16 @@ body {
   10%  { transform: rotate(3deg); }
   20%  { transform: rotate(-2deg); }
 
-  35%  { transform: rotate(4deg); }
-  50%  { transform: rotate(-3deg); }
+  30%  { transform: rotate(4deg); }
+  40%  { transform: rotate(-3deg); }
 
-  65%  { transform: rotate(2deg); }
-  80%  { transform: rotate(-1.5deg); }
+  50%  { transform: rotate(2deg); }
+  60%  { transform: rotate(-1.5deg); }
 
+  70%  { transform: rotate(2.5deg); }
+  80%  { transform: rotate(-1deg); }
+
+  90%  { transform: rotate(1deg); }
   100% { transform: rotate(0deg); }
 }
 
@@ -239,9 +243,9 @@ body {
 }
 
 
-.animate-swingingtree2 { 
-  animation: swingingtree2 20s ease-in-out infinite;
-  transform-origin: bottom center; 
+.animate-swingingtree2 {
+  animation: swingingtree2 40s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  transform-origin: bottom center;
 }
 
 
@@ -313,7 +317,7 @@ body {
 }
 
 .animate-fade-down-slow {
-  animation: fade-down 10s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-down 12s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-fade-up {
@@ -321,7 +325,7 @@ body {
 }
 
 .animate-fade-up-slow {
-  animation: fade-up 10s ease-out forwards;
+  animation: fade-up 12s ease-out forwards;
 }
 
 .animate-fade-up-delay-1 {

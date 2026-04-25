@@ -45,14 +45,14 @@ export default function Bride() {
           alt="Flower"
           width={320}
           height={320}
-          className="absolute top-1/2 left-[-220px] transform -translate-y-1/2 z-30 pointer-events-none rotate-90 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
+          className="absolute top-1/2 left-[-220px] transform -translate-y-1/2 z-30 pointer-events-none rotate-90 animate-[swingingtree2_25s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Flower"
           width={320}
           height={320}
-          className="absolute top-[80px] right-[-210px] z-20 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute top-[80px] right-[-210px] z-20 pointer-events-none rotate-[-90deg] animate-[swingingtree2_25s_ease-in-out_infinite_8s]"
         />
     
         {/* Content */}

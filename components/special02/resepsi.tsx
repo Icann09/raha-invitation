@@ -49,14 +49,14 @@ export default function Woman() {
           alt="Tree 1"
           width={370}
           height={370}
-          className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-50 pointer-events-none rotate-90 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
+          className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-50 pointer-events-none rotate-90 animate-[swingingtree2_25s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree 2"
           width={320}
           height={320}
-          className="absolute top-[80px] right-[-210px] z-50 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute top-[80px] right-[-210px] z-50 pointer-events-none rotate-[-90deg] animate-[swingingtree2_25s_ease-in-out_infinite_8s]"
         />
   
         {/* Bottom Flowers */}
@@ -102,7 +102,7 @@ export default function Woman() {
           
   
           {/* Content */}
-          <div className="z-20 text-special02C">
+          <div className="z-20 text-special02C animate-fade-down-slow">
             <motion.div
               variants={fadeVariants.up}
               initial="hidden"

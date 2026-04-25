@@ -81,7 +81,7 @@ export default function Gift() {
         height={370}
         className="absolute bottom-[80px] left-[-250px] transform z-50 pointer-events-none rotate-90 -scale-x-100"
       />
-      <div className="absolute top-[80px] right-[-200px] z-30 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]">
+      <div className="absolute top-[80px] right-[-200px] z-30 pointer-events-none rotate-[-90deg] animate-[swingingtree2_25s_ease-in-out_infinite_8s]">
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree 2"

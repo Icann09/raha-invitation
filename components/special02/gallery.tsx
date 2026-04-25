@@ -35,21 +35,21 @@ export default function Gallery() {
           alt="Tree 1"
           width={370}
           height={370}
-          className="absolute top-1/2 left-[-250px] transform -translate-y-1/2 z-20 pointer-events-none rotate-90 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
+          className="absolute top-1/2 left-[-250px] transform -translate-y-1/2 z-20 pointer-events-none rotate-90 animate-[swingingtree2_25s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree 2"
           width={320}
           height={320}
-          className="absolute top-[80px] right-[-200px] z-20 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute top-[80px] right-[-200px] z-20 pointer-events-none rotate-[-90deg] animate-[swingingtree2_25s_ease-in-out_infinite_6s]"
         />
           <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree 1"
           width={320}
           height={320}
-          className="absolute bottom-[90px] right-[-60px] transform translate-x-1/2 z-10  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute bottom-[90px] right-[-60px] transform translate-x-1/2 z-10  rotate-[-90deg] animate-[swingingtree2_25s_ease-in-out_infinite_8s]"
         />
         
 

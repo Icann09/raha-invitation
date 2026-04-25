@@ -30,7 +30,7 @@ export default function Woman() {
 
         
         {/* Tribals */}
-        <div className="absolute top-1/2 left-[-125px] transform -translate-y-1/2 z-30 pointer-events-none -scale-x-100 rotate-270 animate-[swingingtree2_10s_ease-in-out_infinite_2s]">
+        <div className="absolute top-1/2 left-[-125px] transform -translate-y-1/2 z-30 pointer-events-none -scale-x-100 rotate-270 animate-[swingingtree2_25s_ease-in-out_infinite_2s]">
           <Image
             src="/images/special02/assets/tribal-1.webp"
             alt="Tree 1"
@@ -38,7 +38,7 @@ export default function Woman() {
             height={260}
           />
         </div>
-        <div className="absolute bottom-[50px] right-2 transform translate-x-1/2 z-30  rotate-[10deg] animate-[swingingtree2_10s_ease-in-out_infinite_3s]">
+        <div className="absolute bottom-[50px] right-2 transform translate-x-1/2 z-30  rotate-[10deg] animate-[swingingtree2_25s_ease-in-out_infinite_3s]">
           <Image
             src="/images/special02/assets/tribal-1.webp"
             alt="Tree 1"
@@ -62,7 +62,7 @@ export default function Woman() {
           <h1 className="text-[40px] font-[Breathing2] leading-tight pb-2">
             Terima Kasih
           </h1>
-          <p className={plusJakartaSans.className + " text-xs max-w-[300] font-normal"}  >
+          <p className={plusJakartaSans.className + " text-xs max-w-[290] font-normal"}  >
             Merupakan suatu kebahagiaan dan
             kehormatan bagi kami apabila
             Bapak/Ibu/Saudara/i berkenan hadir untuk

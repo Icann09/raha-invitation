@@ -88,7 +88,7 @@ const [time, setTime] = useState({
           alt="Tribal"
           width={180}
           height={180}
-          className="absolute bottom-[130px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none animate-fade-down-slow"
+className="absolute bottom-[120px] left-1/2 -translate-x-1/2 z-10 pointer-events-none animate-fade-down-slow-delay-2"
         />
 
         {/* Side Flowers */}
@@ -97,14 +97,14 @@ const [time, setTime] = useState({
           alt="Tree 1"
           width={370}
           height={370}
-          className="absolute top-1/2 left-[-250px] transform -translate-y-1/2 z-50 pointer-events-none rotate-90 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
+          className="absolute top-1/2 left-[-250px] transform -translate-y-1/2 z-10 pointer-events-none rotate-90 animate-[swingingtree2_25s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree 2"
           width={320}
           height={320}
-          className="absolute top-[80px] right-[-220px] z-50 pointer-events-none rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute top-[80px] right-[-220px] z-10 pointer-events-none rotate-[-90deg] animate-[swingingtree2_25s_ease-in-out_infinite_8s]"
         />
 
         {/* Bottom Flowers */}
@@ -149,7 +149,7 @@ const [time, setTime] = useState({
         />
 
         {/* Content */}
-        <div className="w-full flex flex-col items-center justify-center text-center text-special02C absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none">  
+        <div className="w-full flex flex-col items-center justify-center text-center text-special02C absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-100 pointer-events-none">  
         <motion.div
           variants={fadeVariants.up}
           initial="hidden"
@@ -178,7 +178,7 @@ const [time, setTime] = useState({
               <p className="font-bold text-xs">Detik</p>
             </div>
           </div>
-          <p className={sourceCodePro.className + " text-special02B text-sm mt-4 rounded-full bg-special02C py-1 px-2 font-bold pointer-events-auto"}>
+          <p className={sourceCodePro.className + " text-special02B text-sm mt-4 rounded-md bg-special02C py-1 px-2 font-bold pointer-events-auto"}>
             <a
               href={link}
               target="_blank"
