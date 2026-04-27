@@ -11,7 +11,7 @@ const date = "18 . 02 . 2024";
 export default function Opening() {
   return (
     <section  className="min-h-screen flex items-center justify-center bg-neutral-200">
-      <div className="relative w-full max-w-md h-[100dvh] bg-special02B overflow-hidden shadow-2xl">
+      <div className="relative w-full max-w-md h-[100vh] bg-special02B overflow-hidden shadow-2xl">
         
         {/* Backgrounds */}
         <Image
