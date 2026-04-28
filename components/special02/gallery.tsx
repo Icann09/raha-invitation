@@ -17,8 +17,8 @@ export default function Gallery() {
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-special02B">
+    <section  className="min-h-[800px] bg-neutral-200 flex items-center justify-center">
+      <div className="relative w-full max-w-md h-[800px] overflow-hidden shadow-2xl bg-special02B">
         
         {/* Backgrounds */}
         <Image
@@ -137,7 +137,7 @@ export default function Gallery() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-5xl font-[Breathing2] leading-tight py-6">
+          <h1 className="text-5xl font-[Breathing2] leading-tight py-10">
             {initials}
           </h1>
           <p className={plusJakartaSans.className + " max-w-[320px] font-bold text-[10px]"}  >

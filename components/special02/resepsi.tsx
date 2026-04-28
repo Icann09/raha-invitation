@@ -31,8 +31,8 @@ const resepsi = {
 
 export default function Woman() {
   return (
-  <section  className="min-h-screen flex items-center justify-center bg-neutral-200">
-        <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+  <section  className="min-h-[700px] flex items-center justify-center bg-neutral-200">
+        <div className="relative w-full max-w-md h-[700px] overflow-hidden shadow-2xl bg-white">
         
         {/* Backgrounds */}
         <Image

@@ -10,8 +10,8 @@ const bride = "Alisyah";
 const date = "18 . 02 . 2024";
 export default function Opening() {
   return (
-    <section  className="min-h-[100vh] flex items-center justify-center bg-neutral-200">
-      <div className="relative w-full max-w-md h-[100vh] bg-special02B overflow-hidden shadow-2xl">
+    <section  className="min-h-[100dvh] flex items-center justify-center bg-neutral-200">
+      <div className="relative w-full max-w-md h-[100dvh] bg-special02B overflow-hidden shadow-2xl">
         
         {/* Backgrounds */}
         <Image
@@ -26,16 +26,16 @@ export default function Opening() {
         <Image
           src="/images/special02/assets/flower-left.webp"
           alt="Tree Top"
-          width={250}
-          height={250}
-          className="absolute top-[-40px] left-[-80px] z-10 pointer-events-none -scale-y-100 animate-[swingingtree2_25s_ease-in-out_infinite_2s]"
+          width={200}
+          height={200}
+          className="absolute top-[-40px] left-[-100px] z-10 pointer-events-none -scale-y-100 animate-[swingingtree2_25s_ease-in-out_infinite_2s]"
         />
         <Image
           src="/images/special02/assets/flower-right.webp"
           alt="Tree Top"
-          width={250}
-          height={250}
-          className="absolute top-[-40px] right-[-80px] z-10 pointer-events-none -scale-y-100 animate-[swingingtree2_25s_ease-in-out_infinite_2s]"
+          width={200}
+          height={200}
+          className="absolute top-[-40px] right-[-90px] z-10 pointer-events-none -scale-y-100 animate-[swingingtree2_25s_ease-in-out_infinite_2s]"
         />
 
         {/* Flowers */}
@@ -76,9 +76,9 @@ export default function Opening() {
           alt="Tree Top"
           width={300}
           height={300}
-          className="absolute bottom-[300px] left-[-160px] z-10 pointer-events-none rotate-90 animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
+          className="absolute bottom-[270px] left-[-160px] z-10 pointer-events-none rotate-90 animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
         />
-        <div className="absolute bottom-[300px] right-[-160px] z-10 pointer-events-none rotate-[-90deg] animate-[swingingtree2_25s_ease-in-out_infinite_3s]">
+        <div className="absolute bottom-[270px] right-[-160px] z-10 pointer-events-none rotate-[-90deg] animate-[swingingtree2_25s_ease-in-out_infinite_3s]">
           <Image
             src="/images/special02/assets/flower-right.webp"
             alt="Tree Top"
@@ -101,28 +101,28 @@ export default function Opening() {
           alt="Trees"
           width={350}
           height={350}
-          className="absolute bottom-[20px] left-[310px] z-0 pointer-events-none animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
+          className="absolute bottom-0 left-[310px] z-0 pointer-events-none animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
         />
         <Image
           src="/images/special02/assets/tree.webp"
           alt="Trees"
           width={350}
           height={350}
-          className="absolute bottom-[140px] left-[310px] z-0 pointer-events-none animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
+          className="absolute bottom-[100px] left-[310px] z-0 pointer-events-none animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
         />
         <Image
           src="/images/special02/assets/tree.webp"
           alt="Trees"
           width={350}
           height={350}
-          className="absolute bottom-[20px] right-[310px] z-0 pointer-events-none -scale-x-100 animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
+          className="absolute bottom-0 right-[310px] z-0 pointer-events-none -scale-x-100 animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
         />
         <Image
           src="/images/special02/assets/tree.webp"
           alt="Trees"
           width={350}
           height={350}
-          className="absolute bottom-[140px] right-[310px] z-0 pointer-events-none -scale-x-100 animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
+          className="absolute bottom-[100px] right-[310px] z-0 pointer-events-none -scale-x-100 animate-[swingingtree2_25s_ease-in-out_infinite_3s]"
         />
 
         {/* Moon */}
@@ -137,14 +137,14 @@ export default function Opening() {
         <Image
           src="/images/special02/assets/tribal-3.webp"
           alt="Tribal"
-          width={150}
-          height={150}
+          width={130}
+          height={130}
           className="absolute bottom-[170px] left-1/2 transform -translate-x-1/2 z-10 pointer-events-none animate-fade-down-slow"
         />
 
 
         {/* Content */}
-        <div className="w-full flex flex-col items-center justify-center text-center text-special02C absolute top-[28%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none animate-fade-in">
+        <div className="w-full flex flex-col items-center justify-center text-center text-special02C absolute top-[25%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none animate-fade-in">
           <p className={plusJakartaSans.className + " font-bold text-xs"}  >
             THE WEDDING OF
           </p>

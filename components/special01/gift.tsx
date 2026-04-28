@@ -108,7 +108,7 @@ export default function Gift() {
           </h1>
           </motion.div>
           
-          <p className={plusJakartaSans.className + " text-xs text-special01E max-w-[300] font-normal my-6"}  >
+          <p className={plusJakartaSans.className + " text-xs text-special01E max-w-[290px] font-normal my-5"}  >
             Merupakan suatu kebahagiaan dan
             kehormatan bagi kami apabila
             Bapak/Ibu/Saudara/i berkenan hadir untuk

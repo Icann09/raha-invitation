@@ -13,8 +13,8 @@ const plusJakartaSans1 = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" }
 
 export default function Woman() {
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+    <section  className="min-h-[800px] bg-neutral-200 flex items-center justify-center">
+      <div className="relative w-full max-w-md h-[800px] overflow-hidden shadow-2xl bg-white">
       
         {/* Backgrounds */}
         <Image

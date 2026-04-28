@@ -61,8 +61,8 @@ const [time, setTime] = useState({
 
 
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-special02B">
+    <section  className="min-h-[800px] bg-neutral-200 flex items-center justify-center">
+      <div className="relative w-full max-w-md h-[800px] overflow-hidden shadow-2xl bg-special02B">
         
         {/* Backgrounds */}
         <Image

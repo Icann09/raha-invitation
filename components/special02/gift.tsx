@@ -39,8 +39,8 @@ export default function Gift() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+    <section  className="min-h-[800px] bg-neutral-200 flex items-center justify-center">
+      <div className="relative w-full max-w-md h-[800px] overflow-hidden shadow-2xl bg-white flex justify-center items-center">
       
       {/* Backgrounds */}
       <Image
@@ -51,7 +51,7 @@ export default function Gift() {
         priority
       />
       {/* Overlay  */}
-      <div className="absolute w-full h-screen bg-special02A/80 transparent bottom-0 z-10 pointer-events-none" />
+      <div className="absolute w-full h-[800px] bg-special02A/80 transparent bottom-0 z-10 pointer-events-none" />
 
 
       {/* Side Flowers */}
@@ -114,7 +114,7 @@ export default function Gift() {
       />
 
         {/* Content */}
-        <div className="relative h-screen flex flex-col items-center justify-center text-center text-special02C mb-30 z-50 ">
+        <div className="relative h-screen flex flex-col items-center justify-center text-center text-special02C z-50 ">
           <motion.div
             variants={fadeVariants.up}
             initial="hidden"
@@ -126,7 +126,7 @@ export default function Gift() {
           </h1>
           </motion.div>
           
-          <p className={plusJakartaSans.className + " text-xs  max-w-[290] font-normal pt-4"}  >
+          <p className={plusJakartaSans.className + " text-xs  max-w-[290px] font-normal my-5"}  >
             Merupakan suatu kebahagiaan dan
             kehormatan bagi kami apabila
             Bapak/Ibu/Saudara/i berkenan hadir untuk
