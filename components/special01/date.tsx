@@ -61,8 +61,8 @@ const [time, setTime] = useState({
 
 
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+    <section  className="min-h-[800px] bg-neutral-200 flex items-center justify-center">
+      <div className="relative w-full max-w-md h-[800px] overflow-hidden shadow-2xl bg-white">
         
         {/* Backgrounds */}
         <Image
@@ -159,7 +159,7 @@ const [time, setTime] = useState({
               <p className="text-white font-bold text-xs">Detik</p>
             </div>
           </div>
-          <p className={sourceCodePro.className + " text-white text-xs mt-4 rounded-full bg-special01E py-2 px-2 font-bold pointer-events-auto"}>
+          <p className={sourceCodePro.className + " text-white text-xs mt-4 rounded-md bg-special01E py-2 px-2 font-bold pointer-events-auto"}>
             <a
               href={link}
               target="_blank"

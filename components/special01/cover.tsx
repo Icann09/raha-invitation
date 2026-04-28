@@ -92,8 +92,8 @@ export default function Cover({onClick} : {onClick: () => void }) {
           </div>
 
           {/* Middle */}
-          <div className="relative h-[50vh] z-30">
-            <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-24">
+          <div className="relative h-[60vh] z-20">
+            <div className=" h-[60%] bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none pt-26 z-100">
               <p className={plusJakartaSans.className + " font-bold text-xs text-special01E animate-fade-up"}  >
                 THE WEDDING OF
               </p>
@@ -102,12 +102,12 @@ export default function Cover({onClick} : {onClick: () => void }) {
                 {groom} & {bride}
               </h1>
 
-              <p className= {plusJakartaSans.className + " text-xs text-special01E font-bold animate-fade-up-delay-2 z-30"}>
+              <p className= {plusJakartaSans.className + " text-xs text-special01E font-bold animate-fade-up-delay-2 z-100"}>
                 Kepada Yth. <br />
                 {guest || "Tamu Undangan"}
               </p>
             </div>
-            <div className="flex flex-col bg-white h-[40%] justify-end items-center pb-16">
+            <div className="flex flex-col bg-white h-[40%] justify-center items-center pb-8 z-20">
               <p className="relative text-[10px] text-special01E italic mb-4 font-semibold z-30">
                 
                 *Mohon maaf jika ada kesalahan dalam penulisan nama dan gelar

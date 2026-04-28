@@ -27,8 +27,8 @@ const akad = {
 
 export default function Woman() {
   return (
-    <section  className="min-h-screen flex items-center justify-center bg-neutral-200">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+    <section  className="min-h-[700px] flex items-center justify-center bg-neutral-200">
+      <div className="relative w-full max-w-md h-[700px] overflow-hidden shadow-2xl bg-white">
       
         {/* Trees */}
         <Image
@@ -36,25 +36,25 @@ export default function Woman() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
+          className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_20s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special01/assets/tree2.webp"
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-1 right-[-100px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-45deg] animate-swingingtree2"
+          className="absolute top-1 right-[-20px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-45deg] animate-[swingingtree2_20s_ease-in-out_infinite_8s]"
         />
           <Image
           src="/images/special01/assets/tree2.webp"
           alt="Tree 1"
           width={350}
           height={350}
-          className="absolute bottom-[135px] right-[-50px] transform translate-x-1/2 z-30  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute bottom-[35px] right-[-40px] transform translate-x-1/2 z-30  rotate-[-90deg] animate-[swingingtree2_20s_ease-in-out_infinite_8s]"
         />
 
         {/* Castle */}
-        <div className="w-[500px] h-[40vh] absolute bottom-[-60px] left-20  z-10 pointer-events-none">
+        <div className="w-[500px] h-[50vh] absolute bottom-[-60px] left-20  z-10 pointer-events-none">
           <Image
             src="/images/special01/assets/castle.webp"
             alt="Castle Ornament"
@@ -62,7 +62,7 @@ export default function Woman() {
             className="object-cover "
           />
         </div>
-        <div className="w-[500px] h-[40vh] absolute bottom-[-120px] left-[-220px]  z-10 pointer-events-none">
+        <div className="w-[500px] h-[60vh] absolute bottom-[-120px] left-[-220px]  z-10 pointer-events-none">
           <Image
             src="/images/special01/assets/castle.webp"
             alt="Castle Ornament"

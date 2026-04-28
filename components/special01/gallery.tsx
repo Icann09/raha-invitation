@@ -17,8 +17,8 @@ export default function Gallery() {
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+    <section  className="min-h-[800px] bg-neutral-200 flex items-center justify-center">
+      <div className="relative w-full max-w-md h-[800px] overflow-hidden shadow-2xl bg-white">
         
         {/* Backgrounds */}
         <Image
@@ -35,21 +35,21 @@ export default function Gallery() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-280px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
+          className="absolute top-1/2 left-[-280px] transform -translate-y-1/2 z-10 pointer-events-none rotate-45 animate-[swingingtree2_20s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special01/assets/tree2.webp"
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-1 right-[-100px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg] animate-swingingtree2"
+          className="absolute top-1 right-[0px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg] animate-[swingingtree2_20s_ease-in-out_infinite_5s]"
         />
           <Image
           src="/images/special01/assets/tree2.webp"
           alt="Tree 1"
           width={350}
           height={350}
-          className="absolute bottom-[135px] right-[-50px] transform translate-x-1/2 z-10  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute bottom-[95px] right-[-40px] transform translate-x-1/2 z-10  rotate-[-90deg] animate-[swingingtree2_20s_ease-in-out_infinite_8s]"
         />
         
 
@@ -129,7 +129,7 @@ export default function Gallery() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-5xl text-special01B font-[Breathing2] leading-tight py-6">
+          <h1 className="text-5xl text-special01B font-[Breathing2] leading-tight py-8">
             {initials}
           </h1>
           <p className={plusJakartaSans.className + " max-w-[320px] font-bold text-[10px] text-special01E"}  >

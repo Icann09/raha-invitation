@@ -21,8 +21,8 @@ const groom = {
 
 export default function Groom() {
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+    <section  className="min-h-[800px] bg-neutral-200 flex items-center justify-center">
+      <div className="relative w-full max-w-md h-[800px] overflow-hidden shadow-2xl bg-white">
       
         {/* Backgrounds */}
         <Image
@@ -42,25 +42,25 @@ export default function Groom() {
           alt="Tree 1"
           width={400}
           height={400}
-          className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]"
+          className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_20s_ease-in-out_infinite_5s]"
         />
         <Image
           src="/images/special01/assets/tree2.webp"
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-1 right-[-100px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg] animate-swingingtree2"
+          className="absolute top-1 right-[-20px] transform translate-x-1/2 z-10 pointer-events-none rotate-[-45deg] animate-[swingingtree2_20s_ease-in-out_infinite_5s]"
         />
           <Image
           src="/images/special01/assets/tree2.webp"
           alt="Tree 1"
           width={350}
           height={350}
-          className="absolute bottom-[135px] right-[-50px] transform translate-x-1/2 z-30  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]"
+          className="absolute bottom-[95px] right-[-40px] transform translate-x-1/2 z-30  rotate-[-90deg] animate-[swingingtree2_20s_ease-in-out_infinite_8s]"
         />
 
         {/* Castle */}
-        <div className="w-[500px] h-[40vh] absolute bottom-[-80px] left-20  z-20 pointer-events-none">
+        <div className="w-[500px] h-[50vh] absolute bottom-[-120px] left-20  z-20 pointer-events-none">
           <Image
             src="/images/special01/assets/castle.webp"
             alt="Castle Ornament"
@@ -68,7 +68,7 @@ export default function Groom() {
             className="object-cover "
           />
         </div>
-        <div className="w-[500px] h-[60vh] absolute bottom-[-140px] left-[-220px]  z-20 pointer-events-none">
+        <div className="w-[500px] h-[60vh] absolute bottom-[-160px] left-[-220px]  z-20 pointer-events-none">
           <Image
             src="/images/special01/assets/castle.webp"
             alt="Castle Ornament"
@@ -81,7 +81,7 @@ export default function Groom() {
         
 
         {/* Content */}
-        <div className="relative flex flex-col items-center justify-center text-center mt-14 z-40">
+        <div className="relative flex flex-col items-center justify-center text-center mt-8 z-40">
           <div>
             <motion.div
               variants={fadeVariants.up}

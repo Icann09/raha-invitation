@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { motion, number } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeVariants } from "@/lib/motion";
 import { useState } from "react";
 
@@ -39,8 +39,8 @@ export default function Gift() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <section  className="min-h-screen bg-neutral-200 flex items-center justify-center">
-      <div className="relative w-full max-w-md h-[100vh] overflow-hidden shadow-2xl bg-white">
+    <section  className="min-h-[800px] bg-neutral-200 flex items-center justify-center">
+      <div className="relative w-full max-w-md h-[800px] overflow-hidden shadow-2xl bg-white flex justify-center items-center">
       
         {/* Backgrounds */}
         <Image
@@ -53,11 +53,11 @@ export default function Gift() {
 
         {/* Overlay */}
         <div className="absolute w-full h-[50vh] bg-gradient-to-t from-white  to-transparent bottom-0 z-20 pointer-events-none" />
-        <div className="absolute w-full h-screen bg-[#bccdd2]/80 transparent bottom-0 z-10 pointer-events-none" />
+        <div className="absolute w-full h-[800px] bg-[#bccdd2]/80 transparent bottom-0 z-10 pointer-events-none" />
 
 
         {/* Trees */}
-        <div className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_10s_ease-in-out_infinite_5s]">
+        <div className="absolute top-1/2 left-[-260px] transform -translate-y-1/2 z-30 pointer-events-none rotate-45 animate-[swingingtree2_20s_ease-in-out_infinite_5s]">
           <Image
             src="/images/special01/assets/tree2.webp"
             alt="Tree 1"
@@ -77,9 +77,9 @@ export default function Gift() {
           alt="Tree 2"
           width={350}
           height={350}
-          className="absolute top-1 right-[-100px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-45deg] animate-swingingtree2"
+          className="absolute top-4 right-[-10px] transform translate-x-1/2 z-30 pointer-events-none rotate-[-45deg] animate-[swingingtree2_20s_ease-in-out_infinite_8s]"
         />
-        <div className="absolute bottom-[135px] right-[0px] transform translate-x-1/2 z-30  rotate-[-90deg] animate-[swingingtree2_10s_ease-in-out_infinite_8s]">
+        <div className="absolute bottom-[95px] right-[0px] transform translate-x-1/2 z-30  rotate-[-90deg] animate-[swingingtree2_20s_ease-in-out_infinite_8s]">
           <Image
             src="/images/special01/assets/tree2.webp"
             alt="Tree 1"
@@ -96,19 +96,19 @@ export default function Gift() {
         </div>
 
         {/* Content */}
-        <div className="relative h-screen flex flex-col items-center justify-center text-center mb-30 z-40 ">
+        <div className="relative h-screen flex flex-col items-center justify-center text-center z-40 ">
           <motion.div
             variants={fadeVariants.up}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-          <h1 className="text-[45px] text-special01E font-[Breathing2] leading-tight pb-2">
+          <h1 className="text-[45px] text-special01E font-[Breathing2] leading-tight">
             Wedding Gift
           </h1>
           </motion.div>
           
-          <p className={plusJakartaSans.className + " text-xs text-special01E max-w-[300] font-normal pt-4"}  >
+          <p className={plusJakartaSans.className + " text-xs text-special01E max-w-[300] font-normal my-6"}  >
             Merupakan suatu kebahagiaan dan
             kehormatan bagi kami apabila
             Bapak/Ibu/Saudara/i berkenan hadir untuk

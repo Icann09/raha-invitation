@@ -11,9 +11,6 @@ const date = "18 . 02 . 2024";
 export default function Opening() {
   return (
     <section  className="min-h-screen flex items-center justify-center bg-neutral-200">
-
-    
-
       <div className="relative w-full max-w-md h-[100vh] bg-white overflow-hidden shadow-2xl">
         
         {/* Backgrounds */}
@@ -91,7 +88,7 @@ export default function Opening() {
         />
 
         {/* Content */}
-        <div className="w-full flex flex-col items-center justify-center text-center absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none animate-fade-in">
+        <div className="w-full flex flex-col items-center justify-center text-center absolute top-1/4 pt-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none animate-fade-in">
           <p className={plusJakartaSans.className + " font-bold text-xs text-special01E"}  >
             THE WEDDING OF
           </p>
