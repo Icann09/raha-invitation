@@ -41,7 +41,7 @@ export default function Page() {
     <div className="flex justify-center">
 
       {/* BACKGROUND (FIXED & CENTERED) */}
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-[100dvh] -z-10 overflow-hidden">
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 min-w-[320px] w-full max-w-md h-[100dvh] -z-10 overflow-hidden">
         {images.map((img, i) => (
           <div
             key={i}
@@ -59,7 +59,7 @@ export default function Page() {
       </div>
 
       {/* CONTENT */}
-      <div className="min-w-[320px] w-full max-w-md h-[100dvh] overflow-y-auto">
+      <div className="min-w-[320px] w-full max-w-md h-[100dvh] overflow-y-auto overflow-x-hidden">
         <Opening />
         <Initials />
         <BrideAndGroom />

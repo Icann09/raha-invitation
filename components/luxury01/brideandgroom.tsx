@@ -28,7 +28,7 @@ const grromImages = [
 export default function BrideAndGroom() {
 
   return (
-    <section className={quicksand.className + " h-auto flex flex-col items-center justify-center bg-gray-100/80 text-center"}>
+    <section className={quicksand.className + "w-full h-auto flex flex-col items-center justify-center bg-gray-100/80 text-center"}>
     
       {/* Part 1 */}
       <div className="px-6 py-16">
