@@ -11,8 +11,6 @@ import { useState } from "react";
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "500" });
 const plusJakartaSans1 = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 
-<a href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." target="_blank" rel="nofollow">		
-</a>
 
 
 // nama/kode undangan pengantin 

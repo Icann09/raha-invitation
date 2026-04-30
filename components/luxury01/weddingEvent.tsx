@@ -1,0 +1,189 @@
+import { Ballet, Playfair_Display, Quicksand, Plus_Jakarta_Sans } from "next/font/google"
+import ImagesDisplayX from "./imagesDisplayX";
+import { Clock, MapPin, Video } from "lucide-react";
+import Image from "next/image";
+
+
+const ballet = Ballet({subsets: ["latin"], weight: ["400"]});
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["800", "400"] });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  style: ["italic", "normal"],
+  weight: ["400", "600"],
+});
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  weight: ["500", "700"]
+});
+
+const coupleImages1 = [
+  "/images/luxury01/foto1.webp",
+  "/images/luxury01/foto2.webp",
+  "/images/luxury01/foto4.webp",
+];
+const coupleImages2 = [
+  "/images/luxury01/foto5.webp",
+  "/images/luxury01/foto6.webp",
+  "/images/luxury01/foto4.webp",
+];
+
+const akad = {
+  hari: "Sabtu",
+  tanggal: "23 Desember 2023",
+  waktu: "09.00 WIB - Selesai",
+  tempat: "Grand Ballroom Majesty",
+  alamat: "Jl. Gatot Subroto No. 25, Jakarta Selatan",
+  map: "https://maps.app.goo.gl/Li11FsmvkLJPg3EQ8?g_st=iw"
+}
+
+
+export default function WeddingEvent() {
+  return (
+    <section className="h-auto flex flex-col items-center justify-center text-white pl-6 py-10">
+
+      {/* Title */}
+      <div className="flex items-end w-full max-w-full">
+        <div className="w-[40%] flex text-4xl leading-none flex-col text-left ">
+          <h1 className={playfair.className + " italic"}>Wedding</h1>
+          <h1 className={ballet.className + " ml-2"}>Event</h1>
+        </div>
+        <div className="w-[60%] h-[2px] bg-white mb-1"></div>
+      </div>
+
+      {/* Akad Nikah */}
+      <div className="w-full h-[580px] pr-6 mt-16">
+        <div className="h-full w-full">
+          <div className="relative overflow-hidden z-10 h-[40%] w-full bg-black rounded-tr-[150px]">
+            <ImagesDisplayX images={coupleImages1}/>
+          </div>
+          <div className="h-[60%] bg-white flex">
+            <div className="w-[25%] bg-gray-700 flex items-center justify-center">
+              <div className={playfair.className + " rotate-[-90deg] text-3xl flex justify-center"}>
+                <p className="mr-2">
+                  Akad
+                </p>
+                <p>
+                  Nikah
+                </p>
+              </div>
+            </div>
+            <div className={plusJakartaSans.className + " w-[75%] text-gray-600 flex flex-col justify-center"}>
+              <div className="flex gap-4 items-center justify-center">
+                <p className={ " text-[80px]"}>29</p>
+                <div className="flex flex-col justify-center">
+                  <p>Minggu</p>
+                  <p>Mei</p>
+                  <p>2026</p>
+                </div>
+              </div>
+              <div className="h-[2px] w-[90%] bg-gray-700 mx-4"></div>
+              <div className="flex flex-col text-xs pl-4 mt-2">
+                <p className="flex items-center gap-2">
+                  <Clock size={16}/>
+                  08.00 WIB
+                </p>
+                <p className="font-bold tracking-[0.25em] my-6">LOKASI ACARA</p>
+                <p className="font-bold">Menara 165</p>
+                <p>Jl. TB Simatupang Jakarta Selatan</p>
+                <p className="w-[140px] py-1 px-2 mt-4 border-gray-700 border-2 text-[10px] hover:text-white hover:bg-gray-700 tracking-[0.20em]">
+                  <a 
+                  href={akad.map}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                    <MapPin className="inline-block mr-1" size={20}/>
+                    Google Maps
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Resepsi */}
+      <div className="w-full h-[580px] pr-6 mt-20">
+        <div className="h-full w-full">
+          <div className="relative overflow-hidden z-10 h-[40%] w-full bg-black rounded-tl-[150px]">
+            <ImagesDisplayX images={coupleImages1}/>
+          </div>
+          <div className="h-[60%] bg-white flex">
+            
+
+            <div className={plusJakartaSans.className + " w-[75%] text-gray-600 flex flex-col justify-center"}>
+              <div className="flex gap-4 items-center justify-center">
+                <p className={ " text-[80px]"}>29</p>
+                <div className="flex flex-col justify-center">
+                  <p>Minggu</p>
+                  <p>Mei</p>
+                  <p>2026</p>
+                </div>
+              </div>
+              <div className="h-[2px] w-[90%] bg-gray-700 mx-4"></div>
+              <div className="flex flex-col text-xs pl-4 mt-2">
+                <p className="flex items-center gap-2">
+                  <Clock size={16}/>
+                  08.00 WIB
+                </p>
+                <p className="font-bold tracking-[0.25em] my-6">LOKASI ACARA</p>
+                <p className="font-bold">Menara 165</p>
+                <p>Jl. TB Simatupang Jakarta Selatan</p>
+                <p className="w-[140px] py-1 px-2 mt-4 border-gray-700 border-2 text-[10px] hover:text-white hover:bg-gray-700 tracking-[0.20em]">
+                  <a 
+                  href={akad.map}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                    <MapPin className="inline-block mr-1" size={20}/>
+                    Google Maps
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className="w-[25%] bg-gray-700 flex items-center justify-center">
+              <div className={playfair.className + " rotate-[90deg] text-3xl flex justify-center"}>
+                <p>
+                  Resepsi 
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Foto */}
+      <div className="relative w-full h-[270px] pr-6 mt-20">
+        <div className="relative w-full h-full">
+          <Image 
+            src={coupleImages1[0]}
+            alt="Foto Prewedding"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Live streaming and Dresscode  */}
+      <div className={plusJakartaSans.className + " flex flex-col justify-center items-center text-center my-12 pr-6"}>
+        <p className={playfair.className + " text-3xl italic mb-8 tracking-[0.16em]"}>Live Streaming</p>
+        <p className="text-sm">Temui kami secara virtual untuk menyaksikan acara pernikahan kami yang insyaaAllah akan disiarkan langsung melalui link dibawah ini.</p>
+        <p className="py-1 px-2 border-2 border-white mx-auto my-4 flex items-center gap-2 bg-white/10 text-xs">
+          <Video size={16}/>
+          Lihat Live Streaming
+        </p>
+        <div className="w-[1px] h-[100px] bg-white my-3"></div>
+        <p className={playfair.className + " text-3xl italic mb-8 tracking-[0.16em]"}>Dresscode</p>
+        <p className="text-sm">Kami dengan hormat menganjurkan tamu kami untuk mengenakan warna-warna ini untuk hari istimewa kami.</p>
+        <div className="flex gap-3 mt-4">
+          <div className="w-14 h-14 bg-black"></div>
+          <div className="w-14 h-14 bg-white"></div>
+
+        </div>
+
+
+      </div>
+      
+    </section>
+  )
+}

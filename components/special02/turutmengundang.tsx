@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { motion, number } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeVariants } from "@/lib/motion";
-import { useState } from "react";
-import { li } from "framer-motion/client";
+
+
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "600" });
 
