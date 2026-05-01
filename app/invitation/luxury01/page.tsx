@@ -11,6 +11,9 @@ import Gallery from "@/components/luxury01/gallery";
 import Gift from "@/components/luxury01/gift";
 import RSVP from "@/components/luxury01/rsvp";
 import Terimakaish from "@/components/luxury01/terimakasih";
+import Cover from "@/components/luxury01/cover";
+import { useRef } from "react";
+import { Disc3 } from "lucide-react";
 
 const images = [
   "/images/luxury01/foto1.webp",
@@ -21,10 +24,16 @@ const images = [
 ];
 
 export default function Page() {
+
   const [index, setIndex] = useState(0);
+  const [open, setOpen] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+const [isPlaying, setIsPlaying] = useState(false);
+const [isSpinning, setIsSpinning] = useState(false);
+
+  const handleOpen = () => setOpen(true);
 
   useEffect(() => {
-    // preload
     images.forEach((src) => {
       const img = new Image();
       img.src = src;
@@ -37,41 +46,94 @@ export default function Page() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+  if (open && audioRef.current) {
+    audioRef.current
+      .play()
+      .then(() => {
+        setIsPlaying(true);
+        setIsSpinning(true);
+      })
+      .catch(() => {
+        // autoplay blocked by browser
+        setIsPlaying(false);
+        setIsSpinning(false);
+      });
+  }
+}, [open]);
+
+const toggleMusic = () => {
+  if (!audioRef.current) return;
+
+  if (audioRef.current.paused) {
+    audioRef.current.play();
+    setIsPlaying(true);
+    setIsSpinning(true);
+  } else {
+    audioRef.current.pause();
+    setIsPlaying(false);
+    setIsSpinning(false);
+  }
+};
+
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center overflow-x-hidden">
 
-      {/* BACKGROUND (FIXED & CENTERED) */}
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 min-w-[320px] w-full max-w-md h-[100dvh] -z-10 overflow-hidden">
-        {images.map((img, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 bg-cover bg-center transform-gpu will-change-[opacity,transform] transition-all duration-[4000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-              i === index
-                ? "opacity-100 scale-[1.02]"
-                : "opacity-0 scale-100"
-            }`}
-            style={{ backgroundImage: `url(${img})` }}
-          />
-        ))}
+      {/* AUDIO */}
+      <audio ref={audioRef} loop src="/music/music.mp3" />
 
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/30" />
+    
+
+      {/* BACKGROUND */}
+      <div className="fixed inset-0 flex justify-center -z-10">
+        <div className="w-full max-w-md h-[100dvh] relative overflow-hidden">
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className={`absolute inset-0 bg-cover bg-center transition-all duration-[4000ms]
+              ${i === index ? "opacity-100 scale-[1.02]" : "opacity-0"}
+            `}
+              style={{ backgroundImage: `url(${img})` }}
+            />
+          ))}
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
       </div>
 
       {/* CONTENT */}
-      <div className="min-w-[320px] w-full max-w-md h-[100dvh] overflow-y-auto overflow-x-hidden">
-        <Opening />
-        <Initials />
-        <BrideAndGroom />
-        <Date />
-        <WeddingEvent />
-        <LoveStory />
-        <Gallery />
-        <Gift />
-        <RSVP />
-        <Terimakaish />
-      </div>
+      <div className="relative w-full max-w-md h-[100dvh] overflow-y-auto">
 
+        {/* MUSIC BUTTON */}
+        {open && (
+          <div className="fixed bottom-4 right-4 z-50">
+            <Disc3
+              size={40}
+              onClick={toggleMusic}
+              className={`text-black ${isSpinning ? "animate-spin" : ""}`}
+            />
+          </div>
+        )}
+
+        {/* COVER */}
+        {!open && <Cover onClick={handleOpen} />}
+
+        {/* MAIN CONTENT */}
+        {open && (
+          <>
+            <Opening />
+            <Initials />
+            <BrideAndGroom />
+            <Date />
+            <WeddingEvent />
+            <LoveStory />
+            <Gallery />
+            <Gift />
+            <RSVP />
+            <Terimakaish />
+          </>
+        )}
+
+      </div>
     </div>
   );
 }

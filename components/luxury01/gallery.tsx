@@ -51,7 +51,7 @@ export default function Gallery() {
   };
 
   return (
-    <section className="h-auto flex flex-col items-center justify-center bg-white/50 text-gray-700 py-16">
+    <section className="h-auto flex flex-col items-center justify-center bg-white/80 text-gray-700 py-16">
 
       {/* TITLE  */}
       <div className="flex items-end w-full max-w-full mr-12">

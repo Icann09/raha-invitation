@@ -1,5 +1,5 @@
 import { Quicksand } from "next/font/google";
-import { Mrs_Saint_Delafield, Plus_Jakarta_Sans } from "next/font/google";
+import { Mrs_Saint_Delafield, Plus_Jakarta_Sans, Playfair_Display, Ballet } from "next/font/google";
 import ImagesDisplayX from "./imagesDisplayX";
 
 
@@ -8,7 +8,13 @@ const quicksand = Quicksand({
   subsets: ["latin"],
   weight: ["600", "700"]
 });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  style: ["italic", "normal"],
+  weight: ["400", "600"],
+});
 const mrsSaintDelafield = Mrs_Saint_Delafield({ subsets: ["latin"], weight: ["400"]});
+const ballet = Ballet({subsets: ["latin"], weight: ["400"]});
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["700", "800"], style: ["normal", "italic"] });
 
 
@@ -28,15 +34,15 @@ const grromImages = [
 export default function BrideAndGroom() {
 
   return (
-    <section className={quicksand.className + "w-full h-auto flex flex-col items-center justify-center bg-gray-100/80 text-center"}>
+    <section className={quicksand.className + " w-full h-auto flex flex-col items-center justify-center bg-gray-100/80 text-center"}>
     
       {/* Part 1 */}
       <div className="px-6 py-16">
         <div className="text-3xl">
-          <p className="italic mr-16">Kedua</p>
-          <p className={mrsSaintDelafield.className + " ml-16"}>Mempelai</p>
+          <p className={playfair.className + " italic mr-16"}>Kedua</p>
+          <p className={ballet.className + " ml-16"}>Mempelai</p>
         </div>
-        <p className="font-bold text-sm py-5">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+        <p className={quicksand.className + " font-bold text-sm py-5"}>Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
         <p className="text-xs">
           Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
         </p>
