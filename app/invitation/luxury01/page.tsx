@@ -101,7 +101,7 @@ const toggleMusic = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="relative w-full max-w-md h-[100dvh] overflow-y-auto">
+      <div className="relative w-full max-w-md h-[100dvh] overflow-y-auto overflow-x-hidden">
 
         {/* MUSIC BUTTON */}
         {open && (
