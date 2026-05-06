@@ -42,8 +42,8 @@ const akad = {
 
 
 export default function WeddingEvent() {
-    const ref = useRef(null);
-
+  
+  const ref = useRef(null);
   const isInView = useInView(ref, {
     once: false,
     margin: "-20% 0px",

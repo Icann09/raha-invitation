@@ -3,7 +3,7 @@
 import { Playfair_Display, Ballet, Plus_Jakarta_Sans, Quicksand } from "next/font/google";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { itemVariants, containerVariants } from "@/lib/motion";
+import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
 
 const ballet = Ballet({ subsets: ["latin"], weight: ["400"] });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["800", "700"] });
@@ -47,7 +47,7 @@ export default function LoveStory() {
     >
       {/* Title */}
       <motion.div
-        variants={itemVariants}
+        variants={fadeVariants.left}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         transition={{ duration: 0.8 }}
@@ -68,7 +68,7 @@ export default function LoveStory() {
         animate={isInView ? "visible" : "hidden"}
       >
         {stories.map((story, i) => (
-          <motion.div key={i} variants={itemVariants}>
+          <motion.div key={i} variants={fadeVariants.left}>
             <h3 className={plusJakartaSans.className + " font-bold mb-4"}>
               {story.date}
             </h3>
@@ -77,7 +77,7 @@ export default function LoveStory() {
         ))}
 
         {/* Video */}
-        <motion.div variants={itemVariants} className="w-full flex justify-center mt-10">
+        <motion.div variants={fadeVariants.left} className="w-full flex justify-center mt-10">
           <div className="relative w-full max-w-md aspect-video overflow-hidden rounded-2xl shadow-lg">
             <iframe
               src="https://www.youtube.com/embed/VZLeb_q1x2g"

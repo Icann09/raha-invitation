@@ -144,11 +144,6 @@ export default function Gallery() {
           ))}
         </div>
       </motion.div>
-      
-
-
-      
-
     </section>
   );
 }

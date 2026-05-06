@@ -71,7 +71,7 @@ export default function Page() {
   return (
     <section ref={ref} className="h-[400px] w-full flex items-center justify-center flex-col text-white">
       
-        <motion.div
+      <motion.div
         variants={fadeVariants.zoom}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}

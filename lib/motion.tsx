@@ -80,7 +80,7 @@ export const fadeVariants = {
       filter: "blur(0px)",
       transition: {
         duration: 1.5,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1] as const
       },
     },
   },
@@ -93,7 +93,7 @@ export const fadeVariants = {
       scale: 1,
       transition: {
         duration: 1,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1] as const
       },
     },
   },
@@ -127,7 +127,7 @@ export const fadeVariants = {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1] as const
       },
     },
   },
@@ -139,7 +139,7 @@ export const fadeVariants = {
       scale: 1,
       transition: {
         duration: 2,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1] as const
       },
     },
   },
