@@ -1,6 +1,12 @@
+"use client"
+
 import { Quicksand } from "next/font/google";
 import { Mrs_Saint_Delafield, Plus_Jakarta_Sans, Playfair_Display, Ballet } from "next/font/google";
 import ImagesDisplayX from "./imagesDisplayX";
+import { useRef } from "react";
+import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
+import { motion, useInView } from "framer-motion";
+
 
 
 
@@ -32,12 +38,24 @@ const grromImages = [
 
 
 export default function BrideAndGroom() {
+  const ref = useRef(null);
+
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "-20% 0px",
+  });
 
   return (
-    <section className={quicksand.className + " w-full h-auto flex flex-col items-center justify-center bg-gray-100/80 text-center"}>
+    <section ref={ref} className={quicksand.className + " w-full h-auto flex flex-col items-center justify-center bg-gray-100/80 text-center"}>
     
       {/* Part 1 */}
-      <div className="px-6 py-16">
+      <motion.div
+        variants={fadeVariants.up}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="px-6 py-16"
+      >
         <div className="text-3xl">
           <p className={playfair.className + " italic mr-16"}>Kedua</p>
           <p className={ballet.className + " ml-16"}>Mempelai</p>
@@ -46,13 +64,20 @@ export default function BrideAndGroom() {
         <p className="text-xs">
           Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
         </p>
-      </div>
+      </motion.div>
 
       {/* layer  */}
       <div className="w-[90%] h-[2px] bg-black mr-auto mb-6"></div>
 
       {/* Part 2 */}
+    
       <div className="relative w-full h-auto">
+      <motion.div
+        variants={fadeVariants.left}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+      >
         <div className="absolute top-4 left-4 w-[70%] h-[500px] bg-gray-800/50 z-0">
         </div>    
         {/* Image */}
@@ -79,13 +104,20 @@ export default function BrideAndGroom() {
             user_ig_wanita
           </p>
         </div>
+      </motion.div>
       </div>
 
       {/* layer  */}
       <div className="w-[90%] h-[2px] bg-black ml-auto mb-6"></div>
 
       {/* Part 3 */}
-      <div className="relative w-full h-auto">
+      <motion.div
+        variants={fadeVariants.right}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="relative w-full h-auto"
+      >
         {/* BACK LAYER */}
         <div className="absolute top-4 right-4 w-[70%] h-[500px] bg-gray-800/50 z-0" />
         {/* IMAGE */}
@@ -113,7 +145,7 @@ export default function BrideAndGroom() {
             user_ig_pria
           </p>
         </div>
-      </div>
+      </motion.div>
       
     </section>  
   )

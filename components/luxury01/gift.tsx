@@ -2,10 +2,11 @@
 
 import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import { Files } from "lucide-react";
-import { motion, number } from "framer-motion";
-import { fadeVariants } from "@/lib/motion";
 import { useState } from "react";
 import Image from "next/image";
+import { useRef } from "react";
+import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
+import { motion, useInView } from "framer-motion";
 
 
 
@@ -41,24 +42,43 @@ const gift = {
 
 export default function Gift() {
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "-20% 0px",
+  });
+
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="h-auto flex items-center justify-center bg-gray-700/50 text-white pb-20">
+    <section ref={ref} className="h-auto flex items-center justify-center bg-gray-700/50 text-white pb-20">
       {/* Content */}
         <div className={plusJakartaSans.className + " relative flex flex-col items-center justify-center text-center text-sm"}>
           {/* Image */}
           <div className="relative my-12 px-6 w-full h-[250px]">
-            <div className="relative h-full">
+            <motion.div
+              variants={fadeVariants.imageReveal}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              transition={{ duration: 0.8 }}
+              className="relative h-full"
+            >
               <Image 
                 src="/images/luxury01/foto4.webp"
                 fill
                 alt="Logo Bank"
                 className="object-cover"
               />
-            </div>
+            </motion.div>
           </div>
+          <motion.div
+            variants={fadeVariants.down}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ duration: 0.8 }}
+            className="felx flex-col"
+          >
           <h1 className={playfair.className + " text-[35px] leading-tight pb-4 italic"}>
             Wedding Gift
           </h1>
@@ -68,8 +88,15 @@ export default function Gift() {
           <p className="font-normal mx-6" >
             Dan jika memberi adalah ungkapan tanda kasih, Anda dapat memberi melalui dibawah ini.
           </p>
+          </motion.div>
 
-          <div className= "flex w-full px-6 mt-16 text-white flex-col overflow-y-auto text-center gap-3 animate-fade-down">
+          <motion.div
+            variants={fadeVariants.down}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ duration: 0.8 }}
+            className= "flex w-full px-6 mt-16 text-white flex-col overflow-y-auto text-center gap-3"
+          >
             <div className="flex flex-col gap-2 w-full">
               {/* Transfer  */}
               {gift.rekening.map((rek, index) => (
@@ -124,12 +151,9 @@ export default function Gift() {
                 </div>
                 <div className="w-full mt-2 h-[1px] bg-white"></div> 
               </div>
-
             </div>
+          </motion.div>
 
-            
-            
-          </div>
         </div>
     </section>
   )

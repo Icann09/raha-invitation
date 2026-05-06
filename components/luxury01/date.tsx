@@ -5,6 +5,9 @@ import { Quicksand } from "next/font/google";
 import { Calendar1 } from "lucide-react";
 import { useEffect, useState } from "react";
 import ImagesDisplayY from "./imagesDisplayY";
+import { useRef } from "react";
+import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
+import { motion, useInView } from "framer-motion";
 
 
 
@@ -30,6 +33,12 @@ const coupleImages = [
 
 
 export default function Page() {
+  const ref = useRef(null);
+
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "-20% 0px",
+  });
 
   const [time, setTime] = useState({
         days: 0,
@@ -60,9 +69,17 @@ export default function Page() {
       }, []);
 
   return (
-    <section className="h-[400px] w-full flex items-center justify-center flex-col text-white">
-
+    <section ref={ref} className="h-[400px] w-full flex items-center justify-center flex-col text-white">
+      
+        <motion.div
+        variants={fadeVariants.zoom}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="w-full h-full"
+      >
       <div className={quicksand.className + " relative w-full h-full overflow-hidden"}>
+      
 
         {/* SLIDER */}
         <ImagesDisplayY images={coupleImages} />
@@ -97,6 +114,7 @@ export default function Page() {
         </div>
 
       </div>
+      </motion.div>
 
     </section>
   )

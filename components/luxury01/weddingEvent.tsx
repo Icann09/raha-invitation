@@ -1,7 +1,11 @@
+"use client"
 import { Ballet, Playfair_Display, Quicksand, Plus_Jakarta_Sans } from "next/font/google"
 import ImagesDisplayX from "./imagesDisplayX";
 import { Clock, MapPin, Video } from "lucide-react";
 import Image from "next/image";
+import { useRef } from "react";
+import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
+import { motion, useInView } from "framer-motion";
 
 
 const ballet = Ballet({subsets: ["latin"], weight: ["400"]});
@@ -38,20 +42,39 @@ const akad = {
 
 
 export default function WeddingEvent() {
+    const ref = useRef(null);
+
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "-20% 0px",
+  });
+
   return (
-    <section className="h-auto flex flex-col items-center justify-center text-white pl-6 py-10">
+    <section ref={ref} className="h-auto flex flex-col items-center justify-center text-white pl-6 py-10">
 
       {/* Title */}
-      <div className="flex items-end w-full max-w-full">
+      <motion.div
+        variants={fadeVariants.up}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="flex items-end w-full max-w-full"
+      >
         <div className="w-[40%] flex text-4xl leading-none flex-col text-left ">
           <h1 className={playfair.className + " italic"}>Wedding</h1>
           <h1 className={ballet.className + " ml-2"}>Event</h1>
         </div>
         <div className="w-[60%] h-[2px] bg-white mb-1"></div>
-      </div>
+      </motion.div>
 
       {/* Akad Nikah */}
-      <div className="w-full h-[580px] pr-6 mt-16">
+      <motion.div
+        variants={fadeVariants.imageReveal}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="w-full h-[580px] pr-6 mt-16"
+      >
         <div className="h-full w-full">
           <div className="relative overflow-hidden z-10 h-[40%] w-full bg-black rounded-tr-[150px]">
             <ImagesDisplayX images={coupleImages1}/>
@@ -99,10 +122,16 @@ export default function WeddingEvent() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Resepsi */}
-      <div className="w-full h-[580px] pr-6 mt-20">
+      <motion.div
+        variants={fadeVariants.imageReveal}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="w-full h-[580px] pr-6 mt-20"
+      >
         <div className="h-full w-full">
           <div className="relative overflow-hidden z-10 h-[40%] w-full bg-black rounded-tl-[150px]">
             <ImagesDisplayX images={coupleImages1}/>
@@ -150,10 +179,16 @@ export default function WeddingEvent() {
 
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Foto */}
-      <div className="relative w-full h-[270px] pr-6 mt-20">
+      <motion.div
+        variants={fadeVariants.zoom}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="relative w-full h-[270px] pr-6 mt-20"
+      >
         <div className="relative w-full h-full">
           <Image 
             src={coupleImages1[0]}
@@ -162,10 +197,16 @@ export default function WeddingEvent() {
             className="object-cover"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Live streaming and Dresscode  */}
-      <div className={plusJakartaSans.className + " flex flex-col justify-center items-center text-center my-12 pr-6"}>
+      <motion.div
+        variants={fadeVariants.down}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className={plusJakartaSans.className + " flex flex-col justify-center items-center text-center my-12 pr-6"}
+      >
         <p className={playfair.className + " text-3xl italic mb-8 tracking-[0.16em]"}>Live Streaming</p>
         <p className="text-sm">Temui kami secara virtual untuk menyaksikan acara pernikahan kami yang insyaaAllah akan disiarkan langsung melalui link dibawah ini.</p>
         <p className="py-1 px-2 border-2 border-white mx-auto my-4 flex items-center gap-2 bg-white/10 text-xs">
@@ -180,9 +221,7 @@ export default function WeddingEvent() {
           <div className="w-14 h-14 bg-white"></div>
 
         </div>
-
-
-      </div>
+      </motion.div>
       
     </section>
   )

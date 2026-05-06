@@ -3,6 +3,9 @@
 import { Playfair_Display, Ballet, Plus_Jakarta_Sans, Quicksand } from "next/font/google";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useRef } from "react";
+import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
+import { motion, useInView } from "framer-motion";
 
 
 
@@ -26,6 +29,12 @@ const images = [
 ];
 
 export default function Gallery() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "-20% 0px",
+  });
+
   const [index, setIndex] = useState(0);
   const [isAuto, setIsAuto] = useState(true);
 
@@ -51,19 +60,31 @@ export default function Gallery() {
   };
 
   return (
-    <section className="h-auto flex flex-col items-center justify-center bg-white/80 text-gray-700 py-16">
+    <section ref={ref} className="h-auto flex flex-col items-center justify-center bg-white/80 text-gray-700 py-16">
 
       {/* TITLE  */}
-      <div className="flex items-end w-full max-w-full mr-12">
+      <motion.div
+        variants={fadeVariants.up}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="flex items-end w-full max-w-full mr-12"
+      >
         <div className="w-[55%] h-[2px] bg-gray-700 mb-1"></div>
         <div className="w-[45%] flex text-4xl leading-none flex-col text-right ">
           <h1 className={playfair.className + " italic"}>Gallery</h1>
           <h1 className={ballet.className + " ml-2 text-3xl"}>Our Moment</h1>
         </div>
-      </div>
+      </motion.div>
 
         {/* MAIN IMAGE */}
-      <div className="px-5 relative w-full mt-7">
+      <motion.div
+        variants={fadeVariants.imageReveal}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="px-5 relative w-full mt-7"
+      >
         <div className="relative w-full h-[420px] overflow-hidden bg-gray-100">
           {/* LAYERED IMAGES (for smooth fade) */}
           {images.map((img, i) => (
@@ -98,6 +119,7 @@ export default function Gallery() {
           {/* OVERLAY (biar lebih elegan) */}
           <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none" />
         </div>
+        
 
         {/* THUMBNAILS */}
         <div className="flex gap-2 mt-4 overflow-x-auto max-w-full px-2">
@@ -121,7 +143,7 @@ export default function Gallery() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
       
 
 
