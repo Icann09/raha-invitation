@@ -1,6 +1,12 @@
+"use client"
+
 import ImagesDisplayFade from "./imagesDisplayFade";
 import { Quicksand, Ballet, Plus_Jakarta_Sans, Mrs_Saint_Delafield, Playfair_Display } from "next/font/google";
 import Image from "next/image";
+import { useRef } from "react";
+import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
+import { motion, useInView } from "framer-motion";
+
 
 
 
@@ -31,14 +37,27 @@ const Images = [
 ];
 
 export default function Terimakaish() {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "-20% 0px",
+  });
+
   return (
-    <section className={quicksand.className + " relative h-[800px] flex flex-col items-center justify-center text-white text-sm"}>
+    <section ref={ref} className={quicksand.className + " relative h-[800px] flex flex-col items-center justify-center text-white text-sm"}>
       <ImagesDisplayFade images={Images}/>
       {/* Overlay */}
       <div className="absolute inset-0 z-10 bg-black/70 pointer-events-none"></div>
 
       {/* Content  */}
-      <div className="z-20 flex flex-col justify-center items-center text-center mx-6">
+      <motion.div
+        variants={fadeVariants.up}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        transition={{ duration: 0.8 }}
+        className="z-20 flex flex-col justify-center items-center text-center mx-6"
+      >
         <h1 className={playfair.className + " text-4xl mb-16"}>Terima Kasih</h1>
         <div>
           <p>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.</p>
@@ -109,8 +128,7 @@ export default function Terimakaish() {
           </p>
           
         </div>
-      </div>
-      
+      </motion.div>
 
     </section>
   )

@@ -51,21 +51,21 @@ export default function Cover({onClick} : {onClick: () => void}) {
         
         {/* Content */}
         <div className="w-full flex flex-col items-center justify-center px-6 text-center text-white absolute bottom-0 left-1/2 mb-8 transform -translate-x-1/2  z-20 animate-fade-in">
-          <p className={plusJakartaSans.className + " font-bold text-sm tracking-[0.20em]"}  >
+          <p className={plusJakartaSans.className + " font-bold text-sm tracking-[0.20em] animate-fade-down"}  >
             THE WEDDING OF
           </p>
           
-          <h1 className={playfair.className + " text-[40px] leading-tight py-3 mb-2"}>
+          <h1 className={playfair.className + " text-[40px] leading-tight py-3 mb-2 animate-fade-down"}>
             {groom} & {bride}
           </h1>
-          <div className="tracking-[0.15em] py-3 text-sm">
+          <div className="tracking-[0.15em] py-3 text-sm animate-fade-up">
             <p>Kepada Yth.</p>
             <p>Bapak/Ibu/Saudara/i</p>
           </div>
           <p className="text-xs">*Mohon maaf jika ada kesalahan dalam penulisan nama / gelar.</p>
           <button
             onClick={onClick}
-            className="flex gap-2 items-center border-2 px-3 py-2 mt-8 mb-3 text-xs hover:bg-white hover:text-black transition"
+            className="flex gap-2 items-center border-2 px-3 py-2 mt-8 mb-3 text-xs hover:bg-white hover:text-black transition animate-infinite-scale"
           >
             <Mail size={16} />
             Buka Undangan
