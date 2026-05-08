@@ -25,7 +25,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Wedding of Dillo & Alisyah",
     description: "Sabtu, 18 Mei 2026",
-    images: ["/images/luxury01/wedding-preview.jpg"],
+    images: [
+      "https://raha-invitation.vercel.app/images/luxury01/wedding-preview.jpg"
+    ]
   },
 };
 
