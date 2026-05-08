@@ -34,7 +34,11 @@ export default function Initials() {
           <motion.p variants={fadeVariants.left}>
             P
           </motion.p>
-          <div className="bg-black w-[1px] h-[80px]"></div>
+          <motion.div 
+            variants={fadeVariants.fadeDelayed(3)}
+            className="bg-black w-[1px] h-[80px]"
+          >
+          </motion.div>
           <motion.p variants={fadeVariants.right}>
             A
           </motion.p>

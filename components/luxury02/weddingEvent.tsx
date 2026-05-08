@@ -1,6 +1,6 @@
 "use client"
 import { Ballet, Playfair_Display, Quicksand, Plus_Jakarta_Sans } from "next/font/google"
-import ImagesDisplayX from "./imagesDisplayX";
+import ImagesDisplayX from "../ui/imagesDisplayX";
 import { Clock, MapPin, Video } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";

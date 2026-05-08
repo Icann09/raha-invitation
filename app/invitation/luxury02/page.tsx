@@ -1,20 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Opening from "@/components/luxury01/opening";
-import Initials from "@/components/luxury01/initials";
-import BrideAndGroom from "@/components/luxury01/brideandgroom";
-import Date from "@/components/luxury01/date";
-import WeddingEvent from "@/components/luxury01/weddingEvent";
-import LoveStory from "@/components/luxury01/loveStory";
-import Gallery from "@/components/luxury01/gallery";
-import Gift from "@/components/luxury01/gift";
-import RSVP from "@/components/luxury01/rsvp";
-import Terimakaish from "@/components/luxury01/terimakasih";
-import Cover from "@/components/luxury01/cover";
+import Opening from "@/components/luxury02/opening";
+import Initials from "@/components/luxury02/initials";
+import BrideAndGroom from "@/components/luxury02/brideandgroom";
+import Date from "@/components/luxury02/date";
+import WeddingEvent from "@/components/luxury02/weddingEvent";
+import LoveStory from "@/components/luxury02/loveStory";
+import Gallery from "@/components/luxury02/gallery";
+import Gift from "@/components/luxury02/gift";
+import RSVP from "@/components/luxury02/rsvp";
+import Terimakaish from "@/components/luxury02/terimakasih";
+import Cover from "@/components/luxury02/cover";
 import { useRef } from "react";
 import { Disc3 } from "lucide-react";
-
 
 const images = [
   "/images/luxury01/foto1.webp",
@@ -29,8 +28,8 @@ export default function Page() {
   const [index, setIndex] = useState(0);
   const [open, setOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isSpinning, setIsSpinning] = useState(false);
+const [isPlaying, setIsPlaying] = useState(false);
+const [isSpinning, setIsSpinning] = useState(false);
 
   const handleOpen = () => setOpen(true);
 

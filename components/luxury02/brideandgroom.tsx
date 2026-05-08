@@ -2,7 +2,7 @@
 
 import { Quicksand } from "next/font/google";
 import { Playfair_Display, Ballet } from "next/font/google";
-import ImagesDisplayX from "./imagesDisplayX";
+import ImagesDisplayX from "../ui/imagesDisplayX";
 import { useRef } from "react";
 import { fadeVariants } from "@/lib/motion";
 import { motion } from "framer-motion";

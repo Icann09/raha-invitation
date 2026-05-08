@@ -170,6 +170,21 @@ export const fadeVariants = {
 
 };
 
+export const containerVariantsNoDelay = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0,     // lebih renggang → terasa santai
+      delayChildren: 0
+    }
+  },
+  exit: {
+    transition: {
+      staggerChildren: 0,
+      staggerDirection: 0
+    }
+  }
+};
 
 export const containerVariants = {
   hidden: {},
