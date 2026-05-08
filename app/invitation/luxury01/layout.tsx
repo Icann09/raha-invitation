@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "Raha Invitation",
     images: [
       {
-        url: "/images/luxury01/og-image.jpg",
+        url: "/images/luxury01/wedding-preview.jpg",
         width: 1200,
         height: 630,
         alt: "Wedding Invitation",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Wedding of Dillo & Alisyah",
     description: "Sabtu, 18 Mei 2026",
-    images: ["/images/luxury01/og-image.jpg"],
+    images: ["/images/luxury01/wedding-preview.jpg"],
   },
 };
 
