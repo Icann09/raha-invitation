@@ -81,7 +81,7 @@ export async function GET() {
     ),
     {
       width: 1080,
-      height: 1350,
+      height: 1900,
     }
   );
 }
