@@ -17,9 +17,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
       images: [
         {
-          url: "/api/og?v=1",
+          url: "/api/og",
           width: 1080,
-          height: 1350,
+          height: 1800,
           alt: "Undangan Pernikahan Dillo & Alisyah",
         },
       ],
@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "The Wedding of Dillo & Alisyah",
       description: "Sabtu, 18 Mei 2026",
 
-      images: ["/api/og?v=1"],
+      images: ["/api/og"],
     },
 
     robots: {
