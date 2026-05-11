@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Raha Invitation",
       images: [
         {
-          url: "https://raha-invitation.vercel.app/images/luxury01/wedding-preview.jpg",
+          url: "https://raha-invitation.vercel.app/images/luxury01/wedding-preview(1).jpg",
           width: 1200,
           height: 630,
           alt: "Undangan Pernikahan Dillo & Alisyah",
@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "The Wedding of Dillo & Alisyah",
       description: "Sabtu, 18 Mei 2026",
-      images: ["https://raha-invitation.vercel.app/images/luxury01/wedding-preview.jpg"],
+      images: ["https://raha-invitation.vercel.app/images/luxury01/wedding-preview(1).jpg"],
       site: "@raha_invitation", // Optional: add your Twitter handle
     },
     
