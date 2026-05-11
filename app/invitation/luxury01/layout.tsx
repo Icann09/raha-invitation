@@ -12,17 +12,19 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "Sabtu, 18 Mei 2026",
       url: "/invitation/luxury01",
       siteName: "Raha Invitation",
-      type: "website",
-      locale: "id_ID",
 
       images: [
         {
-          url: "/api/og",
+          url: "/images/luxury01/wedding-preview.jpg",
           width: 1080,
-          height: 1800,
+          height: 1920,
           alt: "Undangan Pernikahan Dillo & Alisyah",
+          type: "image/jpeg",
         },
       ],
+
+      locale: "id_ID",
+      type: "website",
     },
 
     twitter: {
@@ -30,7 +32,9 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "The Wedding of Dillo & Alisyah",
       description: "Sabtu, 18 Mei 2026",
 
-      images: ["/api/og"],
+      images: [
+        "/images/luxury01/wedding-preview.jpg",
+      ],
     },
 
     robots: {
