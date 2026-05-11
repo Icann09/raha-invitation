@@ -1,6 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Disc3 } from "lucide-react";
+
 import Opening from "@/components/luxury02/opening";
 import Initials from "@/components/luxury02/initials";
 import BrideAndGroom from "@/components/luxury02/brideandgroom";
@@ -12,8 +15,6 @@ import Gift from "@/components/luxury02/gift";
 import RSVP from "@/components/luxury02/rsvp";
 import Terimakaish from "@/components/luxury02/terimakasih";
 import Cover from "@/components/luxury02/cover";
-import { useRef } from "react";
-import { Disc3 } from "lucide-react";
 
 const images = [
   "/images/luxury01/foto1.webp",
@@ -24,15 +25,13 @@ const images = [
 ];
 
 export default function Page() {
-
   const [index, setIndex] = useState(0);
   const [open, setOpen] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-const [isPlaying, setIsPlaying] = useState(false);
-const [isSpinning, setIsSpinning] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const handleOpen = () => setOpen(true);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
+  // PRELOAD IMAGES + SLIDESHOW
   useEffect(() => {
     images.forEach((src) => {
       const img = new Image();
@@ -46,93 +45,146 @@ const [isSpinning, setIsSpinning] = useState(false);
     return () => clearInterval(interval);
   }, []);
 
+  // PLAY MUSIC WHEN OPEN
   useEffect(() => {
-  if (open && audioRef.current) {
+    if (!open || !audioRef.current) return;
+
     audioRef.current
       .play()
       .then(() => {
         setIsPlaying(true);
-        setIsSpinning(true);
       })
       .catch(() => {
-        // autoplay blocked by browser
         setIsPlaying(false);
-        setIsSpinning(false);
       });
-  }
-}, [open]);
+  }, [open]);
 
-const toggleMusic = () => {
-  if (!audioRef.current) return;
+  // OPEN INVITATION
+  const handleOpen = useCallback(() => {
+    setOpen(true);
+  }, []);
 
-  if (audioRef.current.paused) {
-    audioRef.current.play();
-    setIsPlaying(true);
-    setIsSpinning(true);
-  } else {
-    audioRef.current.pause();
-    setIsPlaying(false);
-    setIsSpinning(false);
-  }
-};
+  // TOGGLE MUSIC
+  const toggleMusic = useCallback(() => {
+    if (!audioRef.current) return;
+
+    if (audioRef.current.paused) {
+      audioRef.current.play();
+      setIsPlaying(true);
+    } else {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
+  }, []);
 
   return (
-    <div className="flex justify-center overflow-x-hidden">
+    <div className="flex justify-center overflow-hidden">
 
       {/* AUDIO */}
-      <audio ref={audioRef} loop src="/music/music.mp3" />
-
-    
+      <audio ref={audioRef} loop preload="auto">
+        <source src="/music/music.mp3" type="audio/mpeg" />
+      </audio>
 
       {/* BACKGROUND */}
-      <div className="fixed inset-0 flex justify-center -z-10">
-        <div className="w-full max-w-md h-[100dvh] relative overflow-hidden">
+      <div className="fixed inset-0 -z-10 flex justify-center">
+        <div className="relative h-[100dvh] w-full max-w-md overflow-hidden">
+
           {images.map((img, i) => (
-            <div
-              key={i}
-              className={`absolute inset-0 bg-cover bg-center transition-all duration-[4000ms]
-              ${i === index ? "opacity-100 scale-[1.02]" : "opacity-0"}
-            `}
-              style={{ backgroundImage: `url(${img})` }}
+            <motion.div
+              key={img}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${img})`,
+              }}
+              animate={{
+                opacity: i === index ? 1 : 0,
+                scale: i === index ? 1.08 : 1.02,
+              }}
+              transition={{
+                opacity: { duration: 2 },
+                scale: { duration: 10 },
+              }}
             />
           ))}
+
           <div className="absolute inset-0 bg-black/30" />
         </div>
       </div>
 
-      {/* CONTENT */}
-      <div className="relative w-full max-w-md h-[100dvh] overflow-y-auto overflow-x-hidden">
+      {/* MAIN WRAPPER */}
+      <div className="relative h-[100dvh] w-full max-w-md overflow-x-hidden overflow-y-auto">
 
         {/* MUSIC BUTTON */}
-        {open && (
-          <div className="fixed bottom-4 right-4 z-50">
-            <Disc3
-              size={40}
+        <AnimatePresence>
+          {open && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ duration: 0.4 }}
               onClick={toggleMusic}
-              className={`text-black ${isSpinning ? "animate-spin" : ""}`}
-            />
-          </div>
-        )}
+              className="fixed bottom-4 right-4 z-50"
+            >
+              <Disc3
+                size={40}
+                className={`text-black drop-shadow-xl ${
+                  isPlaying ? "animate-spin" : ""
+                }`}
+              />
+            </motion.button>
+          )}
+        </AnimatePresence>
 
-        {/* COVER */}
-        {!open && <Cover onClick={handleOpen} />}
+        {/* PAGE TRANSITION */}
+        <AnimatePresence mode="wait">
 
-        {/* MAIN CONTENT */}
-        {open && (
-          <>
-            <Opening />
-            <Initials />
-            <BrideAndGroom />
-            <Date />
-            <WeddingEvent />
-            <LoveStory />
-            <Gallery />
-            <Gift />
-            <RSVP />
-            <Terimakaish />
-          </>
-        )}
+          {/* COVER */}
+          {!open && (
+            <motion.div
+              key="cover"
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              exit={{
+                opacity: 0,
+                scale: 1.1,
+                filter: "blur(10px)",
+              }}
+              transition={{
+                duration: 1.2,
+                ease: "easeInOut",
+              }}
+              className="absolute inset-0 z-50"
+            >
+              <Cover onClick={handleOpen} />
+            </motion.div>
+          )}
 
+          {/* CONTENT */}
+          {open && (
+            <motion.main
+              key="content"
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+              }}
+            >
+              <Opening />
+              <Initials />
+              <BrideAndGroom />
+              <Date />
+              <WeddingEvent />
+              <LoveStory />
+              <Gallery />
+              <Gift />
+              <RSVP />
+              <Terimakaish />
+            </motion.main>
+          )}
+
+        </AnimatePresence>
       </div>
     </div>
   );

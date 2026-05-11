@@ -1,9 +1,8 @@
 "use client"
 
 import { Quicksand } from "next/font/google";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import { useRef } from "react";
-import { itemVariants, containerVariants, fadeVariants, containerVariantsNoDelay } from "@/lib/motion";
+import { fadeVariants, containerVariantsNoDelay } from "@/lib/motion";
 import { motion, useInView } from "framer-motion";
 
 

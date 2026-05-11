@@ -4,7 +4,7 @@ import { Quicksand } from "next/font/google";
 import { Playfair_Display, Ballet } from "next/font/google";
 import ImagesDisplayX from "../ui/imagesDisplayX";
 import { useRef } from "react";
-import { fadeVariants } from "@/lib/motion";
+import { fadeVariants, containerVariants, containerVariantsNoDelay } from "@/lib/motion";
 import { motion } from "framer-motion";
 
 
@@ -45,30 +45,36 @@ export default function BrideAndGroom() {
     
       {/* Part 1 */}
       <motion.div
-        variants={fadeVariants.up}
+        variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
         className="px-6 py-16"
       >
         <div className="text-3xl">
-          <p className={playfair.className + " italic mr-16"}>Kedua</p>
-          <p className={ballet.className + " ml-16"}>Mempelai</p>
+            <motion.p variants={fadeVariants.left} className={playfair.className + " italic mr-16"}>Kedua</motion.p>
+            <motion.p variants={fadeVariants.right} className={ballet.className + " ml-16"}>Mempelai</motion.p>
         </div>
-        <p className={quicksand.className + " font-bold text-sm py-5"}>Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
-        <p className="text-xs">
+        <motion.p variants={fadeVariants.down} className={quicksand.className + " font-bold text-sm py-5"}>Assalamu’alaikum Warahmatullahi Wabarakatuh</motion.p>
+        <motion.p variants={fadeVariants.down} className="text-xs">
           Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
-        </p>
+        </motion.p>
       </motion.div>
 
       {/* layer  */}
-      <div className="w-[90%] h-[2px] bg-black mr-auto mb-6"></div>
+      <motion.div
+        variants={fadeVariants.left}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        className="w-[90%] h-[2px] bg-black mr-auto mb-6"
+      ></motion.div>
 
       {/* Part 2 */}
     
       <div className="relative w-full h-auto">
       <motion.div
-        variants={fadeVariants.left}
+        variants={fadeVariants.imageReveal}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}

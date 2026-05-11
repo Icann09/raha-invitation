@@ -58,18 +58,21 @@ export default function Cover({onClick} : {onClick: () => void}) {
           <h1 className={playfair.className + " text-[40px] leading-tight py-3 mb-2 animate-fade-down"}>
             {groom} & {bride}
           </h1>
-          <div className="tracking-[0.15em] py-3 text-sm animate-fade-up">
+          <div className="tracking-[0.15em] py-3 text-sm animate-fade-in">
             <p>Kepada Yth.</p>
             <p>Bapak/Ibu/Saudara/i</p>
           </div>
-          <p className="text-xs">*Mohon maaf jika ada kesalahan dalam penulisan nama / gelar.</p>
-          <button
-            onClick={onClick}
-            className="flex gap-2 items-center border-2 px-3 py-2 mt-8 mb-3 text-xs hover:bg-white hover:text-black transition animate-infinite-scale"
-          >
-            <Mail size={16} />
-            Buka Undangan
-          </button>
+          <div className="animate-fade-up items-center flex flex-col">
+            <p className="text-xs">*Mohon maaf jika ada kesalahan dalam penulisan nama / gelar.</p>
+            <button
+              onClick={onClick}
+              className="flex gap-2 items-center border-2 px-3 py-2 mt-8 mb-3 text-xs hover:bg-white hover:text-black transition animate-infinite-scale animate-fade-up"
+            >
+              <Mail size={16} />
+              Buka Undangan
+            </button>
+          </div>
+          
         </div>
       </div>
 
