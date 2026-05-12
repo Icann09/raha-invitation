@@ -1,15 +1,21 @@
 "use client";
 
-import { Playfair_Display, Ballet, Plus_Jakarta_Sans, Quicksand } from "next/font/google";
+import {
+  Playfair_Display,
+  Ballet,
+} from "next/font/google";
+
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { useRef } from "react";
-import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
 import { motion, useInView } from "framer-motion";
 
+import { fadeVariants } from "@/lib/motion";
 
+const ballet = Ballet({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
-const ballet = Ballet({subsets: ["latin"], weight: ["400"]});
 const playfair = Playfair_Display({
   subsets: ["latin"],
   style: ["italic", "normal"],
@@ -21,136 +27,130 @@ const images = [
   "/images/luxury01/foto2.webp",
   "/images/luxury01/foto4.webp",
   "/images/luxury01/foto5.webp",
-  "/images/luxury01/foto6.webp",
-  "/images/luxury01/foto4.webp",
   "/images/luxury01/foto1.webp",
-  "/images/luxury01/foto6.webp",
-  "/images/luxury01/foto5.webp",
+  "/images/luxury01/foto2.webp",
 ];
 
 export default function Gallery() {
   const ref = useRef(null);
+
   const isInView = useInView(ref, {
     once: false,
     margin: "-20% 0px",
   });
 
-  const [index, setIndex] = useState(0);
-  const [isAuto, setIsAuto] = useState(true);
-
-  // AUTO SLIDE
-  useEffect(() => {
-    if (!isAuto) return;
-
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // ⬅️ slow & elegant
-
-    return () => clearInterval(interval);
-  }, [isAuto]);
-
-  const next = () => {
-    setIsAuto(false);
-    setIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prev = () => {
-    setIsAuto(false);
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
   return (
-    <section ref={ref} className="h-auto flex flex-col items-center justify-center bg-white/80 text-gray-700 py-16">
+    <section
+      ref={ref}
+      className="flex h-auto flex-col items-center justify-center bg-white/95 py-16 text-gray-700"
+    >
+      {/* TITLE */}
+      <div className="mr-12 flex w-full max-w-full items-end">
+        <div className="mb-1 h-[2px] w-[55%] bg-gray-700" />
 
-      {/* TITLE  */}
+        <div className="flex w-[45%] flex-col text-right leading-none">
+          <h1 className={`${playfair.className} text-4xl italic`}>
+            Gallery
+          </h1>
+
+          <h1 className={`${ballet.className} ml-2 text-3xl`}>
+            Our Moment
+          </h1>
+        </div>
+      </div>
+
+      {/* IMAGE GRID */}
       <motion.div
-        variants={fadeVariants.left}
+        variants={fadeVariants.imageReveal}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }} 
+        className="mt-10 grid w-full grid-cols-2 gap-2 px-4"
+      >
+        {images.slice(0, 4).map((image, index) => (
+          <div
+            key={index}
+            className="relative h-[250px] overflow-hidden"
+          >
+            <Image
+              src={image}
+              fill
+              alt={`Gallery image ${index + 1}`}
+              className="object-cover transition duration-700 hover:scale-105"
+            />
+          </div>
+        ))}
+      </motion.div>
+      <motion.div 
+        variants={fadeVariants.up}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }} 
+        className="relative w-full h-[270px]"
+      >
+        <Image
+          src={images[1]}
+          fill
+          alt="Foto 1"
+          className="object-cover transition duration-700 hover:scale-105 px-4 py-[10px]"
+        />
+      </motion.div>
+      <motion.div 
+        variants={fadeVariants.imageReveal}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
-        className="flex items-end w-full max-w-full mr-12"
+        className="grid w-full grid-cols-2 gap-2 px-4"
       >
-        <div className="w-[55%] h-[2px] bg-gray-700 mb-1"></div>
-        <div className="w-[45%] flex text-4xl leading-none flex-col text-right ">
-          <h1 className={playfair.className + " italic"}>Gallery</h1>
-          <h1 className={ballet.className + " ml-2 text-3xl"}>Our Moment</h1>
-        </div>
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="relative h-[250px] overflow-hidden"
+          >
+            <Image
+              src={image}
+              fill
+              alt={`Gallery image ${index + 1}`}
+              className="object-cover transition duration-700 hover:scale-105"
+            />
+          </div>
+        ))}
       </motion.div>
-
-        {/* MAIN IMAGE */}
-      <div className="px-5 relative w-full mt-7">
-        
-        {/* LAYERED IMAGES (for smooth fade) */}
-        <motion.div
-          variants={fadeVariants.imageReveal}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-          className="relative w-full h-[420px] overflow-hidden bg-gray-100"
-        >
-          {images.map((img, i) => (
-            <div
-              key={i}
-              className={`absolute inset-0 transition-opacity duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${i === index ? "opacity-100 z-10" : "opacity-0 z-0"}
-              `}
-            >
-              <Image
-                src={img}
-                alt="preview"
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-          {/* LEFT BUTTON */}
-          <button
-            onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-4xl z-20 hover:scale-110 transition"
+      <motion.div 
+        variants={fadeVariants.up}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        className="relative w-full h-[270px]"
+      >
+        <Image
+          src={images[2]}
+          fill
+          alt="Foto 1"
+          className="object-cover transition duration-700 hover:scale-105 px-4 py-[10px]"
+        />
+      </motion.div>
+      <motion.div 
+        variants={fadeVariants.imageReveal}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        className="grid w-full grid-cols-2 gap-2 px-4"
+      >
+        {images.slice(1, 5).map((image, index) => (
+          <div
+            key={index}
+            className="relative h-[250px] overflow-hidden"
           >
-            ‹
-          </button>
-          {/* RIGHT BUTTON */}
-          <button
-            onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-4xl z-20 hover:scale-110 transition"
-          >
-            ›
-          </button>
-          {/* OVERLAY (biar lebih elegan) */}
-          <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none" />
-        </motion.div>
-        
-
-        {/* THUMBNAILS */}
-        <motion.div
-          variants={fadeVariants.down}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-          className="flex gap-2 mt-4 overflow-x-auto max-w-full px-2"
-        >
-          {images.map((img, i) => (
-            <div
-              key={i}
-              onClick={() => {
-                setIsAuto(false);
-                setIndex(i);
-              }}
-              className={`relative w-16 h-16 flex-shrink-0 cursor-pointer overflow-hidden transition-all
-                ${i === index ? "ring-2 ring-gray-800 scale-105" : "opacity-60"}
-              `}
-            >
-              <Image
-                src={img}
-                alt={`thumb-${i}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </motion.div>
-      </div>
+            <Image
+              src={image}
+              fill
+              alt={`Gallery image ${index + 1}`}
+              className="object-cover transition duration-700 hover:scale-105"
+            />
+          </div>
+        ))}
+      </motion.div>
     </section>
   );
 }

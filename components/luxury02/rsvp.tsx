@@ -61,7 +61,7 @@ export default function RSVP() {
   const [attendance, setAttendance] = useState("");
   
   return (
-    <section ref={ref} className="flex items-center justify-center bg-white text-gray-700 text-sm">
+    <section ref={ref} className="flex items-center justify-center bg-white text-[#5e5e5e] text-sm">
       <motion.div
         variants={fadeVariants.zoom}
         initial="hidden"
@@ -70,7 +70,7 @@ export default function RSVP() {
         className="relative w-full px-6 flex flex-col items-center justify-start text-center py-16 z-100"
       >
           <h1 className={playfair.className +  " italic text-[35px] pb-2"}>
-            Ucapan dan RSPV
+            Ucapan & RSPV
           </h1>
           <p className={plusJakartaSans.className + " font-normal my-2"}  >
             Berikan doa dan ucapan terbaik untuk kami
@@ -81,17 +81,17 @@ export default function RSVP() {
               name="nama"
               placeholder="Nama"
               required
-              className="placeholder:text-gray-700/50 w-full py-2 pl-2 border-2 border-gray-700"
+              className="placeholder:text-[#5e5e5e]/50 w-full py-2 pl-2 border-2 border-[#5e5e5e]"
             />
             <textarea
-              className="w-full h-18 my-2 p-2 border-2 border-gray-700
-              placeholder:text-gray-700/50"
+              className="w-full h-18 my-2 p-2 border-2 border-[#5e5e5e]
+              placeholder:text-[#5e5e5e]/50"
               placeholder="Tulis ucapanmu di sini..."
             />
             <select
               value={attendance ?? ""}
               onChange={(e) => setAttendance(e.target.value as "hadir" | "tidak")}
-              className="w-full p-2 border-2 border-gray-700"
+              className="w-full p-2 border-2 border-[#5e5e5e]"
             >
               <option value="">Pilih Kehadiran</option>
               <option value="hadir">Hadir</option>
@@ -100,7 +100,7 @@ export default function RSVP() {
             <p
               className={
                 plusJakartaSans.className +
-                " w-full mt-3 py-2 font-bold cursor-pointer bg-gray-700 text-white"
+                " w-full mt-3 py-2 font-bold cursor-pointer bg-[#5e5e5e] text-white "
               }
             >
               Kirim
@@ -115,12 +115,12 @@ export default function RSVP() {
               {wishes.map((wish, index) => (
                 <div
                   key={index}
-                  className="flex flex-col gap-1 border-b border-gray-700 pb-4"
+                  className="flex flex-col gap-1 border-b border-[#5e5e5e] pb-5"
                 >
-                  <p className={`${plusJakartaSans.className} font-bold`}>
+                  <p className={`${plusJakartaSans.className} font-bold pl-2`}>
                     {wish.name}
                   </p>
-                  <p className="">
+                  <p className="pl-2">
                     {wish.message}
                   </p>
                 </div>

@@ -1,16 +1,32 @@
-"use client"
+"use client";
 
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
-import { Files } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
-import { useRef } from "react";
-import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
-import { motion, useInView } from "framer-motion";
+import {
+  motion,
+  useInView,
+  AnimatePresence,
+} from "framer-motion";
 
+import {
+  Plus_Jakarta_Sans,
+  Playfair_Display,
+} from "next/font/google";
 
+import {
+  Files,
+  Check,
+  CreditCard,
+} from "lucide-react";
 
-const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["600", "800"], style: ["normal", "italic"] });
+import { fadeVariants } from "@/lib/motion";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["600", "800"],
+  style: ["normal", "italic"],
+});
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
   style: ["italic", "normal"],
@@ -18,143 +34,288 @@ const playfair = Playfair_Display({
 });
 
 const gift = {
-  rekening : [
-      {
-        nama_bank:"bni",
-        nama_penerima: "Muhammad Aslan", 
-        no_rek: 897892789298, 
-      },
-      {
-        nama_bank:"mandiri",
-        nama_penerima: "Muhammad Aslan", 
-        no_rek: 897892789298, 
-      },
-      {
-        nama_bank:"bri",
-        nama_penerima: "Muhammad Aslan", 
-        no_rek: 897892789298, 
-      },
-    ],
-  alamat: "Jl. Raya Cilandak KKO No.27 Jakarta Selatan",
-  map: "https://maps.app.goo.gl/N3QAhkDJrD4gGGVLA?g_st=iw"
-}
+  rekening: [
+    {
+      nama_bank: "bni",
+      nama_penerima: "Muhammad Aslan",
+      no_rek: "897892789298",
+    },
+    {
+      nama_bank: "mandiri",
+      nama_penerima: "Muhammad Aslan",
+      no_rek: "897892789298",
+    },
+    {
+      nama_bank: "bri",
+      nama_penerima: "Muhammad Aslan",
+      no_rek: "897892789298",
+    },
+  ],
 
+  alamat: "Jl. Raya Cilandak KKO No.27 Jakarta Selatan",
+
+  nama_penerima_kado: "Muhammad Aslan",
+};
 
 export default function Gift() {
-
   const ref = useRef(null);
+
   const isInView = useInView(ref, {
     once: false,
     margin: "-20% 0px",
   });
 
-  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const [copiedText, setCopiedText] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleCopy = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+
+      setCopiedText(text);
+
+      setTimeout(() => {
+        setCopiedText("");
+      }, 2000);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <section ref={ref} className="h-auto flex items-center justify-center bg-gray-700/50 text-white pb-20">
-      {/* Content */}
-        <div className={plusJakartaSans.className + " relative flex flex-col items-center justify-center text-center text-sm"}>
-          {/* Image */}
-          <div className="relative my-12 px-6 w-full h-[250px]">
-            <motion.div
-              variants={fadeVariants.imageReveal}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
-              className="relative h-full"
-            >
-              <Image 
-                src="/images/luxury01/foto4.webp"
-                fill
-                alt="Logo Bank"
-                className="object-cover"
-              />
-            </motion.div>
-          </div>
-          <motion.div
-            variants={fadeVariants.up}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            className="felx flex-col"
+    <section
+      ref={ref}
+      className="relative overflow-hidden py-24 text-white"
+    >
+      {/* BACKGROUND */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/luxury01/foto4.webp"
+          fill
+          alt="Background"
+          className="object-cover"
+        />
+      </div>
+
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-[2px]" />
+
+      {/* CONTENT */}
+      <div
+        className={`
+          ${plusJakartaSans.className}
+          relative
+          z-20
+          max-w-md
+          mx-auto
+          px-6
+        `}
+      >
+        {/* TITLE */}
+        <motion.div
+          variants={fadeVariants.up}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="text-center"
+        >
+          <h1
+            className={`
+              ${playfair.className}
+              text-4xl
+              italic
+              leading-none
+            `}
           >
-          <h1 className={playfair.className + " text-[35px] leading-tight pb-4 italic"}>
             Wedding Gift
           </h1>
-          <p className="font-normal my-4 mx-6"  >
+
+          <p className="mt-12 text-sm text-white/90">
             Doa Restu Anda merupakan karunia yang sangat berarti bagi kami.
           </p>
-          <p className="font-normal mx-6" >
+
+          <p className="mt-4 text-sm text-white/90">
             Dan jika memberi adalah ungkapan tanda kasih, Anda dapat memberi melalui dibawah ini.
           </p>
-          </motion.div>
 
-          <motion.div
-            variants={fadeVariants.down}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            className= "flex w-full px-6 mt-16 text-white flex-col overflow-y-auto text-center gap-3"
+          {/* BUTTON */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="
+              mt-14
+              inline-flex
+              items-center
+              gap-3
+              bg-white
+              px-4
+              py-1
+              text-sm
+              tracking-[0.2em]
+              text-black
+              transition-all
+              duration-300
+              hover:scale-[1.03]
+            "
           >
-            <div className="flex flex-col gap-2 w-full">
-              {/* Transfer  */}
-              {gift.rekening.map((rek, index) => (
-                <div key={index}>
-                  <div className="flex justify-between">
-                    <div className="text-left">
-                      <p className="font-bold italic">No Rekening</p>
-                      <p>{rek.no_rek}</p>
+            <CreditCard size={18} />
+            Klik di Sini
+          </button>
+        </motion.div>
+
+        {/* REVEAL SECTION */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{
+                opacity: 0,
+                height: 0,
+                y: 40,
+              }}
+              animate={{
+                opacity: 1,
+                height: "auto",
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                height: 0,
+                y: 20,
+              }}
+              transition={{
+                duration: 1.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="overflow-hidden"
+            >
+              {/* BANK LIST */}
+              <div className="mt-18 space-y-8 text-sm">
+                {gift.rekening.map((rek, index) => (
+                  <div key={index}>
+                    {/* TOP */}
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="italic text-white/90">
+                          No Rekening
+                        </p>
+
+                        <p className="mt-1 tracking-wide">
+                          {rek.no_rek}
+                        </p>
+                      </div>
+
+                      <Image
+                        src={`/icons/${rek.nama_bank}.webp`}
+                        width={70}
+                        height={28}
+                        alt={rek.nama_bank}
+                        className="object-contain"
+                      />
                     </div>
-                    <Image 
-                      src={`/icons/${rek.nama_bank}.webp`}
-                      width={60}
-                      height={15}
-                      alt="Logo Bank"
-                    />
-                  </div>  
-                  <div className="text-left mt-2">
-                    <p className="font-bold italic">Atas Nama</p>
-                    <div className="flex justify-between items-center">
-                      <p className="">{rek.nama_penerima}</p>
-                      <p className="border-2 px-2 py-1 flex text-xs gap-1">
-                        <Files size={12}/>
-                        Salin
+
+                    {/* BOTTOM */}
+                    <div className="flex justify-between items-end mt-2">
+                      <div>
+                        <p className="italic text-white/90">
+                          Atas Nama
+                        </p>
+
+                        <p className="mt-1">
+                          {rek.nama_penerima}
+                        </p>
+                      </div>
+
+                      <button
+                        onClick={() => handleCopy(rek.no_rek)}
+                        className="
+                          text-xs
+                          border
+                          border-white/70
+                          px-2
+                          py-1
+                          flex
+                          items-center
+                          gap-2
+                          transition-all
+                          duration-300
+                          hover:bg-white
+                          hover:text-black
+                        "
+                      >
+                        {copiedText === rek.no_rek ? (
+                          <>
+                            <Check size={16} />
+                            Tersalin
+                          </>
+                        ) : (
+                          <>
+                            <Files size={16} />
+                            Salin
+                          </>
+                        )}
+                      </button>
+                    </div>
+
+                    <div className="w-full h-[1px] bg-white/80 mt-5" />
+                  </div>
+                ))}
+
+                {/* ADDRESS */}
+                <div className="text-sm">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <p className="italic text-white/90">
+                        Nama Penerima
+                      </p>
+
+                      <p className="mt-1">
+                        {gift.nama_penerima_kado}
                       </p>
                     </div>
-                  </div>
-                  <div className="w-full my-2 h-[1px] bg-white">
-                  </div>  
-                </div>
-              ))}
-              {/* Kado */}
-              <div className="mt-4">
-                <div className="flex justify-between">
-                  <div className="text-left">
-                    <p className="font-bold italic">Nama Penerima</p>
-                    <p>Muhammad Aslan</p>
-                    <p>082299862307</p>
-                  </div>
-                  <div className="text-xl font-bold">
-                    <p>KADO</p>
-                  </div>
-                </div>
-                <div className="text-left mt-2">
-                  <p className="font-bold italic">Alamat Penerima</p>
-                  <div className="flex justify-between items-center">
-                    <p className="">Jl. Raya Cilandak KKO No.27 Jakarta Selatan</p>
-                    <p className="border-2 px-2 py-1 flex text-xs gap-1">
-                      <Files size={12}/>
-                      Salin
+
+                    <p className="tracking-wide text-xl">
+                      KADO
                     </p>
                   </div>
-                </div>
-                <div className="w-full mt-2 h-[1px] bg-white"></div> 
-              </div>
-            </div>
-          </motion.div>
+                  <div className="mt-4">
+                    <p className="italic text-white/90">
+                      Alamat Penerima
+                    </p>
 
-        </div>
+                    <p className="mt-1">
+                      {gift.alamat}
+                    </p>
+                  </div>
+                  <div className="flex justify-end mt-4">
+                    <button
+                      onClick={() => handleCopy(gift.alamat)}
+                      className="
+                        border
+                        border-white/70
+                        px-2
+                        py-1
+                        flex
+                        text-xs
+                        items-center
+                        gap-2
+                        transition-all
+                        duration-300
+                        hover:bg-white
+                        hover:text-black
+                      "
+                    >
+                      <Files size={16} />
+                      {copiedText === gift.alamat
+                        ? "Tersalin"
+                        : "Salin"}
+                    </button>
+                  </div>
+
+                  <div className="w-full h-[1px] bg-white/80 mt-5" />
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </section>
-  )
+  );
 }

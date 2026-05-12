@@ -83,7 +83,7 @@ export default function Terimakaish() {
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 640 640"
-                className="w-8 h-8 text-white hover:scale-110 transition"
+                className="w-6 h-6 text-white hover:scale-110 transition"
               >
                 <path 
                   fill="currentColor" 
@@ -96,7 +96,7 @@ export default function Terimakaish() {
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"
-                className="w-8 h-8 text-white hover:scale-110 transition"
+                className="w-6 h-6 text-white hover:scale-110 transition"
               >
                 <path
                   fill="currentColor"
@@ -108,7 +108,7 @@ export default function Terimakaish() {
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 640 640"
-                className="w-8 h-8 text-white hover:scale-110 transition"
+                className="w-6 h-6 text-white hover:scale-110 transition"
               >
                 <path 
                   fill="currentColor" 
@@ -117,7 +117,7 @@ export default function Terimakaish() {
               </svg>
             </a>
           </div>
-          <p className={plusJakartaSans.className + " tracking-[0.20em] font-bold"}>
+          <p className={plusJakartaSans.className + " text-xs tracking-[0.20em] font-bold"}>
             <a 
               href="https://api.whatsapp.com/send/?phone=6285150000715&amp;text=Halo,+saya+ingin+tanya+mengenai+Undangan+Website,+saya+mendapatkan+WA+dari+undangan+yang+telah+disebar." 
               target="_blank" 

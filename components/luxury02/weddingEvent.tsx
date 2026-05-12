@@ -80,7 +80,7 @@ export default function WeddingEvent() {
             <ImagesDisplayX images={coupleImages1}/>
           </div>
           <div className="h-[60%] bg-white flex">
-            <div className="w-[25%] bg-gray-700 flex items-center justify-center">
+            <div className="w-[25%] bg-[#5e5e5e] flex items-center justify-center">
               <div className={playfair.className + " rotate-[-90deg] text-3xl flex justify-center"}>
                 <p className="mr-2">
                   Akad
@@ -90,7 +90,7 @@ export default function WeddingEvent() {
                 </p>
               </div>
             </div>
-            <div className={plusJakartaSans.className + " w-[75%] text-gray-600 flex flex-col justify-center"}>
+            <div className={plusJakartaSans.className + " w-[75%] text-[#5e5e5e] flex flex-col justify-center"}>
               <div className="flex gap-4 items-center justify-center">
                 <p className={ " text-[80px]"}>29</p>
                 <div className="flex flex-col justify-center">
@@ -99,7 +99,7 @@ export default function WeddingEvent() {
                   <p>2026</p>
                 </div>
               </div>
-              <div className="h-[2px] w-[90%] bg-gray-700 mx-4"></div>
+              <div className="h-[2px] w-[90%] bg-[#5e5e5e] mx-4"></div>
               <div className="flex flex-col text-xs pl-4 mt-2">
                 <p className="flex items-center gap-2">
                   <Clock size={16}/>
@@ -108,7 +108,7 @@ export default function WeddingEvent() {
                 <p className="font-bold tracking-[0.25em] my-6">LOKASI ACARA</p>
                 <p className="font-bold">Menara 165</p>
                 <p>Jl. TB Simatupang Jakarta Selatan</p>
-                <p className="w-[140px] py-1 px-2 mt-4 border-gray-700 border-2 text-[10px] hover:text-white hover:bg-gray-700 tracking-[0.20em]">
+                <p className="w-[140px] py-1 px-2 mt-4 border-[#5e5e5e] border-2 text-[10px] hover:text-white hover:bg-[#5e5e5e] tracking-[0.20em]">
                   <a 
                   href={akad.map}
                   target="_blank"
@@ -139,7 +139,7 @@ export default function WeddingEvent() {
           <div className="h-[60%] bg-white flex">
             
 
-            <div className={plusJakartaSans.className + " w-[75%] text-gray-600 flex flex-col justify-center"}>
+            <div className={plusJakartaSans.className + " w-[75%] text-[#5e5e5e] flex flex-col justify-center"}>
               <div className="flex gap-4 items-center justify-center">
                 <p className={ " text-[80px]"}>29</p>
                 <div className="flex flex-col justify-center">
@@ -148,7 +148,7 @@ export default function WeddingEvent() {
                   <p>2026</p>
                 </div>
               </div>
-              <div className="h-[2px] w-[90%] bg-gray-700 mx-4"></div>
+              <div className="h-[2px] w-[90%] bg-[#5e5e5e] mx-4"></div>
               <div className="flex flex-col text-xs pl-4 mt-2">
                 <p className="flex items-center gap-2">
                   <Clock size={16}/>
@@ -157,7 +157,7 @@ export default function WeddingEvent() {
                 <p className="font-bold tracking-[0.25em] my-6">LOKASI ACARA</p>
                 <p className="font-bold">Menara 165</p>
                 <p>Jl. TB Simatupang Jakarta Selatan</p>
-                <p className="w-[140px] py-1 px-2 mt-4 border-gray-700 border-2 text-[10px] hover:text-white hover:bg-gray-700 tracking-[0.20em]">
+                <p className="w-[140px] py-1 px-2 mt-4 border-[#5e5e5e] border-2 text-[10px] hover:text-white hover:bg-[#5e5e5e] tracking-[0.20em]">
                   <a 
                   href={akad.map}
                   target="_blank"
@@ -169,7 +169,7 @@ export default function WeddingEvent() {
                 </p>
               </div>
             </div>
-            <div className="w-[25%] bg-gray-700 flex items-center justify-center">
+            <div className="w-[25%] bg-[#5e5e5e] flex items-center justify-center">
               <div className={playfair.className + " rotate-[90deg] text-3xl flex justify-center"}>
                 <p>
                   Resepsi 

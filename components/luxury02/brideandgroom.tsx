@@ -41,7 +41,7 @@ export default function BrideAndGroom() {
   const ref = useRef(null);
 
   return (
-    <section ref={ref} className={quicksand.className + " w-full h-auto flex flex-col items-center justify-center bg-gray-100/80 text-center"}>
+    <section ref={ref} className={quicksand.className + " w-full h-auto flex flex-col items-center justify-center bg-gray-100/95 text-center"}>
     
       {/* Part 1 */}
       <motion.div
@@ -61,37 +61,29 @@ export default function BrideAndGroom() {
         </motion.p>
       </motion.div>
 
-      {/* layer  */}
-      <motion.div
-        variants={fadeVariants.left}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        className="w-[90%] h-[2px] bg-black mr-auto mb-6"
-      ></motion.div>
 
       {/* Part 2 */}
-    
-      <div className="relative w-full h-auto">
       <motion.div
-        variants={fadeVariants.imageReveal}
+        variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
+        className="w-full h-auto flex flex-col items-center justify-center text-center"
       >
-        <div className="absolute top-4 left-4 w-[70%] h-[500px] bg-gray-800/50 z-0">
-        </div>    
+      <div className="relative w-full h-auto mb-12">
+        <motion.div variants={fadeVariants.imageReveal} className="absolute top-4 left-4 w-[70%] h-[500px] bg-[#5e5e5e]/50 z-0">
+        </motion.div>    
         {/* Image */}
-        <div className="relative w-[70%] h-[500px] overflow-hidden z-10">
+        <motion.div variants={fadeVariants.imageReveal} className="relative w-[70%] h-[500px] overflow-hidden z-10">
           <ImagesDisplayX images={brideImages}/>
-        </div>
+        </motion.div>
         <div className="text-left pl-4 my-12">
-          <p className="text-xl font-bold">Putri Cantika Sari</p>
-          <div className="my-3 text-xs">
+          <motion.p variants={fadeVariants.up} className="text-xl font-bold">Putri Cantika Sari</motion.p>
+          <motion.div variants={fadeVariants.down} className="my-3 text-xs">
             <p className="font-bold">Putri Pertama dari</p>
             <p>Bapak Abdul Rozak dan Ibu Adelia Marni</p>
-          </div>
-          <p className="text-white text-sm bg-gray-600 p-2 mt-4 flex items-center">
+          </motion.div>
+          <motion.p variants={fadeVariants.down} className="w-[70%] text-white text-sm bg-[#5e5e5e] p-2 mt-4 flex items-center">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 640 640"
@@ -103,36 +95,33 @@ export default function BrideAndGroom() {
               />
             </svg>
             user_ig_wanita
-          </p>
+          </motion.p>
         </div>
-      </motion.div>
       </div>
-
-      {/* layer  */}
-      <div className="w-[90%] h-[2px] bg-black ml-auto mb-6"></div>
+      </motion.div>
 
       {/* Part 3 */}
       <motion.div
-        variants={fadeVariants.right}
+        variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
         className="relative w-full h-auto"
       >
         {/* BACK LAYER */}
-        <div className="absolute top-4 right-4 w-[70%] h-[500px] bg-gray-800/50 z-0" />
+        <motion.div variants={fadeVariants.imageReveal} className="absolute top-4 right-4 w-[70%] h-[500px] bg-[#5e5e5e]/50 z-0" />
         {/* IMAGE */}
-        <div className="relative ml-auto w-[70%] h-[500px] overflow-hidden z-10">
+        <motion.div variants={fadeVariants.imageReveal} className="relative ml-auto w-[70%] h-[500px] overflow-hidden z-10">
           <ImagesDisplayX images={grromImages}/>
-        </div>
+        </motion.div>
         {/* TEXT */}
-        <div className="text-right pr-4 my-12">
-          <p className="text-xl font-bold">Putra Andika Pratama</p>
-          <div className="my-3 text-xs">
+        <div className="text-right pr-4 my-12 flex flex-col items-end">
+          <motion.p variants={fadeVariants.up} className="text-xl font-bold">Putra Andika Pratama</motion.p>
+          <motion.div variants={fadeVariants.down} className="my-3 text-xs">
             <p className="font-bold">Putra Pertama dari</p>
             <p>Bapak Deni Bastian dan Ibu Aisha Dania</p>
-          </div>
-          <p className="text-white text-sm w-full bg-gray-600 p-2 flex items-center justify-end gap-2 ">
+          </motion.div>
+          <motion.p variants={fadeVariants.down} className="text-white text-sm w-[70%] bg-[#5e5e5e] p-2 flex items-center justify-end gap-2 ">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 640 640"
@@ -144,7 +133,7 @@ export default function BrideAndGroom() {
               />
             </svg>
             user_ig_pria
-          </p>
+          </motion.p>
         </div>
       </motion.div>
       

@@ -25,7 +25,7 @@ export const fadeVariants = {
   },
 
   left: {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 1, x: -50 },
     visible: {
       opacity: 1,
       x: 0,
@@ -37,7 +37,7 @@ export const fadeVariants = {
   },
 
   right: {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 1, x: 50 },
     visible: {
       opacity: 1,
       x: 0,
@@ -92,7 +92,7 @@ export const fadeVariants = {
       rotate: 0,
       scale: 1,
       transition: {
-        duration: 1,
+        duration: 6,
         ease: [0.22, 1, 0.36, 1] as const
       },
     },

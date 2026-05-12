@@ -20,15 +20,15 @@ const quicksand = Quicksand({
 const stories = [
   {
     date: "25 AGUSTUS 2023",
-    story: "Berawal dari tempat pekerjaan Cianjur-2023...",
+    story: "Berawal dari tempat pekerjaan Cianjur-2023, kami mengenal satu sama lain dan belum ada benih cinta kala itu, hanya sebatas teman kerja.",
   },
   {
     date: "03 JUNI 2024",
-    story: "Setelah cukup mengenal satu sama lain...",
+    story: "Setelah cukup mengenal satu sama lain, satu tahun kurang lebih nya kami menjalin hubungan. 03 Juni 2024 Akhirnya kita memutuskan untuk melanjutkan ke Hubungan yang lebih serius mempertemukan kedua keluarga.",
   },
   {
     date: "29 DESEMBER 2025",
-    story: "Sampai tanggal ini kami melaksanakan akad...",
+    story: "Sampai tanggal ini kami melaksanakan akad terlebih dahulu dan akhirnya kami mengubah status hingga menjadi pasangan suami istri. Semoga allah swt. Memberikan keberkahan pernikahan ini.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function LoveStory() {
   return (
     <section
       ref={ref}
-      className="h-auto flex flex-col items-center justify-center text-gray-700 bg-white pb-10"
+      className="h-auto flex flex-col items-center justify-center text-gray-700 bg-white"
     >
       {/* Title */}
       <motion.div
@@ -62,13 +62,13 @@ export default function LoveStory() {
 
       {/* Stories */}
       <motion.div
-        className={quicksand.className + " flex flex-col text-center my-16 px-8 gap-20"}
+        className={quicksand.className + " flex flex-col text-center my-16 gap-20 px-6"}
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
         {stories.map((story, i) => (
-          <motion.div key={i} variants={fadeVariants.left}>
+          <motion.div key={i} variants={fadeVariants.down}>
             <h3 className={plusJakartaSans.className + " font-bold mb-4"}>
               {story.date}
             </h3>
@@ -76,9 +76,11 @@ export default function LoveStory() {
           </motion.div>
         ))}
 
-        {/* Video */}
-        <motion.div variants={fadeVariants.left} className="w-full flex justify-center mt-10">
-          <div className="relative w-full max-w-md aspect-video overflow-hidden rounded-2xl shadow-lg">
+        
+      </motion.div>
+      {/* Video */}
+        <div className="w-full flex justify-center mt-10">
+          <div className="relative w-full max-w-md aspect-video overflow-hidden shadow-lg">
             <iframe
               src="https://www.youtube.com/embed/VZLeb_q1x2g"
               title="Love Story Video"
@@ -86,8 +88,7 @@ export default function LoveStory() {
               allowFullScreen
             />
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
     </section>
   );
 }

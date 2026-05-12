@@ -70,27 +70,29 @@ export default function Page() {
       }, []);
 
   return (
-    <section ref={ref} className="h-[400px] w-full flex items-center justify-center flex-col text-white">
+    <section ref={ref} className="relative h-[400px] w-full flex items-center justify-center flex-col text-white">
+      <ImagesDisplayY images={coupleImages}/>
+      {/* Overlay */}
+      <div className="absolute inset-0 z-10 bg-black/70 pointer-events-none"></div>
+
       
-      <motion.div
-        variants={fadeVariants.zoom}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: 0.8 }}
-        className="w-full h-full"
+      <div
+      
+        className="z-50"
       >
-      <div className={quicksand.className + " relative w-full h-full overflow-hidden"}>
-      
-
-        {/* SLIDER */}
-        <ImagesDisplayY images={coupleImages} />
-
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-black/40 z-20 flex items-center justify-center flex-col gap-6">
-          <p className={playfair.className + " text-3xl font-bold tracking-widest font-bold"}>
+      {/* Content */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        className={quicksand.className}
+      >
+        <div className="absolute inset-0 z-20 flex items-center justify-center flex-col gap-6">
+          <motion.p variants={fadeVariants.up} className={playfair.className + " text-3xl font-bold tracking-widest font-bold"}>
             SAVE THE DATE
-          </p>
-          <div className="grid grid-cols-2 gap-2">
+          </motion.p>
+          <motion.div variants={fadeVariants.rotate} className="grid grid-cols-2 gap-2">
             <div className={plusJakartaSans.className + " w-16 h-16 text-center flex flex-col items-center justify-center"}>
               <p className="font-bold text-2xl">{time.days}</p>
               <p className="font-bold text-xs">Hari</p>
@@ -107,15 +109,14 @@ export default function Page() {
               <p className="font-bold text-2xl">{time.seconds}</p>
               <p className="font-bold text-xs">Detik</p>
             </div>
-          </div>
-          <p className="border-2 border-white py-1 px-2 flex items-center gap-2">
+          </motion.div>
+          <motion.p variants={fadeVariants.down} className="border-2 border-white py-1 px-2 flex items-center gap-2">
             <Calendar1 size={16}/>
             Simpan Tanggal
-          </p>
+          </motion.p>
         </div>
-
-      </div>
       </motion.div>
+      </div>
 
     </section>
   )
