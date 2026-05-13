@@ -7,57 +7,41 @@ import {
   useInView,
   AnimatePresence,
 } from "framer-motion";
-
 import {
   Plus_Jakarta_Sans,
   Playfair_Display,
 } from "next/font/google";
-
 import {
   Files,
   Check,
   CreditCard,
 } from "lucide-react";
-
 import { fadeVariants } from "@/lib/motion";
+
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["600", "800"],
   style: ["normal", "italic"],
 });
-
 const playfair = Playfair_Display({
   subsets: ["latin"],
   style: ["italic", "normal"],
   weight: ["400", "600"],
 });
 
-const gift = {
-  rekening: [
-    {
-      nama_bank: "bni",
-      nama_penerima: "Muhammad Aslan",
-      no_rek: "897892789298",
-    },
-    {
-      nama_bank: "mandiri",
-      nama_penerima: "Muhammad Aslan",
-      no_rek: "897892789298",
-    },
-    {
-      nama_bank: "bri",
-      nama_penerima: "Muhammad Aslan",
-      no_rek: "897892789298",
-    },
-  ],
+interface Rek {
+  nama_bank: string,
+  nama_penerima: string,
+  no_rek: string,
+}
 
-  alamat: "Jl. Raya Cilandak KKO No.27 Jakarta Selatan",
+interface Kado {
+  alamat: string,
+  penerima: string,
+}
 
-  nama_penerima_kado: "Muhammad Aslan",
-};
-
-export default function Gift() {
+export default function Gift({ rekening, kado }: {rekening: Rek[], kado: Kado}) {
   const ref = useRef(null);
 
   const isInView = useInView(ref, {
@@ -188,7 +172,7 @@ export default function Gift() {
             >
               {/* BANK LIST */}
               <div className="mt-18 space-y-8 text-sm">
-                {gift.rekening.map((rek, index) => (
+                {rekening.map((rek, index) => (
                   <div key={index}>
                     {/* TOP */}
                     <div className="flex justify-between items-start">
@@ -267,7 +251,7 @@ export default function Gift() {
                       </p>
 
                       <p className="mt-1">
-                        {gift.nama_penerima_kado}
+                        {kado.penerima}
                       </p>
                     </div>
 
@@ -281,12 +265,12 @@ export default function Gift() {
                     </p>
 
                     <p className="mt-1">
-                      {gift.alamat}
+                      {kado.alamat}
                     </p>
                   </div>
                   <div className="flex justify-end mt-4">
                     <button
-                      onClick={() => handleCopy(gift.alamat)}
+                      onClick={() => handleCopy(kado.alamat)}
                       className="
                         border
                         border-white/70
@@ -303,7 +287,7 @@ export default function Gift() {
                       "
                     >
                       <Files size={16} />
-                      {copiedText === gift.alamat
+                      {copiedText === kado.alamat
                         ? "Tersalin"
                         : "Salin"}
                     </button>

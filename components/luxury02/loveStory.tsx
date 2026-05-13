@@ -3,7 +3,7 @@
 import { Playfair_Display, Ballet, Plus_Jakarta_Sans, Quicksand } from "next/font/google";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
+import { containerVariants, fadeVariants } from "@/lib/motion";
 
 const ballet = Ballet({ subsets: ["latin"], weight: ["400"] });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["800", "700"] });
@@ -17,24 +17,14 @@ const quicksand = Quicksand({
   weight: ["500", "700"],
 });
 
-const stories = [
-  {
-    date: "25 AGUSTUS 2023",
-    story: "Berawal dari tempat pekerjaan Cianjur-2023, kami mengenal satu sama lain dan belum ada benih cinta kala itu, hanya sebatas teman kerja.",
-  },
-  {
-    date: "03 JUNI 2024",
-    story: "Setelah cukup mengenal satu sama lain, satu tahun kurang lebih nya kami menjalin hubungan. 03 Juni 2024 Akhirnya kita memutuskan untuk melanjutkan ke Hubungan yang lebih serius mempertemukan kedua keluarga.",
-  },
-  {
-    date: "29 DESEMBER 2025",
-    story: "Sampai tanggal ini kami melaksanakan akad terlebih dahulu dan akhirnya kami mengubah status hingga menjadi pasangan suami istri. Semoga allah swt. Memberikan keberkahan pernikahan ini.",
-  },
-];
+interface Props {
+  date: string,
+  story: string
+}
 
-export default function LoveStory() {
+export default function LoveStory({ stories }: {stories: Props[]}) {
+  
   const ref = useRef(null);
-
   const isInView = useInView(ref, {
     once: false,
     margin: "-20% 0px",

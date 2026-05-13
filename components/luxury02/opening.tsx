@@ -6,7 +6,7 @@ import { Playfair_Display } from "next/font/google";
 import { useEffect, useState } from "react";
 import { ChevronsDown } from "lucide-react";
 import { useRef } from "react";
-import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
+import { fadeVariants } from "@/lib/motion";
 import { motion, useInView } from "framer-motion";
 
 
@@ -16,21 +16,10 @@ const playfair = Playfair_Display({
   weight: ["400", "600"],
 });
 
-const groom = "Dillo";
-const bride = "Alisyah";
-const date = "18 . 05 . 2026";
 
-const weddingDate = new Date('2026-05-18T10:00:00+08:00');
-
-export default function Opening() {
+export default function Opening({ groom, bride, dateString, dateDate }: { groom: string, bride: string, dateString: string, dateDate: Date }) {
   
   const ref = useRef(null);
-
-  const isInView = useInView(ref, {
-    once: false,
-    margin: "-20% 0px",
-  });
-
   const [time, setTime] = useState({
       days: 0,
       hours: 0,
@@ -41,7 +30,7 @@ export default function Opening() {
     useEffect(() => {
       const interval = setInterval(() => {
         const now = new Date();
-        const diff = weddingDate.getTime() - now.getTime();
+        const diff = dateDate.getTime() - now.getTime();
   
         if (diff <= 0) {
           clearInterval(interval);
@@ -61,8 +50,6 @@ export default function Opening() {
 
   return (
     <section ref={ref} className="min-h-[100dvh] flex items-center justify-center">
-
-
       {/* Content */}
       <div className="relative w-full max-w-md h-[100dvh] overflow-hidden shadow-2xl ">
         <div className="w-full flex flex-col items-center justify-center text-center text-white absolute bottom-0 left-1/2 mb-8 transform -translate-x-1/2  z-20 pointer-events-none animate-fade-in">
@@ -82,7 +69,7 @@ export default function Opening() {
             {groom} & {bride}
           </motion.h1>
           <p className={plusJakartaSans.className + " font-bold text-xs mb-4"}  >
-            {date}
+            {dateString}
           </p>
 
           <motion.div
@@ -120,8 +107,6 @@ export default function Opening() {
           </div>
         </div>
       </div>
-
-
     </section>
   );
 }

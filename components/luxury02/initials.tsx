@@ -11,11 +11,9 @@ const quicksand = Quicksand({
   weight: ["500"],
 });
 
-
-
-export default function Initials() {
+export default function Initials({ groomInitial, brideInitial }: { groomInitial: string, brideInitial: string }) {
+  
   const ref = useRef(null);
-
   const isInView = useInView(ref, {
     once: false,
     margin: "-20% 0px",
@@ -31,7 +29,7 @@ export default function Initials() {
       >
         <div className="text-7xl flex gap-5 justify-center items-center">
           <motion.p variants={fadeVariants.left}>
-            P
+            {brideInitial}
           </motion.p>
           <motion.div 
             variants={fadeVariants.fadeDelayed(3)}
@@ -39,7 +37,7 @@ export default function Initials() {
           >
           </motion.div>
           <motion.p variants={fadeVariants.right}>
-            A
+            {groomInitial}
           </motion.p>
         </div>
         <motion.p variants={fadeVariants.up} className={quicksand.className + " text-center px-6 my-6 text-xs leading-relaxed italic"}>

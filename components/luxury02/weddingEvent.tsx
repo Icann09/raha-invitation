@@ -4,8 +4,8 @@ import ImagesDisplayX from "../ui/imagesDisplayX";
 import { Clock, MapPin, Video } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
-import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
-import { motion, useInView } from "framer-motion";
+import { fadeVariants } from "@/lib/motion";
+import { motion } from "framer-motion";
 
 
 const ballet = Ballet({subsets: ["latin"], weight: ["400"]});
@@ -15,43 +15,30 @@ const playfair = Playfair_Display({
   style: ["italic", "normal"],
   weight: ["400", "600"],
 });
-const quicksand = Quicksand({
-  subsets: ["latin"],
-  weight: ["500", "700"]
-});
 
-const coupleImages1 = [
-  "/images/luxury01/foto1.webp",
-  "/images/luxury01/foto2.webp",
-  "/images/luxury01/foto4.webp",
-];
-const coupleImages2 = [
-  "/images/luxury01/foto5.webp",
-  "/images/luxury01/foto6.webp",
-  "/images/luxury01/foto4.webp",
-];
 
-const akad = {
-  hari: "Sabtu",
-  tanggal: "23 Desember 2023",
-  waktu: "09.00 WIB - Selesai",
-  tempat: "Grand Ballroom Majesty",
-  alamat: "Jl. Gatot Subroto No. 25, Jakarta Selatan",
-  map: "https://maps.app.goo.gl/Li11FsmvkLJPg3EQ8?g_st=iw"
+interface Props {
+  alamat: {
+    nama: string,
+    lokasi: string,
+    link: string
+  },
+  waktu: {
+    hari: string,
+    tanggal: string,
+    bulan: string,
+    tahun: string,
+    jam: string
+  }
 }
 
 
-export default function WeddingEvent() {
+export default function WeddingEvent({ images, akad, resepsi }: { images: string[], akad: Props, resepsi: Props }) {
   
   const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: false,
-    margin: "-20% 0px",
-  });
 
   return (
     <section ref={ref} className="h-auto flex flex-col items-center justify-center text-white pl-6 py-10">
-
       {/* Title */}
       <motion.div
         variants={fadeVariants.up}
@@ -77,7 +64,7 @@ export default function WeddingEvent() {
       >
         <div className="h-full w-full">
           <div className="relative overflow-hidden z-10 h-[40%] w-full bg-black rounded-tr-[150px]">
-            <ImagesDisplayX images={coupleImages1}/>
+            <ImagesDisplayX images={images.slice(1, 5)}/>
           </div>
           <div className="h-[60%] bg-white flex">
             <div className="w-[25%] bg-[#5e5e5e] flex items-center justify-center">
@@ -92,25 +79,25 @@ export default function WeddingEvent() {
             </div>
             <div className={plusJakartaSans.className + " w-[75%] text-[#5e5e5e] flex flex-col justify-center"}>
               <div className="flex gap-4 items-center justify-center">
-                <p className={ " text-[80px]"}>29</p>
+                <p className={ " text-[80px]"}>{akad.waktu.tanggal}</p>
                 <div className="flex flex-col justify-center">
-                  <p>Minggu</p>
-                  <p>Mei</p>
-                  <p>2026</p>
+                  <p>{akad.waktu.hari}</p>
+                  <p>{akad.waktu.bulan}</p>
+                  <p>{akad.waktu.tahun}</p>
                 </div>
               </div>
               <div className="h-[2px] w-[90%] bg-[#5e5e5e] mx-4"></div>
               <div className="flex flex-col text-xs pl-4 mt-2">
                 <p className="flex items-center gap-2">
                   <Clock size={16}/>
-                  08.00 WIB
+                  {akad.waktu.jam}
                 </p>
                 <p className="font-bold tracking-[0.25em] my-6">LOKASI ACARA</p>
-                <p className="font-bold">Menara 165</p>
-                <p>Jl. TB Simatupang Jakarta Selatan</p>
+                <p className="font-bold">{akad.alamat.nama}</p>
+                <p>{akad.alamat.lokasi}</p>
                 <p className="w-[140px] py-1 px-2 mt-4 border-[#5e5e5e] border-2 text-[10px] hover:text-white hover:bg-[#5e5e5e] tracking-[0.20em]">
                   <a 
-                  href={akad.map}
+                  href={akad.alamat.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   >
@@ -134,32 +121,30 @@ export default function WeddingEvent() {
       >
         <div className="h-full w-full">
           <div className="relative overflow-hidden z-10 h-[40%] w-full bg-black rounded-tl-[150px]">
-            <ImagesDisplayX images={coupleImages1}/>
+            <ImagesDisplayX images={images.slice(3, 8)}/>
           </div>
           <div className="h-[60%] bg-white flex">
-            
-
             <div className={plusJakartaSans.className + " w-[75%] text-[#5e5e5e] flex flex-col justify-center"}>
               <div className="flex gap-4 items-center justify-center">
-                <p className={ " text-[80px]"}>29</p>
+                <p className={ " text-[80px]"}>{resepsi.waktu.tanggal}</p>
                 <div className="flex flex-col justify-center">
-                  <p>Minggu</p>
-                  <p>Mei</p>
-                  <p>2026</p>
+                  <p>{resepsi.waktu.hari}</p>
+                  <p>{resepsi.waktu.bulan}</p>
+                  <p>{resepsi.waktu.tahun}</p>
                 </div>
               </div>
               <div className="h-[2px] w-[90%] bg-[#5e5e5e] mx-4"></div>
               <div className="flex flex-col text-xs pl-4 mt-2">
                 <p className="flex items-center gap-2">
                   <Clock size={16}/>
-                  08.00 WIB
+                  {resepsi.waktu.jam}
                 </p>
                 <p className="font-bold tracking-[0.25em] my-6">LOKASI ACARA</p>
-                <p className="font-bold">Menara 165</p>
-                <p>Jl. TB Simatupang Jakarta Selatan</p>
+                <p className="font-bold">{resepsi.alamat.nama}</p>
+                <p>{resepsi.alamat.lokasi}</p>
                 <p className="w-[140px] py-1 px-2 mt-4 border-[#5e5e5e] border-2 text-[10px] hover:text-white hover:bg-[#5e5e5e] tracking-[0.20em]">
                   <a 
-                  href={akad.map}
+                  href={resepsi.alamat.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   >
@@ -191,7 +176,7 @@ export default function WeddingEvent() {
       >
         <div className="relative w-full h-full">
           <Image 
-            src={coupleImages1[0]}
+            src={images[0]}
             alt="Foto Prewedding"
             fill
             className="object-cover"

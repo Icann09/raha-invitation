@@ -1,0 +1,92 @@
+Cover: 
+  - Nama Panggilan 
+Opening: 
+  - Nama Panggialan 
+  - Tanggal pernikahan 
+Initial: 
+  - initial nama
+Bride and Groom: 
+  - Foto 
+  - Nama lengkap
+  - Nama ayah dan ibu
+  - Anak ke?
+  - IG
+Date: 
+  - Tanggal 
+Wedding Event: 
+  - Akad nikah (waktu dan tempat, foto")
+  - Resepsi (waktu dan tempat, foto")
+  - Foto
+  - Link live streaming 
+Love Story: 
+  - Tanggal dan Kisah
+  - Youtube video
+Gallery: 
+  - Foto" 1 (4)
+  - Foto" 2 (6)
+  - Foto" 3 (4)
+  - Foto 1
+  - Foto 2
+Gift: 
+  - Rekening (nama, no, nama bank)
+  - Kado (alamat, nama penerima)
+
+
+Mempelai Wanita
+  - Nama Lengkap 
+  - Nama Panggilan 
+  - Ayah
+  - ibu
+  - Anak ke
+  - IG
+
+Mempelai Pria 
+  - Nama Lengkap 
+  - Nama Panggilan 
+  - Ayah
+  - ibu
+  - Anak ke
+  - IG
+
+Akad nikah 
+  - Alamat 
+  - Tanggal dan Waktu
+  - Link Google Map 
+
+Resepsi
+  - Alamat 
+  - Tanggal dan Waktu
+  - Link Google Map 
+
+Rekening
+  Rekening 1
+  - Nama Bank
+  - Nomor
+  - Nama Penerima
+  Rekening 2
+  - Nama Bank
+  - Nomor
+  - Nama Penerima
+  Rekening 3
+  - Nama Bank
+  - Nomor
+  - Nama Penerima
+  Kado
+  - Nama Penerima
+  - Alamat Penerima
+  - Link Google Maps Alamat
+
+Gallery 
+  - Foto Sendiri (Pria dan Wanita)
+  - Foto Bersama (jumlah: 16, bisa kurang)
+
+Love Story
+  Story 1
+  - Tanggal
+  - Kisah 
+  Story 2
+  - Tanggal
+  - Kisah 
+  Story 3
+  - Tanggal
+  - Kisah 

@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Disc3 } from "lucide-react";
-
 import Opening from "@/components/luxury02/opening";
 import Initials from "@/components/luxury02/initials";
 import BrideAndGroom from "@/components/luxury02/brideandgroom";
@@ -15,6 +14,8 @@ import Gift from "@/components/luxury02/gift";
 import RSVP from "@/components/luxury02/rsvp";
 import Terimakaish from "@/components/luxury02/terimakasih";
 import Cover from "@/components/luxury02/cover";
+import { gallery, bride, groom, date, akadNikah, resepsi, loveStory, gift } from "@/data/luxury02"
+
 
 const images = [
   "/images/luxury01/foto1.webp",
@@ -155,7 +156,7 @@ export default function Page() {
               }}
               className="absolute inset-0 z-50"
             >
-              <Cover onClick={handleOpen} />
+              <Cover onClick={handleOpen} images={gallery.couples} bride={bride.nama} groom={groom.nama}/>
             </motion.div>
           )}
 
@@ -171,14 +172,14 @@ export default function Page() {
                 ease: "easeOut",
               }}
             >
-              <Opening />
-              <Initials />
-              <BrideAndGroom />
-              <Date />
-              <WeddingEvent />
-              <LoveStory />
-              <Gallery />
-              <Gift />
+              <Opening bride={bride.nama} groom={groom.nama} dateDate={date.number} dateString={date.string}/>
+              <Initials brideInitial={bride.initial} groomInitial={groom.initial}/>
+              <BrideAndGroom bride={bride} groom={groom} images={gallery.couples}/>
+              <Date date={date.number} images={images.slice(8, 13)}/>
+              <WeddingEvent akad={akadNikah} resepsi={resepsi} images={gallery.couples}/>
+              <LoveStory stories={loveStory}/>
+              <Gallery images={gallery.couples}/>
+              <Gift rekening={gift.rekening} kado={gift.kado}/>
               <RSVP />
               <Terimakaish />
             </motion.main>

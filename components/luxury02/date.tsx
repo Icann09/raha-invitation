@@ -5,11 +5,9 @@ import { Quicksand } from "next/font/google";
 import { Calendar1 } from "lucide-react";
 import { useEffect, useState } from "react";
 import ImagesDisplayY from "../ui/imagesDisplayY";
-
 import { useRef } from "react";
-import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
-import { motion, useInView } from "framer-motion";
-
+import { containerVariants, fadeVariants } from "@/lib/motion";
+import { motion } from "framer-motion";
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
@@ -23,24 +21,10 @@ const playfair = Playfair_Display({
   weight: ["400", "600"],
 });
 
-const weddingDate = new Date('2026-05-18T10:00:00+08:00');
-const coupleImages = [
-  "/images/luxury01/foto5.webp",
-  "/images/luxury01/foto6.webp",
-  "/images/luxury01/foto4.webp",
-  "/images/luxury01/foto1.webp",
-  "/images/luxury01/foto2.webp",
-];
 
-
-export default function Page() {
+export default function Page({ date, images }: { date: Date, images: string[] }) {
+  
   const ref = useRef(null);
-
-  const isInView = useInView(ref, {
-    once: false,
-    margin: "-20% 0px",
-  });
-
   const [time, setTime] = useState({
         days: 0,
         hours: 0,
@@ -51,7 +35,7 @@ export default function Page() {
       useEffect(() => {
         const interval = setInterval(() => {
           const now = new Date();
-          const diff = weddingDate.getTime() - now.getTime();
+          const diff = date.getTime() - now.getTime();
     
           if (diff <= 0) {
             clearInterval(interval);
@@ -71,16 +55,12 @@ export default function Page() {
 
   return (
     <section ref={ref} className="relative h-[400px] w-full flex items-center justify-center flex-col text-white">
-      <ImagesDisplayY images={coupleImages}/>
+      <ImagesDisplayY images={images}/>
       {/* Overlay */}
       <div className="absolute inset-0 z-10 bg-black/70 pointer-events-none"></div>
-
       
-      <div
-      
-        className="z-50"
-      >
       {/* Content */}
+      <div className="z-50">
       <motion.div
         variants={containerVariants}
         initial="hidden"

@@ -22,22 +22,10 @@ const playfair = Playfair_Display({
   weight: ["400", "600"],
 });
 
-const images = [
-  "/images/luxury01/foto1.webp",
-  "/images/luxury01/foto2.webp",
-  "/images/luxury01/foto4.webp",
-  "/images/luxury01/foto5.webp",
-  "/images/luxury01/foto1.webp",
-  "/images/luxury01/foto2.webp",
-];
 
-export default function Gallery() {
+export default function Gallery({ images }: {images: string[]}) {
+
   const ref = useRef(null);
-
-  const isInView = useInView(ref, {
-    once: false,
-    margin: "-20% 0px",
-  });
 
   return (
     <section

@@ -1,9 +1,11 @@
-
+"use client"
 
 import { Plus_Jakarta_Sans, Quicksand } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import { Mail } from "lucide-react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
@@ -16,19 +18,11 @@ const quicksand = Quicksand({
   weight: ["600", "700"]
 });
 
-const groom = "Andika";
-const bride = "Putri";
 
-const coupleImages1 = [
-  "/images/luxury01/foto1.webp",
-  "/images/luxury01/foto2.webp",
-  "/images/luxury01/foto4.webp",
-];
+export default function Cover({onClick, groom, bride, images}  : {onClick: () => void, groom: string, bride: string, images: string[] }) {
 
-
-export default function Cover({onClick} : {onClick: () => void}) {
-
-
+  const params = useSearchParams();
+  const guest = params.get("to")?.replace(/\+/g, " ");
 
   return (
     <section className="min-h-[100dvh] flex items-center justify-center">
@@ -38,7 +32,7 @@ export default function Cover({onClick} : {onClick: () => void}) {
         {/* Background Image  */}
         <div className="relative w-full h-full">
           <Image 
-            src={coupleImages1[0]}
+            src={images[0]}
             alt="Foto Prewedding"
             fill
             className="object-cover"
@@ -60,7 +54,7 @@ export default function Cover({onClick} : {onClick: () => void}) {
           </h1>
           <div className="tracking-[0.15em] py-3 text-sm animate-fade-in">
             <p>Kepada Yth.</p>
-            <p>Bapak/Ibu/Saudara/i</p>
+            <p>{guest || "Tamu Undangan"}</p>
           </div>
           <div className="animate-fade-up items-center flex flex-col">
             <p className="text-xs">*Mohon maaf jika ada kesalahan dalam penulisan nama / gelar.</p>
