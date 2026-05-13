@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { Suspense } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Disc3 } from "lucide-react";
 import Opening from "@/components/luxury02/opening";
@@ -140,25 +141,32 @@ export default function Page() {
         <AnimatePresence mode="wait">
 
           {/* COVER */}
-          {!open && (
-            <motion.div
-              key="cover"
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 1 }}
-              exit={{
-                opacity: 0,
-                scale: 1.1,
-                filter: "blur(10px)",
-              }}
-              transition={{
-                duration: 1.2,
-                ease: "easeInOut",
-              }}
-              className="absolute inset-0 z-50"
-            >
-              <Cover onClick={handleOpen} images={gallery.couples} bride={bride.nama} groom={groom.nama}/>
-            </motion.div>
-          )}
+          <Suspense fallback={null}>
+            {!open && (
+              <motion.div
+                key="cover"
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
+                exit={{
+                  opacity: 0,
+                  scale: 1.1,
+                  filter: "blur(10px)",
+                }}
+                transition={{
+                  duration: 1.2,
+                  ease: "easeInOut",
+                }}
+                className="absolute inset-0 z-50"
+              >
+                <Cover
+                  onClick={handleOpen}
+                  images={gallery.couples}
+                  bride={bride.nama}
+                  groom={groom.nama}
+                />
+              </motion.div>
+            )}
+          </Suspense>
 
           {/* CONTENT */}
           {open && (
