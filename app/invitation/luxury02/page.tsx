@@ -180,7 +180,7 @@ export default function Page() {
               <LoveStory stories={loveStory}/>
               <Gallery images={gallery.couples}/>
               <Gift rekening={gift.rekening} kado={gift.kado}/>
-              <RSVP />
+              <RSVP id={1}/>
               <Terimakaish />
             </motion.main>
           )}
