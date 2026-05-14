@@ -90,6 +90,33 @@ export default function Page() {
     }
   }, []);
 
+  // MUSIC AUTO STOP  
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (!audioRef.current) return;
+
+      if (document.hidden) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      } else if (open) {
+        audioRef.current.play();
+        setIsPlaying(true);
+      }
+    };
+
+    document.addEventListener(
+      "visibilitychange",
+      handleVisibilityChange
+    );
+
+    return () => {
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibilityChange
+      );
+    };
+  }, [open]);
+
   return (
     <div className="flex justify-center overflow-hidden">
 
