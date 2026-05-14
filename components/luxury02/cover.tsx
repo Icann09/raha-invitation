@@ -7,7 +7,6 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
 
-
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -50,7 +49,7 @@ export default function Cover({onClick, groom, bride, images}  : {onClick: () =>
           </p>
           
           <h1 className={playfair.className + " text-[40px] leading-tight py-3 mb-2 animate-fade-down"}>
-            {groom} & {bride}
+            {bride} & {groom}
           </h1>
           <div className="tracking-[0.15em] py-3 text-sm animate-fade-in">
             <p>Kepada Yth.</p>

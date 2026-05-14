@@ -1,13 +1,12 @@
 "use client"
 
-
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import { useEffect, useState } from "react";
 import { ChevronsDown } from "lucide-react";
 import { useRef } from "react";
 import { fadeVariants } from "@/lib/motion";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: "800" });
@@ -66,7 +65,7 @@ export default function Opening({ groom, bride, dateString, dateDate }: { groom:
             }}
             className={playfair.className + " text-[40px] leading-tight py-3"}
           >
-            {groom} & {bride}
+            {bride} & {groom}
           </motion.h1>
           <p className={plusJakartaSans.className + " font-bold text-xs mb-4"}  >
             {dateString}

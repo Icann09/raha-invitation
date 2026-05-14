@@ -4,7 +4,7 @@ import { Quicksand } from "next/font/google";
 import { Playfair_Display, Ballet } from "next/font/google";
 import ImagesDisplayX from "../ui/imagesDisplayX";
 import { useRef } from "react";
-import { fadeVariants, containerVariants } from "@/lib/motion";
+import { fadeVariants, containerVariants, containerVariantsNoDelay } from "@/lib/motion";
 import { motion } from "framer-motion";
 
 
@@ -56,7 +56,7 @@ export default function BrideAndGroom ( {bride, groom, images }: { bride: Bride,
     
       {/* Title */}
       <motion.div
-        variants={containerVariants}
+        variants={containerVariantsNoDelay}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
@@ -94,7 +94,7 @@ export default function BrideAndGroom ( {bride, groom, images }: { bride: Bride,
             <p className="font-bold">Putri {bride.anakKe} dari</p>
             <p>Bapak {bride.ayah} dan Ibu {bride.ibu}</p>
           </motion.div>
-          <motion.p variants={fadeVariants.down} className="w-[70%] text-white text-sm bg-[#5e5e5e] p-2 mt-4 flex items-center">
+          <motion.p variants={fadeVariants.down} className="w-[70%] text-white text-sm bg-[#5e5e5e] p-2 mt-4 flex items-center gap-1">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 640 640"
@@ -132,7 +132,7 @@ export default function BrideAndGroom ( {bride, groom, images }: { bride: Bride,
             <p className="font-bold">Putra {groom.anakKe} dari</p>
             <p>Bapak {groom.ayah} dan Ibu {groom.ibu}</p>
           </motion.div>
-          <motion.p variants={fadeVariants.down} className="text-white text-sm w-[70%] bg-[#5e5e5e] p-2 flex items-center justify-end gap-2 ">
+          <motion.p variants={fadeVariants.down} className="text-white text-sm w-[70%] bg-[#5e5e5e] p-2 flex items-center justify-end gap-1">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 640 640"

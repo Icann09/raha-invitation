@@ -2,20 +2,9 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import {
-  motion,
-  useInView,
-  AnimatePresence,
-} from "framer-motion";
-import {
-  Plus_Jakarta_Sans,
-  Playfair_Display,
-} from "next/font/google";
-import {
-  Files,
-  Check,
-  CreditCard,
-} from "lucide-react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { Files, Check, CreditCard } from "lucide-react";
 import { fadeVariants } from "@/lib/motion";
 
 
@@ -41,7 +30,7 @@ interface Kado {
   penerima: string,
 }
 
-export default function Gift({ rekening, kado }: {rekening: Rek[], kado: Kado}) {
+export default function Gift({ rekening, kado, image }: {rekening: Rek[], kado: Kado, image: string}) {
   const ref = useRef(null);
 
   const isInView = useInView(ref, {
@@ -74,7 +63,7 @@ export default function Gift({ rekening, kado }: {rekening: Rek[], kado: Kado}) 
       {/* BACKGROUND */}
       <div className="absolute inset-0">
         <Image
-          src="/images/luxury01/foto4.webp"
+          src={image}
           fill
           alt="Background"
           className="object-cover"
@@ -209,20 +198,7 @@ export default function Gift({ rekening, kado }: {rekening: Rek[], kado: Kado}) 
 
                       <button
                         onClick={() => handleCopy(rek.no_rek)}
-                        className="
-                          text-xs
-                          border
-                          border-white/70
-                          px-2
-                          py-1
-                          flex
-                          items-center
-                          gap-2
-                          transition-all
-                          duration-300
-                          hover:bg-white
-                          hover:text-black
-                        "
+                        className="text-xs border border-white/70 px-2 py-1 flex items-center gap-2 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black"
                       >
                         {copiedText === rek.no_rek ? (
                           <>
@@ -238,7 +214,7 @@ export default function Gift({ rekening, kado }: {rekening: Rek[], kado: Kado}) 
                       </button>
                     </div>
 
-                    <div className="w-full h-[1px] bg-white/80 mt-5" />
+                    <div className="w-full h-[2px] bg-white/80 mt-4" />
                   </div>
                 ))}
 
@@ -271,20 +247,7 @@ export default function Gift({ rekening, kado }: {rekening: Rek[], kado: Kado}) 
                   <div className="flex justify-end mt-4">
                     <button
                       onClick={() => handleCopy(kado.alamat)}
-                      className="
-                        border
-                        border-white/70
-                        px-2
-                        py-1
-                        flex
-                        text-xs
-                        items-center
-                        gap-2
-                        transition-all
-                        duration-300
-                        hover:bg-white
-                        hover:text-black
-                      "
+                      className="border border-white/70 px-2 y-1 flex text-xs tems-center ap-2 cursor-pointer transition-all uration-300 hover:bg-white hover:text-black"
                     >
                       <Files size={16} />
                       {copiedText === kado.alamat
@@ -293,7 +256,7 @@ export default function Gift({ rekening, kado }: {rekening: Rek[], kado: Kado}) 
                     </button>
                   </div>
 
-                  <div className="w-full h-[1px] bg-white/80 mt-5" />
+                  <div className="w-full h-[2px] bg-white/80 mt-4" />
                 </div>
               </div>
             </motion.div>

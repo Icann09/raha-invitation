@@ -18,25 +18,39 @@ export async function submitWish(
     // GET FORM DATA
     // =========================
 
-    const name = formData.get("name") as string;
+    const invitationId = Number(
+      formData.get("invitationId")
+    );
 
-    const message = formData.get("message") as string;
+    const name = formData.get(
+      "name"
+    ) as string;
 
-    const attendance = formData.get(
-      "attendance"
-    ) as "HADIR" | "TIDAK_HADIR";
+    const message = formData.get(
+      "message"
+    ) as string;
 
-    // invitation id bisa dynamic nanti
-    const invitationId = 1;
+    const attendance =
+      formData.get(
+        "attendance"
+      ) as
+        | "HADIR"
+        | "TIDAK_HADIR";
 
     // =========================
     // VALIDATION
     // =========================
 
-    if (!name || !message || !attendance) {
+    if (
+      !invitationId ||
+      !name ||
+      !message ||
+      !attendance
+    ) {
       return {
         success: false,
-        message: "Semua field wajib diisi.",
+        message:
+          "Semua field wajib diisi.",
       };
     }
 
@@ -45,47 +59,51 @@ export async function submitWish(
     // =========================
 
     await db.insert(wishes).values({
+      invitationId,
       name,
       message,
       attendance,
-      invitationId,
     });
 
     // =========================
     // REVALIDATE
     // =========================
 
-    revalidatePath("/invitation/luxury02");
+    revalidatePath(
+      `/invitation/dewi-idot`
+    );
 
     return {
       success: true,
-      message: "Ucapan berhasil dikirim ✨",
+      message:
+        "Ucapan berhasil dikirim ✨",
     };
   } catch (error) {
     console.error(error);
 
     return {
       success: false,
-      message: "Terjadi kesalahan server.",
+      message:
+        "Terjadi kesalahan server.",
     };
   }
 }
-
 
 export async function getWishes(
   invitationId: number
 ) {
   try {
-    const data = await db.query.wishes.findMany({
-      where: eq(
-        wishes.invitationId,
-        invitationId
-      ),
+    const data =
+      await db.query.wishes.findMany({
+        where: eq(
+          wishes.invitationId,
+          invitationId
+        ),
 
-      orderBy: [
-        desc(wishes.createdAt),
-      ],
-    });
+        orderBy: [
+          desc(wishes.createdAt),
+        ],
+      });
 
     return data;
   } catch (error) {

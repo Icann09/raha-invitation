@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { containerVariants, fadeVariants } from "@/lib/motion";
 
+
 const ballet = Ballet({ subsets: ["latin"], weight: ["400"] });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["800", "700"] });
 const playfair = Playfair_Display({
@@ -65,20 +66,20 @@ export default function LoveStory({ stories }: {stories: Props[]}) {
             <p className="text-sm">{story.story}</p>
           </motion.div>
         ))}
-
-        
       </motion.div>
+      
       {/* Video */}
-        <div className="w-full flex justify-center mt-10">
-          <div className="relative w-full max-w-md aspect-video overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.youtube.com/embed/VZLeb_q1x2g"
-              title="Love Story Video"
-              className="absolute inset-0 w-full h-full"
-              allowFullScreen
-            />
-          </div>
+      <div className="mt-10 flex w-full justify-center">
+        <div className="relative aspect-video w-full max-w-md overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.youtube.com/embed/VZLeb_q1x2g?autoplay=1&mute=1&loop=1&playlist=VZLeb_q1x2g"
+            title="Love Story Video"
+            className="absolute inset-0 h-full w-full"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
         </div>
+      </div>
     </section>
   );
 }

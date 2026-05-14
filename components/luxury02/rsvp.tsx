@@ -39,10 +39,10 @@ export default function RSVP({id}: {id: number}) {
   });
 
   const [state, formAction] =
-    useActionState(
-      submitWish,
-      initialState
-    );
+  useActionState(
+    submitWish,
+    initialState
+  );
 
   const [wishData, setWishData] =
     useState<Wish[]>([]);
@@ -122,6 +122,11 @@ export default function RSVP({id}: {id: number}) {
             }
             className={` mt-6 flex w-full flex-col gap-3`}
           >
+            <input
+              type="hidden"
+              name="invitationId"
+              value={id}
+            />
             {/* NAME */}
             <input
               type="text"

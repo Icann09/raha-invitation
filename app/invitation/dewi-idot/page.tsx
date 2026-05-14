@@ -15,7 +15,25 @@ import Gift from "@/components/luxury02/gift";
 import RSVP from "@/components/luxury02/rsvp";
 import Terimakaish from "@/components/luxury02/terimakasih";
 import Cover from "@/components/luxury02/cover";
-import { gallery, bride, groom, date, akadNikah, resepsi, loveStory, gift } from "@/data/luxury02"
+import { gallery, bride, groom, date, akadNikah, resepsi, loveStory, gift } from "@/data/dewi_idot"
+
+const images = gallery.casual;
+const coverImages = gallery.adat[0];
+const brideAndGroomImages = gallery.adat;
+const dateImages = gallery.adat.slice(0,4);
+const weddingEventImages = gallery.adat;
+
+const galleryImages1 = gallery.adat.slice(0, 4);
+const galleryImages2 = gallery.adat.slice(5, 11);
+const galleryImages3 = gallery.adat.slice(9, 13);
+const galleryImage1 = gallery.casual[0];
+const galleryImage2 = gallery.casual[1];
+
+
+const giftImages= gallery.adat[1];
+const terimakasihImages = gallery.adat;
+
+
 
 
 
@@ -28,13 +46,13 @@ export default function Page() {
 
   // PRELOAD IMAGES + SLIDESHOW
   useEffect(() => {
-    gallery.couples.forEach((src) => {
+    gallery.casual.forEach((src) => {
       const img = new Image();
       img.src = src;
     });
 
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % gallery.couples.length);
+      setIndex((prev) => (prev + 1) % gallery.casual.length);
     }, 9000);
 
     return () => clearInterval(interval);
@@ -84,7 +102,7 @@ export default function Page() {
       <div className="fixed inset-0 -z-10 flex justify-center">
         <div className="relative h-[100dvh] w-full max-w-md overflow-hidden">
 
-          {gallery.couples.slice(1,6).map((img, i) => (
+          {gallery.casual.map((img, i) => (
             <motion.div
               key={`${img}-${i}`}
               className="absolute inset-0 bg-cover bg-center"
@@ -153,7 +171,7 @@ export default function Page() {
               >
                 <Cover
                   onClick={handleOpen}
-                  images={gallery.couples}
+                  images={gallery.adat}
                   bride={bride.nama}
                   groom={groom.nama}
                 />
@@ -175,14 +193,14 @@ export default function Page() {
             >
               <Opening bride={bride.nama} groom={groom.nama} dateDate={date.number} dateString={date.string}/>
               <Initials brideInitial={bride.initial} groomInitial={groom.initial}/>
-              <BrideAndGroom bride={bride} groom={groom} images={gallery.couples}/>
-              <Date date={date.number} images={gallery.couples.slice(8, 13)}/>
-              <WeddingEvent akad={akadNikah} resepsi={resepsi} images={gallery.couples}/>
+              <BrideAndGroom bride={bride} groom={groom} images={gallery.adat}/>
+              <Date date={date.number} images={gallery.adat.slice(8, 13)}/>
+              <WeddingEvent akad={akadNikah} resepsi={resepsi} images={gallery.adat}/>
               <LoveStory stories={loveStory}/>
-              <Gallery images1={gallery.couples.slice(0, 4)} images2={gallery.couples.slice(4, 10)} images3={gallery.couples.slice(5, 9)} image1={gallery.couples[1]} image2={gallery.couples[2]}/>
-              <Gift rekening={gift.rekening} kado={gift.kado} image={gallery.couples[3]}/>
-              <RSVP id={1}/>
-              <Terimakaish images={gallery.couples}/>
+              <Gallery images1={galleryImages1} images2={galleryImages2} images3={galleryImages3} image1={galleryImage1} image2={galleryImage2}/>
+              <Gift rekening={gift.rekening} kado={gift.kado} image={giftImages}/>
+              <RSVP id={2}/>
+              <Terimakaish images={terimakasihImages}/>
             </motion.main>
           )}
 

@@ -1,14 +1,11 @@
 "use client"
 
 import ImagesDisplayFade from "../ui/imagesDisplayFade";
-import { Quicksand, Ballet, Plus_Jakarta_Sans, Mrs_Saint_Delafield, Playfair_Display } from "next/font/google";
+import { Quicksand, Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import { useRef } from "react";
-import { itemVariants, containerVariants, fadeVariants } from "@/lib/motion";
+import { fadeVariants } from "@/lib/motion";
 import { motion, useInView } from "framer-motion";
-
-
-
 
 
 const quicksand = Quicksand({
@@ -21,22 +18,9 @@ const playfair = Playfair_Display({
   weight: ["400", "600"],
 });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["600", "800"], style: ["normal", "italic"] });
-const mrsSaint = Mrs_Saint_Delafield({ subsets: ["latin"], weight: "400", style: "normal" });
-const ballet = Ballet({subsets: ["latin"], weight: ["400"]});
 
 
-
-
-
-const Images = [
-  "/images/luxury01/foto5.webp",
-  "/images/luxury01/foto6.webp",
-  "/images/luxury01/foto4.webp",
-  "/images/luxury01/foto1.webp",
-  "/images/luxury01/foto2.webp",
-];
-
-export default function Terimakaish() {
+export default function Terimakaish({ images }: { images: string[] }) {
 
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -46,7 +30,7 @@ export default function Terimakaish() {
 
   return (
     <section ref={ref} className={quicksand.className + " relative h-[800px] flex flex-col items-center justify-center text-white text-sm"}>
-      <ImagesDisplayFade images={Images}/>
+      <ImagesDisplayFade images={images}/>
       {/* Overlay */}
       <div className="absolute inset-0 z-10 bg-black/70 pointer-events-none"></div>
 

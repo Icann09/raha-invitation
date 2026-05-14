@@ -1,15 +1,11 @@
 "use client";
 
-import {
-  Playfair_Display,
-  Ballet,
-} from "next/font/google";
-
+import { Playfair_Display, Ballet } from "next/font/google";
 import Image from "next/image";
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-
+import { motion } from "framer-motion";
 import { fadeVariants } from "@/lib/motion";
+
 
 const ballet = Ballet({
   subsets: ["latin"],
@@ -23,7 +19,7 @@ const playfair = Playfair_Display({
 });
 
 
-export default function Gallery({ images }: {images: string[]}) {
+export default function Gallery({ images1, images2, images3, image1, image2 }: {images1: string[], images2: string[], images3: string[], image1: string, image2: string}) {
 
   const ref = useRef(null);
 
@@ -55,7 +51,7 @@ export default function Gallery({ images }: {images: string[]}) {
         viewport={{ once: false, amount: 0.3 }} 
         className="mt-10 grid w-full grid-cols-2 gap-2 px-4"
       >
-        {images.slice(0, 4).map((image, index) => (
+        {images1.map((image, index) => (
           <div
             key={index}
             className="relative h-[250px] overflow-hidden"
@@ -77,7 +73,7 @@ export default function Gallery({ images }: {images: string[]}) {
         className="relative w-full h-[270px]"
       >
         <Image
-          src={images[1]}
+          src={image1}
           fill
           alt="Foto 1"
           className="object-cover transition duration-700 hover:scale-105 px-4 py-[10px]"
@@ -90,7 +86,7 @@ export default function Gallery({ images }: {images: string[]}) {
         viewport={{ once: false, amount: 0.3 }}
         className="grid w-full grid-cols-2 gap-2 px-4"
       >
-        {images.map((image, index) => (
+        {images2.map((image, index) => (
           <div
             key={index}
             className="relative h-[250px] overflow-hidden"
@@ -112,7 +108,7 @@ export default function Gallery({ images }: {images: string[]}) {
         className="relative w-full h-[270px]"
       >
         <Image
-          src={images[2]}
+          src={image2}
           fill
           alt="Foto 1"
           className="object-cover transition duration-700 hover:scale-105 px-4 py-[10px]"
@@ -125,7 +121,7 @@ export default function Gallery({ images }: {images: string[]}) {
         viewport={{ once: false, amount: 0.3 }}
         className="grid w-full grid-cols-2 gap-2 px-4"
       >
-        {images.slice(1, 5).map((image, index) => (
+        {images3.map((image, index) => (
           <div
             key={index}
             className="relative h-[250px] overflow-hidden"
