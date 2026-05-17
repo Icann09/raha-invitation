@@ -175,9 +175,9 @@ export default function Page() {
             >
               <Opening bride={bride.nama} groom={groom.nama} dateDate={date.number} dateString={date.string}/>
               <Initials brideInitial={bride.initial} groomInitial={groom.initial}/>
-              <BrideAndGroom bride={bride} groom={groom} images={gallery.couples}/>
+              {/* <BrideAndGroom bride={bride} groom={groom} images={gallery.couples}/> */}
               <Date date={date.number} images={gallery.couples.slice(8, 13)}/>
-              <WeddingEvent akad={akadNikah} resepsi={resepsi} images={gallery.couples}/>
+              {/* <WeddingEvent akad={akadNikah} resepsi={resepsi} images={gallery.couples}/> */}
               <LoveStory stories={loveStory}/>
               <Gallery images1={gallery.couples.slice(0, 4)} images2={gallery.couples.slice(4, 10)} images3={gallery.couples.slice(5, 9)} image1={gallery.couples[1]} image2={gallery.couples[2]}/>
               <Gift rekening={gift.rekening} kado={gift.kado} image={gallery.couples[3]}/>
