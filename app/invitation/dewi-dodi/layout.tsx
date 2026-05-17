@@ -5,11 +5,11 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL("https://raha-invitation.vercel.app"),
 
     title: "The Wedding of Dewi & Dodi",
-    description: "Wedding Invitation - Senin, 10 Juni 2026",
+    description: "Wedding Invitation - Rabu, 10 Juni 2026",
 
     openGraph: {
-      title: "The Wedding of Dewi & Idot",
-      description: "Sabtu, 8 Juni 2026",
+      title: "The Wedding of Dewi & Dodi",
+      description: "Rabu, 10 Juni 2026",
       url: "/invitation/dewi-dodi",
       siteName: "Raha Invitation",
 
@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: "The Wedding of Dewi & Dodi",
-      description: "Senin, 10 Juni 2026",
+      description: "Rabu, 10 Juni 2026",
 
       images: [
         "/images/dewi-idot/wedding-preview.jpg",
