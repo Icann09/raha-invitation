@@ -33,7 +33,7 @@ export const groom = {
 export const akadNikah = {
   alamat: {
     nama: "Kediaman Mempelai Wanita",
-    lokasi: "Jl. Kelinci (Lor. PAM) Raha, Kec. Katobu, Kab. Muna ",
+    lokasi: "Jl. Kelinci (Lor. PAM) Raha, Kec. Katobu, Kab. Muna",
     link: "https://maps.app.goo.gl/jjRvSCdtYYt9Hhuw6?g_st=iw"
   },
   waktu: {
@@ -79,8 +79,8 @@ export const gift = {
     },
   ],
   kado: {
-    alamat: "Jl. Raya Cilandak KKO No.27 Jakarta Selatan",
-    penerima: "Muhammad Aslan",
+    alamat: "Jl. Kelinci (Lor. PAM) Raha, Kec. Katobu, Kab. Muna",
+    penerima: "Dewi",
   }
 };
 

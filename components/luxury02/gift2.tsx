@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
-import { Files, Check, CreditCard } from "lucide-react";
+import { Files, Check, CreditCard, Gift } from "lucide-react";
 import { fadeVariants } from "@/lib/motion";
 
 
@@ -236,6 +236,90 @@ export default function Gift2({ rekening, kado, image }: {rekening: Rek[], kado:
               </motion.div>
             ))}
           </div>
+
+          {/* KADO SECTION */}
+          <motion.div
+            variants={fadeVariants.up}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            className="
+              mt-10
+              rounded-2xl
+              border
+              border-white/20
+              bg-white/10
+              p-4
+              backdrop-blur-md
+            "
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs tracking-[0.2em] text-white/70">
+                  KADO
+                </p>
+              </div>
+
+              <Gift size={30}/>
+            </div>
+
+            {/* PENERIMA */}
+            <div className="mt-4">
+              <p className="text-xs text-white/70">
+                Nama Penerima
+              </p>
+
+              <p className="text-sm leading-relaxed">
+                {kado.penerima}
+              </p>
+            </div>
+
+            {/* ALAMAT */}
+            <div className="mt-4">
+              <p className="text-xs text-white/70">
+                Alamat Pengiriman
+              </p>
+
+              <p className="text-sm leading-relaxed">
+                {kado.alamat}
+              </p>
+            </div>
+
+            {/* COPY BUTTON */}
+            <button
+              onClick={() => handleCopy(kado.alamat)}
+              className="
+                mt-6
+                flex
+                items-center
+                gap-2
+                rounded-full
+                border
+                border-white/70
+                bg-white/10
+                px-4
+                py-2
+                text-xs
+                backdrop-blur-md
+                transition-all
+                duration-300
+                hover:bg-white
+                hover:text-black
+              "
+            >
+              {copiedText === kado.alamat ? (
+                <>
+                  <Check size={14} />
+                  Alamat Tersalin
+                </>
+              ) : (
+                <>
+                  <Files size={14} />
+                  Salin Alamat
+                </>
+              )}
+            </button>
+          </motion.div>
+
             </motion.div>
           )}
         </AnimatePresence>

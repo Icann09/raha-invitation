@@ -49,7 +49,7 @@ export default function Terimakaish({ images }: { images: string[] }) {
         </div>
         <div>
           <p className={plusJakartaSans.className + " font-bold text-sm mb-4 tracking-[0.13em]"}>KAMI YANG BERBAHAGIA</p>
-          <p className={playfair.className + " text-2xl italic"}>Putri & Andika</p>
+          <p className={playfair.className + " text-2xl italic"}>Dewi & Dodi</p>
         </div>
         {/* contact */}
         <div className="pt-24">
