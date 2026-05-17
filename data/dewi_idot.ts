@@ -1,31 +1,31 @@
 
 export const date = {
-  string: "08 . 06 . 2026",
-  number: new Date('2026-06-08T10:00:00+08:00'),
+  string: "10 . 06 . 2026",
+  number: new Date('2026-06-10T10:00:00+08:00'),
 }
 
 export const bride = {
-  namaLengkap: "Husna Amalia Indra Purnama",
+  namaLengkap: "Husna Amalia Indra Purnama, S.M",
   nama: "Dewi",
   initial: "D",
   ayah: "Laode Gomberto",
-  ibu: "Waode Ampera",
+  ibu: "Wa Ode Ampera",
   anakKe: "Pertama",
   IG: {
-    nama: "@_",
+    nama: "@hsnam__",
     link: "https://www.instagram.com"
   }
 }
 
 export const groom = {
-  namaLengkap: "Alfayed Rahmat Muhammad",
-  nama: "Idot",
-  initial: "I",
-  ayah: "Rahmat Raeba",
-  ibu: "Nasrawati Ibu",
+  namaLengkap: "Alfayed Rahmat Muhammad, S.Ars,. M.Si",
+  nama: "Dodi",
+  initial: "D",
+  ayah: "Rahmat Raeba, S.Pd., M.M",
+  ibu: "Nasrawati Ibu, SP.",
   anakKe: "Kedua",
   IG: {
-    nama: "@_",
+    nama: "@alfayed_rahmat_muhammad",
     link: "https://www.instagram.com"
   }
 }
@@ -33,30 +33,30 @@ export const groom = {
 export const akadNikah = {
   alamat: {
     nama: "Kediaman Mempelai Wanita",
-    lokasi: "Jalan Lumba-lumba",
+    lokasi: "Jl. Kelinci (Lor. PAM) Raha, Kec. Katobu, Kab. Muna ",
     link: "https://maps.app.goo.gl/jjRvSCdtYYt9Hhuw6?g_st=iw"
   },
   waktu: {
-    hari: "Minggu",
+    hari: "Senin",
     tanggal: "8",
     bulan: "Juni",
     tahun: "2026",
-    jam: "08.00 WITA - Selesai"
+    jam: "09.00 WITA"
   }
 }
 
 export const resepsi = {
   alamat: {
-    nama: "SOR Laode Pandu",
-    lokasi: "Jalan Wamponiki",
+    nama: "Kawasan PT. MPS",
+    lokasi: "Desa Lasalepa (Motewe) Kab. Muna",
     link: "https://maps.app.goo.gl/vs681DAaYNy1tCxw5?g_st=iw"
   },
   waktu: {
-    hari: "Senin",
-    tanggal: "9",
+    hari: "Rabu",
+    tanggal: "10",
     bulan: "Juni",
     tahun: "2026",
-    jam: "13.00 WITA - Selesai"
+    jam: "14.00 WITA - Selesai"
   }
 }
 
@@ -116,10 +116,69 @@ export const gallery = {
     "/images/dewi-idot/foto-adat12.webp",
     "/images/dewi-idot/foto-adat13.webp",
   ],
+  adat_outdoor: [
+    "/images/dewi-idot/adat-outdoor1.webp",
+    "/images/dewi-idot/adat-outdoor2.webp",
+    "/images/dewi-idot/adat-outdoor3.webp",
+    "/images/dewi-idot/adat-outdoor4.webp",
+    "/images/dewi-idot/adat-outdoor5.webp",
+    "/images/dewi-idot/adat-outdoor6.webp",
+    "/images/dewi-idot/adat-outdoor7.webp",
+    "/images/dewi-idot/adat-outdoor8.webp",
+  ],
+  adat_studio: [
+    "/images/dewi-idot/adat-studio1.webp",
+    "/images/dewi-idot/adat-studio2.webp",
+    "/images/dewi-idot/adat-studio3.webp",
+    "/images/dewi-idot/adat-studio4.webp",
+    "/images/dewi-idot/adat-studio5.webp",
+    "/images/dewi-idot/adat-studio6.webp",
+  ],
+  akad: [
+    "/images/dewi-idot/adat-studio2.webp",
+    "/images/dewi-idot/adat-studio7.webp",
+    "/images/dewi-idot/adat-studio8.webp",
+    "/images/dewi-idot/adat-studio9.webp",
+  ],
   casual: [
     "/images/dewi-idot/foto-casual1.webp",
     "/images/dewi-idot/foto-casual2.webp",
     "/images/dewi-idot/foto-casual3.webp",
   ],
+  dewi: [
+    "/images/dewi-idot/casual-dewi1.webp",
+    "/images/dewi-idot/casual-dewi2.webp",
+    "/images/dewi-idot/adat-dewi3.webp",
+    "/images/dewi-idot/adat-dewi4.webp",
+  ],
+  idot: [
+    "/images/dewi-idot/casual-idot1.webp",
+    "/images/dewi-idot/casual-idot2.webp",
+    "/images/dewi-idot/adat-idot1.webp",
+    "/images/dewi-idot/adat-idot2.webp",
+  ],
+  cover: [
+    "/images/dewi-idot/foto-adat13.webp",
+  ],
+  main: [
+    "/images/dewi-idot/casual1.webp",
+    "/images/dewi-idot/casual2.webp",
+    "/images/dewi-idot/casual4.webp",
+  ],
+  terimakasih: [
+    "/images/dewi-idot/adat-studio1.webp",
+    "/images/dewi-idot/adat-studio2.webp",
+    "/images/dewi-idot/adat-studio3.webp",
+    "/images/dewi-idot/adat-studio4.webp",
+  ],
+  date: [
+    "/images/dewi-idot/adat-studio9.webp",
+    "/images/dewi-idot/adat-studio8.webp",
+    "/images/dewi-idot/adat-studio7.webp",
+  ]
 }
+
+
+
+
 

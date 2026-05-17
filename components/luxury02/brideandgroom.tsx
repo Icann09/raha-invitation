@@ -48,7 +48,8 @@ interface Bride {
 
 
 
-export default function BrideAndGroom ( {bride, groom, images }: { bride: Bride, groom: Groom, images: string[] } ) {
+
+export default function BrideAndGroom ( {bride, groom, brideImages, groomImages }: { bride: Bride, groom: Groom, brideImages: string[], groomImages: string[] } ) {
   const ref = useRef(null);
 
   return (
@@ -86,7 +87,7 @@ export default function BrideAndGroom ( {bride, groom, images }: { bride: Bride,
         </motion.div>    
         {/* Image */}
         <motion.div variants={fadeVariants.imageReveal} className="relative w-[70%] h-[500px] overflow-hidden z-10">
-          <ImagesDisplayX images={images.slice(5, 9)}/>
+          <ImagesDisplayX images={brideImages}/>
         </motion.div>
         <div className="text-left pl-4 my-12">
           <motion.p variants={fadeVariants.up} className="text-xl font-bold">{bride.namaLengkap}</motion.p>
@@ -123,7 +124,7 @@ export default function BrideAndGroom ( {bride, groom, images }: { bride: Bride,
         <motion.div variants={fadeVariants.imageReveal} className="absolute top-4 right-4 w-[70%] h-[500px] bg-[#5e5e5e]/50 z-0" />
         {/* IMAGE */}
         <motion.div variants={fadeVariants.imageReveal} className="relative ml-auto w-[70%] h-[500px] overflow-hidden z-10">
-          <ImagesDisplayX images={images.slice(0, 4)}/>
+          <ImagesDisplayX images={groomImages}/>
         </motion.div>
         {/* TEXT */}
         <div className="text-right pr-4 my-12 flex flex-col items-end">

@@ -33,7 +33,7 @@ interface Props {
 }
 
 
-export default function WeddingEvent({ images, akad, resepsi }: { images: string[], akad: Props, resepsi: Props }) {
+export default function WeddingEvent({ akadImages, resepsiImages, image, akad, resepsi }: { akadImages: string[], resepsiImages: string[], image: string, akad: Props, resepsi: Props }) {
   
   const ref = useRef(null);
 
@@ -64,7 +64,7 @@ export default function WeddingEvent({ images, akad, resepsi }: { images: string
       >
         <div className="h-full w-full">
           <div className="relative overflow-hidden z-10 h-[40%] w-full bg-black rounded-tr-[150px]">
-            <ImagesDisplayX images={images.slice(1, 5)}/>
+            <ImagesDisplayX images={akadImages}/>
           </div>
           <div className="h-[60%] bg-white flex">
             <div className="w-[25%] bg-[#5e5e5e] flex items-center justify-center">
@@ -121,7 +121,7 @@ export default function WeddingEvent({ images, akad, resepsi }: { images: string
       >
         <div className="h-full w-full">
           <div className="relative overflow-hidden z-10 h-[40%] w-full bg-black rounded-tl-[150px]">
-            <ImagesDisplayX images={images.slice(3, 8)}/>
+            <ImagesDisplayX images={resepsiImages}/>
           </div>
           <div className="h-[60%] bg-white flex">
             <div className={plusJakartaSans.className + " w-[75%] text-[#5e5e5e] flex flex-col justify-center"}>
@@ -176,7 +176,7 @@ export default function WeddingEvent({ images, akad, resepsi }: { images: string
       >
         <div className="relative w-full h-full">
           <Image 
-            src={images[0]}
+            src={image}
             alt="Foto Prewedding"
             fill
             className="object-cover"
