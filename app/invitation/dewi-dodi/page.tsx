@@ -12,9 +12,11 @@ import WeddingEvent from "@/components/luxury02/weddingEvent";
 import Gallery from "@/components/luxury02/gallery";
 import RSVP from "@/components/luxury02/rsvp";
 import Terimakaish from "@/components/luxury02/terimakasih";
+import Poem from "@/components/luxury02/poem";
 import Cover from "@/components/luxury02/cover";
-import { gallery, bride, groom, date, akadNikah, resepsi, gift } from "@/data/dewi_idot"
+import { gallery, bride, groom, date, akadNikah, resepsi, loveStory, gift } from "@/data/dewi_idot"
 import Gift2 from "@/components/luxury02/gift2";
+
 
 
 
