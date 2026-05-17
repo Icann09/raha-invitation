@@ -91,7 +91,7 @@ export default function Poem() {
       </motion.div>
       
       {/* Video */}
-      <div className="mt-10 flex w-full justify-center">
+      {/* <div className="mt-10 flex w-full justify-center">
         <div className="relative aspect-video w-full max-w-md overflow-hidden shadow-lg">
           <iframe
             src="https://www.youtube.com/embed/VZLeb_q1x2g?autoplay=1&mute=1&loop=1&playlist=VZLeb_q1x2g"
@@ -101,7 +101,7 @@ export default function Poem() {
             allowFullScreen
           />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

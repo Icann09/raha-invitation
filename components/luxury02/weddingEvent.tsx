@@ -185,7 +185,7 @@ export default function WeddingEvent({ akadImages, resepsiImages, image, akad, r
       </motion.div>
 
       {/* Live streaming and Dresscode  */}
-      <motion.div
+      {/* <motion.div
         variants={fadeVariants.down}
         initial="hidden"
         whileInView="visible"
@@ -206,7 +206,7 @@ export default function WeddingEvent({ akadImages, resepsiImages, image, akad, r
           <div className="w-14 h-14 bg-white"></div>
 
         </div>
-      </motion.div>
+      </motion.div> */}
       
     </section>
   )

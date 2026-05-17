@@ -9,30 +9,13 @@ import Initials from "@/components/luxury02/initials";
 import BrideAndGroom from "@/components/luxury02/brideandgroom";
 import Date from "@/components/luxury02/date";
 import WeddingEvent from "@/components/luxury02/weddingEvent";
-import LoveStory from "@/components/luxury02/loveStory";
 import Gallery from "@/components/luxury02/gallery";
-import Gift from "@/components/luxury02/gift";
 import RSVP from "@/components/luxury02/rsvp";
 import Terimakaish from "@/components/luxury02/terimakasih";
-import Poem from "@/components/luxury02/poem";
 import Cover from "@/components/luxury02/cover";
-import { gallery, bride, groom, date, akadNikah, resepsi, loveStory, gift } from "@/data/dewi_idot"
+import { gallery, bride, groom, date, akadNikah, resepsi, gift } from "@/data/dewi_idot"
+import Gift2 from "@/components/luxury02/gift2";
 
-const images = gallery.casual;
-const coverImages = gallery.adat[0];
-const brideAndGroomImages = gallery.adat;
-const dateImages = gallery.adat.slice(0,4);
-const weddingEventImages = gallery.adat;
-
-const galleryImages1 = gallery.adat.slice(0, 4);
-const galleryImages2 = gallery.adat.slice(5, 11);
-const galleryImages3 = gallery.adat.slice(9, 13);
-const galleryImage1 = gallery.casual[0];
-const galleryImage2 = gallery.casual[1];
-
-
-const giftImages= gallery.adat[1];
-const terimakasihImages = gallery.adat;
 
 
 
@@ -226,7 +209,7 @@ export default function Page() {
               <WeddingEvent akad={akadNikah} resepsi={resepsi} image="/images/dewi-idot/foto-adat10.webp" akadImages={gallery.akad} resepsiImages={gallery.adat_outdoor}/>
               <Poem />
               <Gallery images1={gallery.adat_outdoor.slice(0, 4)} images2={gallery.adat_studio} images3={gallery.adat_outdoor.slice(4, 9)} image1="/images/dewi-idot/casual6.webp" image2="/images/dewi-idot/casual5.webp"/>
-              <Gift rekening={gift.rekening} kado={gift.kado} image="/images/dewi-idot/foto-adat12.webp" />
+              <Gift2 rekening={gift.rekening} kado={gift.kado} image="/images/dewi-idot/foto-adat12.webp" />
               <RSVP id={2}/>
               <Terimakaish images={gallery.terimakasih}/>
             </motion.main>

@@ -33,24 +33,8 @@ export default function Gallery({
 }) {
   const ref = useRef(null);
 
-  // =========================
-  // IMAGE PREVIEW STATE
-  // =========================
-
   const [selectedImage, setSelectedImage] =
     useState<string | null>(null);
-
-  // =========================
-  // ALL IMAGES
-  // =========================
-
-  const allImages = [
-    ...images1,
-    image1,
-    ...images2,
-    image2,
-    ...images3,
-  ];
 
   return (
     <>
